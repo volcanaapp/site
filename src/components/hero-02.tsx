@@ -5,12 +5,9 @@ import { useEffect, useRef, useState } from "react";
 
 export function Hero02({ dictionary }: { dictionary: any }) {
   const [isVisible, setIsVisible] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -44,7 +41,7 @@ export function Hero02({ dictionary }: { dictionary: any }) {
         ref={sectionRef}
         className={cn(
           "bg-background py-20 md:py-32 transition-all duration-1000 ease-in-out",
-          isMounted && isVisible ? "opacity-100" : "opacity-0"
+          isVisible ? "opacity-100" : "opacity-0"
         )}
       >
         <div className="container max-w-screen-xl">
@@ -54,7 +51,7 @@ export function Hero02({ dictionary }: { dictionary: any }) {
                 key={index}
                 className={cn(
                   "transition-all duration-700 ease-out",
-                  isMounted && isVisible
+                  isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 )}
