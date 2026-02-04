@@ -51,5 +51,13 @@
       "unlimited_products": "Unlimited products and orders",
       "priority_support": "Priority support"
     }
+  },
+  "feature_section": {
+    "title_part1": "INTRODUCING",
+    "title_part2": "HERO",
+    "subtitle": "Your Shortcut to Innovation Starts Here.",
+    "description1": "Hero is about more than cutting costs—it's about unlocking potential. Boost productivity with a personalized, adaptive AI agent that learns and evolves with your team.",
+    "description2": "This isn't just a return on investment—it's a return on innovation.",
+    "cta": "Book an intro"
   }
 }

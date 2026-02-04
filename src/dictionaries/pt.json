@@ -51,5 +51,13 @@
       "unlimited_products": "Produtos e pedidos ilimitados",
       "priority_support": "Suporte prioritário"
     }
+  },
+  "feature_section": {
+    "title_part1": "APRESENTANDO",
+    "title_part2": "HERO",
+    "subtitle": "Seu Atalho para a Inovação Começa Aqui.",
+    "description1": "Hero é mais do que cortar custos - é sobre destravar potencial. Aumente a produtividade com um agente de IA personalizado e adaptativo que aprende e evolui com sua equipe.",
+    "description2": "Isso não é apenas um retorno sobre o investimento - é um retorno sobre a inovação.",
+    "cta": "Agendar uma demonstração"
   }
 }

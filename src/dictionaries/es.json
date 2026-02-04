@@ -35,7 +35,7 @@
         "text": "Soluciones reales. Personas reales. Resultados reales."
       }
     ],
-    "main_heading": "ESTAMOS REVOLUCIONANDO LA FORMA EN QUE SE HACE EL BUEN TRABAJO."
+    "main_heading": "ESTAMOS REVOLUCIONANDO LA FORMA EN QUE SE HACE EL BUEN TRABALJO."
   },
   "pricing": {
     "title": "Un precio, posibilidades ilimitadas.",
@@ -51,5 +51,13 @@
       "unlimited_products": "Productos y pedidos ilimitados",
       "priority_support": "Soporte prioritario"
     }
+  },
+  "feature_section": {
+    "title_part1": "PRESENTANDO",
+    "title_part2": "HERO",
+    "subtitle": "Tu Atajo a la Innovación Comienza Aquí.",
+    "description1": "Hero es más que reducir costos, se trata de desbloquear el potencial. Aumenta la productividad con un agente de IA personalizado y adaptable que aprende y evoluciona con tu equipo.",
+    "description2": "Esto no es solo un retorno de la inversión, es un retorno de la innovación.",
+    "cta": "Reservar una introducción"
   }
 }
