@@ -5,9 +5,12 @@
     "cta_primary": "Create my store"
   },
   "header": {
-    "features": "Features",
+    "product": "Product",
+    "solutions": "Solutions",
+    "comparison": "Comparison",
+    "use_cases": "Use Cases",
     "pricing": "Pricing",
-    "blog": "Blog",
+    "content": "Content",
     "login": "Login",
     "start_now": "Start Now"
   },

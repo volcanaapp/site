@@ -25,9 +25,12 @@ export function Header({ dictionary }: { dictionary: any }) {
   }, []);
 
   const navLinks = [
-    { href: "#", label: dictionary.header.features },
+    { href: "#", label: dictionary.header.product },
+    { href: "#", label: dictionary.header.solutions },
+    { href: "#", label: dictionary.header.comparison },
+    { href: "#", label: dictionary.header.use_cases },
     { href: "#pricing", label: dictionary.header.pricing },
-    { href: "#", label: dictionary.header.blog },
+    { href: "#", label: dictionary.header.content },
   ];
 
   return (

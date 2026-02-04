@@ -5,9 +5,12 @@
     "cta_primary": "Criar minha loja"
   },
   "header": {
-    "features": "Recursos",
+    "product": "Produto",
+    "solutions": "Soluções",
+    "comparison": "Comparativo",
+    "use_cases": "Casos de uso",
     "pricing": "Preços",
-    "blog": "Blog",
+    "content": "Conteúdo",
     "login": "Login",
     "start_now": "Comece Agora"
   },
