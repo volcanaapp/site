@@ -59,7 +59,7 @@ export function Hero02({ dictionary }: { dictionary: any }) {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <h3 className="text-5xl font-bold tracking-tighter mb-4">{column.title}</h3>
-                <p className="text-lg text-muted-foreground max-w-sm">{column.text}</p>
+                <p className="text-lg text-foreground/80 max-w-sm">{column.text}</p>
               </div>
             ))}
           </div>
