@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 export function Hero01({ dictionary }: { dictionary: any }) {
   return (
-    <section className="container grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-theme(spacing.14))] py-12 md:py-20">
-      <div className="flex flex-col items-start text-left">
+    <section className="container grid lg:grid-cols-5 gap-12 items-center min-h-[calc(100vh-theme(spacing.14))] py-12 md:py-20">
+      <div className="flex flex-col items-start text-left lg:col-span-2">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase leading-none">
           {dictionary.title}
         </h1>
@@ -16,17 +16,15 @@ export function Hero01({ dictionary }: { dictionary: any }) {
           </Button>
         </div>
       </div>
-      <div className="hidden lg:flex items-center justify-center self-stretch">
-        <div className="w-full h-full min-h-[400px] bg-card rounded-lg border overflow-hidden">
-          <video
-            src="https://a.storyblok.com/f/314917/x/1fc22db7b3/1721996743-hero-latest.webm"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          />
-        </div>
+      <div className="hidden lg:flex items-center justify-center self-stretch lg:col-span-3">
+        <video
+          src="https://a.storyblok.com/f/314917/x/1fc22db7b3/1721996743-hero-latest.webm"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-auto transform scale-125"
+        />
       </div>
     </section>
   );
