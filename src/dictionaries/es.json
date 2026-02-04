@@ -29,5 +29,24 @@
   },
   "footer": {
     "copyright": "© {year} Volcana™. Todos los derechos reservados."
+  },
+  "hero2": {
+    "title": "La primera plataforma que no necesita ser operada.",
+    "subtitle": "Olvida la gestión manual. Activa agentes de IA que ejecutan el trabajo operativo por ti.",
+    "active_badge": "Activo"
+  },
+  "agent": {
+    "seo": {
+      "name": "Agente de Visibilidad",
+      "desc": "Optimiza automáticamente tus productos para Google y Meta en tiempo real."
+    },
+    "stock": {
+      "name": "Agente de Inventario",
+      "desc": "Predice las roturas de stock y ajusta el inventario basándose en las tendencias del mercado."
+    },
+    "sales": {
+      "name": "Agente de Conversión",
+      "desc": "Soporte activo centrado en cerrar carritos abandonados sin intervención humana."
+    }
   }
 }

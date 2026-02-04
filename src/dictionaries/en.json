@@ -29,5 +29,24 @@
   },
   "footer": {
     "copyright": "© {year} Volcana™. All rights reserved."
+  },
+  "hero2": {
+    "title": "The first platform that runs itself.",
+    "subtitle": "Forget manual management. Activate AI agents that execute the heavy operational lifting for you.",
+    "active_badge": "Active"
+  },
+  "agent": {
+    "seo": {
+      "name": "Visibility Agent",
+      "desc": "Automatically optimizes your products for Google and Meta in real-time."
+    },
+    "stock": {
+      "name": "Inventory Agent",
+      "desc": "Predicts stockouts and adjusts inventory based on market trends."
+    },
+    "sales": {
+      "name": "Conversion Agent",
+      "desc": "Active support focused on closing abandoned carts without human intervention."
+    }
   }
 }
