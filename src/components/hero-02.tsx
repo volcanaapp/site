@@ -1,27 +1,26 @@
+"use client";
+
 import { Boxes, Search, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from "react";
 
 type AgentCardProps = {
   icon: React.ReactNode;
   name: string;
   description: string;
   badge: string;
-  className?: string;
 };
 
-function AgentCard({ icon, name, description, badge, className }: AgentCardProps) {
+function AgentCard({ icon, name, description, badge }: AgentCardProps) {
   return (
     <div
       className={cn(
-        "bg-card rounded-xl p-6 border border-glow/20 relative overflow-hidden",
-        "transition-all duration-300 hover:border-glow hover:shadow-2xl hover:shadow-glow/20 hover:-translate-y-1",
-        className
+        "bg-card rounded-xl p-6 border border-glow/20 relative overflow-hidden h-full",
+        "transition-all duration-300 hover:border-glow hover:shadow-2xl hover:shadow-glow/20 hover:-translate-y-1"
       )}
     >
       <div className="flex justify-between items-start mb-4">
-        <div className="p-2 bg-primary/10 rounded-lg text-primary">
-          {icon}
-        </div>
+        <div className="p-2 bg-primary/10 rounded-lg text-primary">{icon}</div>
         <div className="flex items-center gap-2 text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -37,6 +36,35 @@ function AgentCard({ icon, name, description, badge, className }: AgentCardProps
 }
 
 export function Hero02({ dictionary }: { dictionary: any }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0.2,
+      }
+    );
+
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   const agents = [
     {
       name: dictionary.agent.seo.name,
@@ -60,7 +88,15 @@ export function Hero02({ dictionary }: { dictionary: any }) {
 
   return (
     <div className="dark">
-      <section className="bg-background py-20 md:py-32">
+      <section
+        ref={sectionRef}
+        className={cn(
+          "bg-background py-20 md:py-32 transition-all duration-1000 ease-in-out transform",
+          isVisible
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 translate-y-16 scale-95"
+        )}
+      >
         <div className="container max-w-screen-xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
@@ -72,15 +108,25 @@ export function Hero02({ dictionary }: { dictionary: any }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {agents.map((agent) => (
-              <AgentCard
+            {agents.map((agent, index) => (
+              <div
                 key={agent.name}
-                name={agent.name}
-                description={agent.description}
-                icon={agent.icon}
-                badge={dictionary.hero2.active_badge}
-                className={agent.className}
-              />
+                className={cn(
+                  agent.className,
+                  "transition-all duration-500 ease-out",
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                )}
+                style={{ transitionDelay: `${300 + index * 150}ms` }}
+              >
+                <AgentCard
+                  name={agent.name}
+                  description={agent.description}
+                  icon={agent.icon}
+                  badge={dictionary.hero2.active_badge}
+                />
+              </div>
             ))}
           </div>
         </div>
