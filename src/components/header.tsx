@@ -45,11 +45,45 @@ export function Header({ dictionary }: { dictionary: any }) {
         )}
       >
         <div className="container flex h-14 max-w-screen-2xl items-center">
-          <div className="mr-4 hidden md:flex">
-            <Link href="/" className="mr-6 flex items-center">
-              <Logo className="h-7" />
-            </Link>
-            <nav className="flex items-center gap-6 text-sm">
+          {/* Left side: Logo (desktop) / Menu (mobile) */}
+          <div className="flex flex-1 justify-start">
+            <div className="hidden md:flex">
+              <Link href="/" className="mr-6 flex items-center">
+                <Logo className="h-7" />
+              </Link>
+            </div>
+            <div className="flex md:hidden">
+              <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Abrir menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left">
+                  <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+                    <Logo className="h-7" />
+                  </Link>
+                  <div className="flex flex-col gap-4 mt-8">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.label}
+                        href={link.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-lg font-medium text-foreground/80 hover:text-foreground"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
+          </div>
+
+          {/* Center: Nav (desktop) / Logo (mobile) */}
+          <div className="flex justify-center">
+            <nav className="hidden md:flex items-center gap-6 text-sm">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
@@ -60,43 +94,15 @@ export function Header({ dictionary }: { dictionary: any }) {
                 </Link>
               ))}
             </nav>
-          </div>
-
-          <div className="flex md:hidden">
-            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Abrir menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left">
-                <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
-                  <Logo className="h-7" />
-                </Link>
-                <div className="flex flex-col gap-4 mt-8">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.label}
-                      href={link.href}
-                      onClick={() => setIsMenuOpen(false)}
-                      className="text-lg font-medium text-foreground/80 hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-          
-          <div className="flex flex-1 items-center justify-center md:hidden">
+            <div className="flex md:hidden">
               <Link href="/" className="flex items-center">
                   <Logo className="h-7" />
               </Link>
+            </div>
           </div>
 
-          <div className="flex flex-1 items-center justify-end space-x-2">
+          {/* Right side: Buttons */}
+          <div className="flex flex-1 justify-end space-x-2">
             <Button variant="ghost">{dictionary.header.login}</Button>
             <Button className="font-bold bg-primary text-primary-foreground hover:bg-primary/90">{dictionary.header.start_now}</Button>
           </div>
