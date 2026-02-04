@@ -17,9 +17,15 @@ export function Hero01({ dictionary }: { dictionary: any }) {
         </div>
       </div>
       <div className="hidden lg:flex items-center justify-center self-stretch">
-        {/* Placeholder para o visual */}
-        <div className="w-full h-full min-h-[400px] bg-card rounded-lg border flex items-center justify-center">
-          <p className="text-muted-foreground">Visual Placeholder</p>
+        <div className="w-full h-full min-h-[400px] bg-card rounded-lg border overflow-hidden">
+          <video
+            src="https://a.storyblok.com/f/314917/x/1fc22db7b3/1721996743-hero-latest.webm"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </section>
