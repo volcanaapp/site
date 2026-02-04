@@ -11,16 +11,6 @@
     "login": "Login",
     "start_now": "Comece Agora"
   },
-  "comparison": {
-    "title": "Chega de taxas abusivas",
-    "subtitle": "Na Volcana™, você paga um preço fixo e justo. O lucro das suas vendas é 100% seu.",
-    "traditional_platform": "Plataformas Tradicionais",
-    "traditional_fee": "3-5% de taxa por venda",
-    "traditional_description": "Taxas que punem o seu crescimento e comem uma parte significativa do seu lucro.",
-    "volcana_platform": "Volcana™",
-    "volcana_fee": "0% de taxa por venda",
-    "volcana_description": "Um preço mensal fixo, não importa o quanto você venda. Previsibilidade para o seu negócio."
-  },
   "topbar": {
     "language": "PT-BR",
     "pt": "Português (BR)",

@@ -11,16 +11,6 @@
     "login": "Login",
     "start_now": "Empieza Ahora"
   },
-  "comparison": {
-    "title": "No más tarifas abusivas",
-    "subtitle": "En Volcana™, pagas un precio fijo y justo. El 100% de las ganancias de tus ventas es tuyo.",
-    "traditional_platform": "Plataformas Tradicionales",
-    "traditional_fee": "3-5% de tarifa por venta",
-    "traditional_description": "Tarifas que castigan tu crecimiento y se comen una parte importante de tus ganancias.",
-    "volcana_platform": "Volcana™",
-    "volcana_fee": "0% de tarifa por venta",
-    "volcana_description": "Un precio mensual fijo, sin importar cuánto vendas. Previsibilidad para tu negocio."
-  },
   "topbar": {
     "language": "ES-ES",
     "pt": "Português (BR)",
