@@ -21,23 +21,21 @@
     "copyright": "© {year} Volcana™. All rights reserved."
   },
   "hero2": {
-    "title": "The first platform that runs itself.",
-    "subtitle": "Forget manual management. Activate AI agents that execute the heavy operational lifting for you.",
-    "active_badge": "Active"
-  },
-  "agent": {
-    "seo": {
-      "name": "Visibility Agent",
-      "desc": "Automatically optimizes your products for Google and Meta in real-time."
-    },
-    "stock": {
-      "name": "Inventory Agent",
-      "desc": "Predicts stockouts and adjusts inventory based on market trends."
-    },
-    "sales": {
-      "name": "Conversion Agent",
-      "desc": "Active support focused on closing abandoned carts without human intervention."
-    }
+    "columns": [
+      {
+        "title": "AI.",
+        "text": "The technology no one can afford to ignore-buy most struggle to implement securely, understand fully, or use effectively."
+      },
+      {
+        "title": "GAP.",
+        "text": "The Gap between technology, skills and people resources."
+      },
+      {
+        "title": "CLOSED.",
+        "text": "Real solutions. Real people. Real outcomes."
+      }
+    ],
+    "main_heading": "WE'RE REVOLUTIONIZING THE WAY GOOD WORK GETS DONE."
   },
   "pricing": {
     "title": "One price, unlimited possibilities.",

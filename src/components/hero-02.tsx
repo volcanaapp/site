@@ -1,39 +1,7 @@
 "use client";
 
-import { Boxes, Search, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
-
-type AgentCardProps = {
-  icon: React.ReactNode;
-  name: string;
-  description: string;
-  badge: string;
-};
-
-function AgentCard({ icon, name, description, badge }: AgentCardProps) {
-  return (
-    <div
-      className={cn(
-        "bg-card rounded-xl p-6 border border-glow/20 relative overflow-hidden h-full",
-        "transition-all duration-300 hover:border-glow hover:shadow-2xl hover:shadow-glow/20 hover:-translate-y-1"
-      )}
-    >
-      <div className="flex justify-between items-start mb-4">
-        <div className="p-2 bg-primary/10 rounded-lg text-primary">{icon}</div>
-        <div className="flex items-center gap-2 text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-          </span>
-          {badge}
-        </div>
-      </div>
-      <h3 className="text-xl font-bold text-card-foreground">{name}</h3>
-      <p className="text-muted-foreground mt-2 text-sm">{description}</p>
-    </div>
-  );
-}
 
 export function Hero02({ dictionary }: { dictionary: any }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,7 +17,7 @@ export function Hero02({ dictionary }: { dictionary: any }) {
       },
       {
         rootMargin: "0px",
-        threshold: 0.2,
+        threshold: 0.1,
       }
     );
 
@@ -65,69 +33,49 @@ export function Hero02({ dictionary }: { dictionary: any }) {
     };
   }, []);
 
-  const agents = [
-    {
-      name: dictionary.agent.seo.name,
-      description: dictionary.agent.seo.desc,
-      icon: <Search className="h-6 w-6" />,
-      className: "md:col-span-2",
-    },
-    {
-      name: dictionary.agent.stock.name,
-      description: dictionary.agent.stock.desc,
-      icon: <Boxes className="h-6 w-6" />,
-      className: "md:col-span-1",
-    },
-    {
-      name: dictionary.agent.sales.name,
-      description: dictionary.agent.sales.desc,
-      icon: <ShoppingCart className="h-6 w-6" />,
-      className: "md:col-span-3",
-    },
-  ];
+  const columns = dictionary.hero2.columns;
+  const mainHeading = dictionary.hero2.main_heading;
 
   return (
     <div className="dark">
       <section
         ref={sectionRef}
         className={cn(
-          "bg-background py-20 md:py-32 transition-all duration-1000 ease-in-out transform",
-          isVisible
-            ? "opacity-100 translate-y-0 scale-100"
-            : "opacity-0 translate-y-16 scale-95"
+          "bg-background py-20 md:py-32 transition-all duration-1000 ease-in-out",
+          isVisible ? "opacity-100" : "opacity-0"
         )}
       >
-        <div className="container max-w-screen-xl">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
-              {dictionary.hero2.title}
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              {dictionary.hero2.subtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {agents.map((agent, index) => (
+        <div className="container max-w-screen-xl space-y-24 md:space-y-32">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+            {columns.map((column: any, index: number) => (
               <div
-                key={agent.name}
+                key={index}
                 className={cn(
-                  agent.className,
-                  "transition-all duration-500 ease-out",
+                  "transition-all duration-700 ease-out",
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 )}
-                style={{ transitionDelay: `${300 + index * 150}ms` }}
+                style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <AgentCard
-                  name={agent.name}
-                  description={agent.description}
-                  icon={agent.icon}
-                  badge={dictionary.hero2.active_badge}
-                />
+                <h3 className="text-5xl font-bold tracking-tighter mb-4">{column.title}</h3>
+                <p className="text-lg text-muted-foreground max-w-sm">{column.text}</p>
               </div>
             ))}
+          </div>
+
+          <div
+            className={cn(
+              "transition-all duration-700 ease-out",
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            )}
+            style={{ transitionDelay: `${columns.length * 200}ms` }}
+          >
+            <h2 className="text-6xl md:text-8xl font-bold tracking-tighter leading-none uppercase">
+              {mainHeading}
+            </h2>
           </div>
         </div>
       </section>
