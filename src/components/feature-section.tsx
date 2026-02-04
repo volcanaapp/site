@@ -40,6 +40,7 @@ export function FeatureSection({ dictionary }: { dictionary: any }) {
                     width={1266}
                     height={791}
                     className="w-full h-full object-cover"
+                    crossOrigin="anonymous"
                   />
                 </div>
               </div>

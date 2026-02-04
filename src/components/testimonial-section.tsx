@@ -13,7 +13,7 @@ export function TestimonialSection({ dictionary }: { dictionary: any }) {
             </blockquote>
             <figcaption className="mt-8 flex items-center justify-center gap-4">
               <Avatar className="h-12 w-12">
-                <AvatarImage src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt={dictionary.author} />
+                <AvatarImage src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt={dictionary.author} crossOrigin="anonymous" />
                 <AvatarFallback>{dictionary.author.charAt(0)}</AvatarFallback>
               </Avatar>
               <div className="text-left">
