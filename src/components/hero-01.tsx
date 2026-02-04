@@ -5,7 +5,7 @@ export function Hero01({ dictionary }: { dictionary: any }) {
     <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-center">
       <div className="container grid grid-cols-1 md:grid-cols-4 gap-12 items-center">
         <div className="md:col-span-3 flex flex-col items-start text-left">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase leading-none text-foreground">
+          <h1 className="text-5xl md:text-[5.5rem] font-bold tracking-tighter mb-6 uppercase leading-none text-foreground">
             {dictionary.title}
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl">
