@@ -4,6 +4,7 @@ import { Locale } from "@/lib/i18n-config";
 import { Hero02 } from "@/components/hero-02";
 import { PricingSection } from "@/components/pricing-section";
 import { FeatureSection } from "@/components/feature-section";
+import { TestimonialSection } from "@/components/testimonial-section";
 
 export default async function Home({
   params: { lang },
@@ -16,6 +17,7 @@ export default async function Home({
       <Hero01 dictionary={dictionary.hero} />
       <Hero02 dictionary={dictionary} />
       <FeatureSection dictionary={dictionary.feature_section} />
+      <TestimonialSection dictionary={dictionary.testimonial_section} />
       <PricingSection dictionary={dictionary.pricing} />
     </>
   );
