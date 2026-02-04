@@ -67,5 +67,9 @@
       "unlimited_products": "Productos y pedidos ilimitados",
       "priority_support": "Soporte prioritario"
     }
+  },
+  "planet_badge": {
+    "title": "Somos parte de 1% for the Planet",
+    "description": "Una red global con miles de empresas y organizaciones ambientales que trabajan juntas para apoyar a las personas y el planeta."
   }
 }

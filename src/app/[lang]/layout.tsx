@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/lib/i18n-config";
 import { AppWrapper } from "@/components/app-wrapper";
+import { PlanetBadge } from "@/components/planet-badge";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default async function RootLayout({
             <Header dictionary={dictionary} />
             <main className="flex-1">{children}</main>
             <Footer dictionary={dictionary.footer} />
+            <PlanetBadge dictionary={dictionary.planet_badge} />
           </div>
         </AppWrapper>
       </body>
