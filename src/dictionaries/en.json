@@ -3,5 +3,31 @@
     "title": "The first Autonomous E-commerce Platform in Latin America.",
     "subtitle": "Brazilian engineering. Fixed cost. Agentic operation.",
     "cta_primary": "Create my store"
+  },
+  "header": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "login": "Login",
+    "start_now": "Start Now"
+  },
+  "comparison": {
+    "title": "No more abusive fees",
+    "subtitle": "At Volcana™, you pay a fair, flat price. 100% of your sales profit is yours.",
+    "traditional_platform": "Traditional Platforms",
+    "traditional_fee": "3-5% fee per sale",
+    "traditional_description": "Fees that punish your growth and eat a significant part of your profit.",
+    "volcana_platform": "Volcana™",
+    "volcana_fee": "0% fee per sale",
+    "volcana_description": "A flat monthly price, no matter how much you sell. Predictability for your business."
+  },
+  "topbar": {
+    "language": "EN-US",
+    "pt": "Português (BR)",
+    "en": "English",
+    "es": "Español"
+  },
+  "footer": {
+    "copyright": "© {year} Volcana™. All rights reserved."
   }
 }

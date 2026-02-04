@@ -8,8 +8,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-export function TopBar() {
+export function TopBar({ dictionary }: { dictionary: any }) {
+  const pathName = usePathname();
+  const redirectedPathName = (locale: string) => {
+    if (!pathName) return "/";
+    const segments = pathName.split("/");
+    segments[1] = locale;
+    return segments.join("/");
+  };
+
   return (
     <div className="bg-card border-b">
       <div className="container flex h-10 items-center justify-end max-w-screen-2xl">
@@ -17,18 +27,18 @@ export function TopBar() {
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="sm" className="flex items-center gap-2">
               <Globe className="h-4 w-4" />
-              <span>PT-BR</span>
+              <span>{dictionary.language}</span>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem>
-              Português (BR)
+            <DropdownMenuItem asChild>
+              <Link href={redirectedPathName('pt')}>{dictionary.pt}</Link>
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              English
+            <DropdownMenuItem asChild>
+              <Link href={redirectedPathName('en')}>{dictionary.en}</Link>
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              Español
+            <DropdownMenuItem asChild>
+              <Link href={redirectedPathName('es')}>{dictionary.es}</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

@@ -7,18 +7,18 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Sparkles } from "lucide-react";
 import { TopBar } from "./top-bar";
 
-export function Header() {
+export function Header({ dictionary }: { dictionary: any }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#", label: "Recursos" },
-    { href: "#", label: "Preços" },
-    { href: "#", label: "Blog" },
+    { href: "#", label: dictionary.header.features },
+    { href: "#", label: dictionary.header.pricing },
+    { href: "#", label: dictionary.header.blog },
   ];
 
   return (
     <>
-      <TopBar />
+      <TopBar dictionary={dictionary.topbar} />
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 max-w-screen-2xl items-center">
           <div className="mr-4 hidden md:flex">
@@ -31,7 +31,7 @@ export function Header() {
             <nav className="flex items-center gap-6 text-sm">
               {navLinks.map((link) => (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   className="transition-colors hover:text-foreground/80 text-foreground/60"
                 >
@@ -59,7 +59,7 @@ export function Header() {
                 <div className="flex flex-col gap-4 mt-8">
                   {navLinks.map((link) => (
                     <Link
-                      key={link.href}
+                      key={link.label}
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
                       className="text-lg font-medium text-foreground/80 hover:text-foreground"
@@ -82,8 +82,8 @@ export function Header() {
           </div>
 
           <div className="flex flex-1 items-center justify-end space-x-2">
-            <Button variant="ghost">Login</Button>
-            <Button className="font-bold bg-primary text-primary-foreground hover:bg-primary/90">Comece Agora</Button>
+            <Button variant="ghost">{dictionary.header.login}</Button>
+            <Button className="font-bold bg-primary text-primary-foreground hover:bg-primary/90">{dictionary.header.start_now}</Button>
           </div>
         </div>
       </header>

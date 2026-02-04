@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { getDictionary } from "@/lib/get-dictionary";
+import { Locale } from "@/lib/i18n-config";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -14,18 +16,22 @@ export const metadata: Metadata = {
   description: "A primeira plataforma de e-commerce autônoma da América Latina.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(params.lang);
+
   return (
-    <html lang="pt-BR">
+    <html lang={params.lang}>
       <body className={`${outfit.variable} font-sans antialiased`}>
         <div className="relative flex min-h-screen flex-col bg-background">
-          <Header />
+          <Header dictionary={dictionary} />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer dictionary={dictionary.footer} />
         </div>
       </body>
     </html>
