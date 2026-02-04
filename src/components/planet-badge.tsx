@@ -13,8 +13,8 @@ export function PlanetBadge({ dictionary }: { dictionary: any }) {
     <div className="fixed bottom-6 right-6 z-50">
       <HoverCard>
         <HoverCardTrigger asChild>
-          <Button variant="ghost" size="icon" className="rounded-full h-14 w-14 bg-card/80 backdrop-blur-sm hover:bg-card text-foreground">
-            <OnePercentLogo className="h-10 w-10" />
+          <Button variant="ghost" size="icon" className="rounded-full h-16 w-16 bg-card/80 backdrop-blur-sm hover:bg-card text-foreground">
+            <OnePercentLogo className="h-12 w-12" />
           </Button>
         </HoverCardTrigger>
         <HoverCardContent className="w-80" side="top" align="end">
