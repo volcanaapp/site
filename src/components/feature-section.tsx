@@ -26,28 +26,14 @@ export function FeatureSection({ dictionary }: { dictionary: any }) {
             </Button>
           </div>
           <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-2xl mx-auto">
-              <div className="relative aspect-[16/10] bg-[#0A0A0A] border-4 border-muted-foreground/20 rounded-t-2xl overflow-hidden shadow-2xl shadow-primary/10">
-                <div className="absolute top-0 left-0 w-full h-8 bg-card flex items-center px-4 gap-2">
-                  <span className="h-3 w-3 rounded-full bg-muted-foreground/30"></span>
-                  <span className="h-3 w-3 rounded-full bg-muted-foreground/30"></span>
-                  <span className="h-3 w-3 rounded-full bg-muted-foreground/30"></span>
-                </div>
-                <div className="pt-8 h-full">
-                  <Image
-                    src="https://a.storyblok.com/f/314917/2532x1582/1297851299/hero.png"
-                    alt="Product screenshot"
-                    width={1266}
-                    height={791}
-                    className="w-full h-full object-cover"
-                    crossOrigin="anonymous"
-                  />
-                </div>
-              </div>
-              <div className="h-4 bg-muted-foreground/30 rounded-b-xl relative">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/4 h-1 bg-muted-foreground/20 rounded-full"></div>
-              </div>
-            </div>
+            <Image
+              src="https://a.storyblok.com/f/314917/1634x1248/c71656cb82/mbp.png"
+              alt="Product screenshot on a laptop"
+              width={1634}
+              height={1248}
+              className="w-full max-w-2xl mx-auto"
+              crossOrigin="anonymous"
+            />
           </div>
         </div>
       </section>
