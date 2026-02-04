@@ -1,37 +1,13 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState } from "react";
+import { useInView } from "@/hooks/use-in-view";
 
 export function Hero02({ dictionary }: { dictionary: any }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        rootMargin: "0px",
-        threshold: 0.1,
-      }
-    );
-
-    const currentRef = sectionRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
+  const { ref: sectionRef, isInView } = useInView<HTMLElement>({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   const columns = dictionary.hero2.columns;
 
@@ -41,7 +17,7 @@ export function Hero02({ dictionary }: { dictionary: any }) {
         ref={sectionRef}
         className={cn(
           "bg-background py-20 md:py-32 transition-all duration-1000 ease-in-out",
-          isVisible ? "opacity-100" : "opacity-0"
+          isInView ? "opacity-100" : "opacity-0"
         )}
       >
         <div className="container max-w-screen-xl">
@@ -51,7 +27,7 @@ export function Hero02({ dictionary }: { dictionary: any }) {
                 key={index}
                 className={cn(
                   "transition-all duration-700 ease-out",
-                  isVisible
+                  isInView
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 )}

@@ -1,12 +1,26 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useInView } from "@/hooks/use-in-view";
+import { cn } from "@/lib/utils";
 
 export function FeatureSection({ dictionary }: { dictionary: any }) {
+  const { ref, isInView } = useInView<HTMLElement>({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   return (
     <div className="dark">
-      <section className="w-full bg-background py-20 md:py-32">
+      <section ref={ref} className="w-full bg-background py-20 md:py-32 overflow-hidden">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-16 items-center max-w-screen-xl">
-          <div className="flex flex-col items-start text-left space-y-6">
+          <div
+            className={cn(
+              "flex flex-col items-start text-left space-y-6 transition-all duration-700 ease-out",
+              isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+            )}
+          >
             <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
               <span className="text-muted-foreground">{dictionary.title_part1}</span>
               <br />
@@ -27,7 +41,13 @@ export function FeatureSection({ dictionary }: { dictionary: any }) {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center">
+          <div
+            className={cn(
+              "flex items-center justify-center transition-all duration-700 ease-out",
+              isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            )}
+            style={{ transitionDelay: "200ms" }}
+          >
             <Image
               src="https://a.storyblok.com/f/314917/1634x1248/c71656cb82/mbp.png"
               alt="Product screenshot on a laptop"
