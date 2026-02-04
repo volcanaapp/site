@@ -97,12 +97,17 @@ export default {
         'pulse-slow': {
           '0%, 100%': { transform: 'scale(1)', opacity: '1' },
           '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+        },
+        'clip-reveal': {
+          '0%': { 'clip-path': 'polygon(50% 50%, 50% 50%, 50% 50%)' },
+          '100%': { 'clip-path': 'polygon(50% -100%, 200% 100%, -100% 100%)' },
         }
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-slow': 'pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'clip-reveal': 'clip-reveal 1s cubic-bezier(0.25, 1, 0.5, 1) forwards',
   		}
   	}
   },
