@@ -1,5 +1,3 @@
-import { MadeWithDyad } from "@/components/made-with-dyad";
-
 export function Footer() {
   return (
     <footer className="border-t border-border/40">
@@ -9,7 +7,6 @@ export function Footer() {
             © {new Date().getFullYear()} Volcana™. Todos os direitos reservados.
           </p>
         </div>
-        <MadeWithDyad />
       </div>
     </footer>
   );
