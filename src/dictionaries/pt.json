@@ -23,19 +23,19 @@
   "hero2": {
     "columns": [
       {
-        "title": "IA.",
-        "text": "A tecnologia que ninguém pode ignorar, mas que a maioria luta para implementar com segurança, entender completamente ou usar de forma eficaz."
+        "title": "AGENTIC.",
+        "text": "A tecnologia que a maioria das plataformas tenta \"pendurar\" como acessório — mas poucas conseguem integrar ao core para realmente executar a operação por você."
       },
       {
-        "title": "GAP.",
-        "text": "A lacuna entre tecnologia, habilidades e recursos humanos."
+        "title": "FRICTION.",
+        "text": "O abismo entre ter um produto e lucrar online, hoje preenchido por taxas abusivas sobre suas vendas, processos manuais e ferramentas fragmentadas."
       },
       {
-        "title": "FECHADO.",
-        "text": "Soluções reais. Pessoas reais. Resultados reais."
+        "title": "AUTONOMOUS.",
+        "text": "A solução real. Uma plataforma que opera a si mesma. Sem \"imposto sobre o seu crescimento\". Eficiência agentica nativa."
       }
     ],
-    "main_heading": "ESTAMOS REVOLUCIONANDO A FORMA COMO O BOM TRABALHO É FEITO."
+    "main_heading": "ESTAMOS REVOLUCIONANDO A FORMA COMO O E-COMMERCE É OPERADO."
   },
   "pricing": {
     "title": "Um preço, possibilidades ilimitadas.",
