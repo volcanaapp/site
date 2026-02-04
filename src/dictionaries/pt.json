@@ -36,6 +36,19 @@
       }
     ]
   },
+  "feature_section": {
+    "title_part1": "FEITO PARA",
+    "title_part2": "PERFORMANCE.",
+    "subtitle": "O dashboard agêntico que centraliza toda a sua operação.",
+    "description1": "Da gestão de inventário à otimização de SEO e recuperação de clientes, nossos agentes de IA trabalham 24/7 para garantir que sua loja esteja sempre no auge do desempenho.",
+    "description2": "Pare de gerenciar ferramentas. Comece a gerenciar resultados.",
+    "cta": "Explore o Dashboard"
+  },
+  "testimonial_section": {
+    "quote": "A Volcana transformou completamente nossa operação. Passamos de horas em tarefas manuais para focar em estratégia. Nossas vendas aumentaram 30% e finalmente estou dormindo à noite.",
+    "author": "Camila Santos",
+    "author_title": "Fundadora, Moda Viva"
+  },
   "pricing": {
     "title": "Um preço, possibilidades ilimitadas.",
     "subtitle": "Sem taxas escondidas, sem surpresas. Apenas uma assinatura mensal para desbloquear todo o poder da sua operação autônoma.",

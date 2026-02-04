@@ -36,6 +36,19 @@
       }
     ]
   },
+  "feature_section": {
+    "title_part1": "HECHO PARA",
+    "title_part2": "EL RENDIMIENTO.",
+    "subtitle": "El panel de control agéntico que centraliza toda tu operación.",
+    "description1": "Desde la gestión de inventario hasta la optimización de SEO y la recuperación de clientes, nuestros agentes de IA trabajan 24/7 para garantizar que tu tienda siempre esté en su máximo rendimiento.",
+    "description2": "Deja de gestionar herramientas. Empieza a gestionar resultados.",
+    "cta": "Explora el Panel"
+  },
+  "testimonial_section": {
+    "quote": "Volcana transformó por completo nuestra operación. Pasamos de dedicar horas a tareas manuales a centrarnos en la estrategia. Nuestras ventas han aumentado un 30% y por fin duermo por la noche.",
+    "author": "Camila Santos",
+    "author_title": "Fundadora, Moda Viva"
+  },
   "pricing": {
     "title": "Un precio, posibilidades ilimitadas.",
     "subtitle": "Sin tarifas ocultas, sin sorpresas. Solo una suscripción mensual para desbloquear todo el poder de tu operación autónoma.",

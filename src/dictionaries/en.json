@@ -36,6 +36,19 @@
       }
     ]
   },
+  "feature_section": {
+    "title_part1": "BUILT FOR",
+    "title_part2": "PERFORMANCE.",
+    "subtitle": "The agentic dashboard that centralizes your entire operation.",
+    "description1": "From inventory management to SEO optimization and customer recovery, our AI agents work 24/7 to ensure your store is always performing at its peak.",
+    "description2": "Stop managing tools. Start managing results.",
+    "cta": "Explore the Dashboard"
+  },
+  "testimonial_section": {
+    "quote": "Volcana completely transformed our operation. We went from spending hours on manual tasks to focusing on strategy. Our sales are up 30% and I'm finally sleeping at night.",
+    "author": "Camila Santos",
+    "author_title": "Founder, Moda Viva"
+  },
   "pricing": {
     "title": "One price, unlimited possibilities.",
     "subtitle": "No hidden fees, no surprises. Just one monthly subscription to unlock the full power of your autonomous operation.",
