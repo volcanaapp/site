@@ -38,5 +38,20 @@
       "name": "Agente de Conversión",
       "desc": "Soporte activo centrado en cerrar carritos abandonados sin intervención humana."
     }
+  },
+  "pricing": {
+    "title": "Un precio, posibilidades ilimitadas.",
+    "subtitle": "Sin tarifas ocultas, sin sorpresas. Solo una suscripción mensual para desbloquear todo el poder de tu operación autónoma.",
+    "plan_name": "Plan Autónomo",
+    "plan_description": "Todo lo que necesitas para escalar.",
+    "price": "$59",
+    "per_month": "/mes",
+    "cta": "Empezar ahora",
+    "features": {
+      "ai_agents": "Agentes de IA ilimitados",
+      "zero_fees": "0% de tarifa de transacción",
+      "unlimited_products": "Productos y pedidos ilimitados",
+      "priority_support": "Soporte prioritario"
+    }
   }
 }

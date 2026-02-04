@@ -38,5 +38,20 @@
       "name": "Conversion Agent",
       "desc": "Active support focused on closing abandoned carts without human intervention."
     }
+  },
+  "pricing": {
+    "title": "One price, unlimited possibilities.",
+    "subtitle": "No hidden fees, no surprises. Just one monthly subscription to unlock the full power of your autonomous operation.",
+    "plan_name": "Autonomous Plan",
+    "plan_description": "Everything you need to scale.",
+    "price": "$59",
+    "per_month": "/month",
+    "cta": "Start Now",
+    "features": {
+      "ai_agents": "Unlimited AI Agents",
+      "zero_fees": "0% transaction fee",
+      "unlimited_products": "Unlimited products and orders",
+      "priority_support": "Priority support"
+    }
   }
 }
