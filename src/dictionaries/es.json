@@ -23,19 +23,19 @@
   "hero2": {
     "columns": [
       {
-        "title": "AGÉNTICO.",
-        "text": "La tecnología que la mayoría de las plataformas intentan \"añadir\" como un accesorio, pero pocas logran integrar en el núcleo para realmente ejecutar la operación por ti."
+        "title": "IA.",
+        "text": "La tecnología que nadie puede permitirse ignorar, pero que la mayoría lucha por implementar de forma segura, comprender plenamente o utilizar eficazmente."
       },
       {
-        "title": "FRICCIÓN.",
-        "text": "El abismo entre tener un producto y obtener ganancias en línea, hoy lleno de tarifas abusivas sobre tus ventas, procesos manuales y herramientas fragmentadas."
+        "title": "BRECHA.",
+        "text": "La brecha entre tecnología, habilidades y recursos humanos."
       },
       {
-        "title": "AUTÓNOMO.",
-        "text": "La solución real. Una plataforma que se opera a sí misma. Sin \"impuesto sobre tu crecimiento\". Eficiencia agéntica nativa."
+        "title": "CERRADA.",
+        "text": "Soluciones reales. Personas reales. Resultados reales."
       }
     ],
-    "main_heading": "ESTAMOS REVOLUCIONANDO LA FORMA EN QUE SE OPERA EL E-COMMERCE."
+    "main_heading": "ESTAMOS REVOLUCIONANDO LA FORMA EN QUE SE HACE EL BUEN TRABAJO."
   },
   "pricing": {
     "title": "Un precio, posibilidades ilimitadas.",
