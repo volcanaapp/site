@@ -23,19 +23,18 @@
   "hero2": {
     "columns": [
       {
-        "title": "IA.",
-        "text": "A tecnologia que ninguém pode ignorar, mas que a maioria luta para implementar com segurança, entender completamente ou usar de forma eficaz."
+        "title": "AGENTIC.",
+        "text": "A tecnologia que não apenas assiste — ela executa. Muitos tentam implementar IA como um acessório, mas poucos conseguem torná-la o motor da operação. A Volcana™ nasce agent-first para garantir que sua tecnologia trabalhe para você, e não o contrário."
       },
       {
-        "title": "GAP.",
-        "text": "A lacuna entre tecnologia, habilidades e recursos humanos."
+        "title": "CHAOS.",
+        "text": "O abismo entre ter uma loja e conseguir operá-la. O varejista moderno está sufocado por inúmeros pontos de contato, ferramentas fragmentadas e custos variáveis. Nós fechamos esse gap eliminando a complexidade operacional manual com agentes autônomos."
       },
       {
-        "title": "FECHADO.",
-        "text": "Soluções reais. Pessoas reais. Resultados reais."
+        "title": "MARGIN.",
+        "text": "Crescimento real. Custo fixo. Sem 'imposto' sobre o sucesso. Diferente das plataformas tradicionais que punem seu crescimento com taxas de porcentagem, oferecemos previsibilidade total. Soluções reais para quem precisa de escala sem comprometer a margem de lucro."
       }
-    ],
-    "main_heading": "ESTAMOS REVOLUCIONANDO A FORMA COMO O BOM TRABALHO É FEITO."
+    ]
   },
   "pricing": {
     "title": "Um preço, possibilidades ilimitadas.",
@@ -51,18 +50,5 @@
       "unlimited_products": "Produtos e pedidos ilimitados",
       "priority_support": "Suporte prioritário"
     }
-  },
-  "feature_section": {
-    "title_part1": "APRESENTANDO",
-    "title_part2": "HERO",
-    "subtitle": "Seu Atalho para a Inovação Começa Aqui.",
-    "description1": "Hero é mais do que cortar custos - é sobre destravar potencial. Aumente a produtividade com um agente de IA personalizado e adaptativo que aprende e evolui com sua equipe.",
-    "description2": "Isso não é apenas um retorno sobre o investimento - é um retorno sobre a inovação.",
-    "cta": "Agendar uma demonstração"
-  },
-  "testimonial_section": {
-    "quote": "A Volcana não apenas otimizou nossa operação, ela a transformou. Em seis meses, nossa eficiência aumentou em 40% e as vendas cresceram 25%. É o futuro do e-commerce, hoje.",
-    "author": "Juliana Alves",
-    "author_title": "CEO, VesteBem"
   }
 }

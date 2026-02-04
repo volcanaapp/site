@@ -23,19 +23,18 @@
   "hero2": {
     "columns": [
       {
-        "title": "AI.",
-        "text": "The technology no one can afford to ignore-buy most struggle to implement securely, understand fully, or use effectively."
+        "title": "AGENTIC.",
+        "text": "Technology that doesn't just assist—it executes. Many try to implement AI as an accessory, but few manage to make it the engine of the operation. Volcana™ is born agent-first to ensure that its technology works for you, and not the other way around."
       },
       {
-        "title": "GAP.",
-        "text": "The Gap between technology, skills and people resources."
+        "title": "CHAOS.",
+        "text": "The abyss between having a store and being able to operate it. The modern retailer is suffocated by countless contact points, fragmented tools, and variable costs. We close this gap by eliminating manual operational complexity with autonomous agents."
       },
       {
-        "title": "CLOSED.",
-        "text": "Real solutions. Real people. Real outcomes."
+        "title": "MARGIN.",
+        "text": "Real growth. Fixed cost. No 'tax' on success. Unlike traditional platforms that punish your growth with percentage fees, we offer total predictability. Real solutions for those who need to scale without compromising their profit margin."
       }
-    ],
-    "main_heading": "WE'RE REVOLUTIONIZING THE WAY GOOD WORK GETS DONE."
+    ]
   },
   "pricing": {
     "title": "One price, unlimited possibilities.",
@@ -51,18 +50,5 @@
       "unlimited_products": "Unlimited products and orders",
       "priority_support": "Priority support"
     }
-  },
-  "feature_section": {
-    "title_part1": "INTRODUCING",
-    "title_part2": "HERO",
-    "subtitle": "Your Shortcut to Innovation Starts Here.",
-    "description1": "Hero is about more than cutting costs—it's about unlocking potential. Boost productivity with a personalized, adaptive AI agent that learns and evolves with your team.",
-    "description2": "This isn't just a return on investment—it's a return on innovation.",
-    "cta": "Book an intro"
-  },
-  "testimonial_section": {
-    "quote": "Volcana didn't just optimize our operation, it transformed it. In six months, our efficiency increased by 40% and sales grew by 25%. It's the future of e-commerce, today.",
-    "author": "Juliana Alves",
-    "author_title": "CEO, VesteBem"
   }
 }
