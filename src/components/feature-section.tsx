@@ -36,7 +36,7 @@ export function FeatureSection({ dictionary }: { dictionary: any }) {
               <Button size="lg" className="font-bold text-lg py-6 px-8 bg-primary-foreground text-background hover:bg-primary-foreground/90 rounded-lg">
                 {dictionary.cta}
               </Button>
-              <Button variant="outline" size="lg" className="font-bold text-lg py-6 px-8 rounded-lg">
+              <Button size="lg" className="font-bold text-lg py-6 px-8 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90">
                 {dictionary.learn_more}
               </Button>
             </div>
