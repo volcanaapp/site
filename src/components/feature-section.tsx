@@ -18,12 +18,14 @@ export function FeatureSection({ dictionary }: { dictionary: any }) {
             <p className="text-lg text-muted-foreground max-w-md">
               {dictionary.description1}
             </p>
-            <p className="text-lg text-foreground max-w-md font-semibold">
-              {dictionary.description2}
-            </p>
-            <Button size="lg" className="font-bold text-lg py-6 px-8 bg-primary-foreground text-background hover:bg-primary-foreground/90 rounded-lg mt-4">
-              {dictionary.cta}
-            </Button>
+            <div className="flex flex-wrap items-center gap-4">
+              <Button size="lg" className="font-bold text-lg py-6 px-8 bg-primary-foreground text-background hover:bg-primary-foreground/90 rounded-lg">
+                {dictionary.cta}
+              </Button>
+              <Button variant="outline" size="lg" className="font-bold text-lg py-6 px-8 rounded-lg">
+                {dictionary.learn_more}
+              </Button>
+            </div>
           </div>
           <div className="flex items-center justify-center">
             <Image
