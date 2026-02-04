@@ -33,9 +33,6 @@ export function FeatureSection({ dictionary }: { dictionary: any }) {
               {dictionary.description1}
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <Button variant="outline" size="lg" className="font-bold text-lg py-6 px-8 bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-background rounded-lg">
-                {dictionary.cta}
-              </Button>
               <Button size="lg" className="font-bold text-lg py-6 px-8 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90">
                 {dictionary.learn_more}
               </Button>
