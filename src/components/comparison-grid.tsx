@@ -3,7 +3,7 @@ import { CheckCircle, XCircle } from "lucide-react";
 export function ComparisonGrid({ dictionary }: { dictionary: any }) {
   return (
     <div className="dark">
-      <section className="bg-background border-t border-border/40">
+      <section className="bg-background relative -mt-24 rounded-t-3xl shadow-2xl pt-1">
         <div className="container py-20 md:py-32 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">{dictionary.title}</h2>
           <p className="text-lg text-muted-foreground mb-16 max-w-3xl mx-auto">

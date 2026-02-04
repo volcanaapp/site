@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero01({ dictionary }: { dictionary: any }) {
   return (
-    <section className="w-full py-20 md:py-32">
+    <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-center">
       <div className="container grid grid-cols-1 md:grid-cols-4 gap-12 items-center">
         <div className="md:col-span-3 flex flex-col items-start text-left">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase leading-none text-foreground">
