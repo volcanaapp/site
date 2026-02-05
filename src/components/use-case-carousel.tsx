@@ -69,7 +69,7 @@ export function UseCaseCarousel({ dictionary }: { dictionary: any }) {
                   </div>
                   <div className="flex items-center justify-center">
                     <Image
-                      src={slide.image_url}
+                      src="https://www.dayos.com/assets/images-next/subpillars/accounting-accountsReceivable.webp"
                       alt={slide.title}
                       width={500}
                       height={500}
