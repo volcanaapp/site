@@ -7,6 +7,7 @@ import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/lib/i18n-config";
 import { AppWrapper } from "@/components/app-wrapper";
 import { PlanetBadge } from "@/components/planet-badge";
+import { SocialImpactBar } from "@/components/social-impact-bar";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default async function RootLayout({
           <div className="relative flex min-h-screen flex-col bg-background">
             <Header dictionary={dictionary} />
             <main className="flex-1">{children}</main>
+            <SocialImpactBar dictionary={dictionary.social_impact} />
             <Footer dictionary={dictionary.footer} footerDictionary={dictionary.new_footer} />
             <PlanetBadge dictionary={dictionary.planet_badge} />
           </div>

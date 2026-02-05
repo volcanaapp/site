@@ -186,6 +186,10 @@
       "text": "Learn about our journey of Brazilian engineering in redefining autonomous e-commerce for Latin America."
     }
   },
+  "social_impact": {
+    "text": "1% for the Planet. Because the future of e-commerce is sustainable.",
+    "link": "Learn about our commitment"
+  },
   "new_footer": {
     "contact_slogan": "Have questions or want to chat?",
     "contact_email": "hello@volcana.ai",
