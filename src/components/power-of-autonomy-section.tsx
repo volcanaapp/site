@@ -1,11 +1,3 @@
-"use client";
-
-import dynamic from 'next/dynamic';
-
-const Spline = dynamic(() => import('@splinetool/react-spline').then((mod) => mod.default), {
-  ssr: false,
-});
-
 export function PowerOfAutonomySection({ dictionary }: { dictionary: any }) {
   const columns = [
     {
@@ -35,7 +27,14 @@ export function PowerOfAutonomySection({ dictionary }: { dictionary: any }) {
             {columns.map((column, index) => (
               <div key={index} className="flex flex-col items-center text-center md:items-start md:text-left">
                 <div className="relative h-48 w-48 mb-8">
-                  <Spline scene="https://my.spline.design/greenchips-aByj2tjzOVnSsUrDgh9ygd4o/scene.splinecode" />
+                  <video
+                    src="https://a.storyblok.com/f/314917/x/168e5e4f12/ai_solutions-loop.webm"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <h3 className="text-2xl font-extrabold tracking-tight mb-4 text-lime uppercase">
                   {column.title}
