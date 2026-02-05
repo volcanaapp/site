@@ -110,5 +110,19 @@
         "image_url": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png"
       }
     ]
+  },
+  "orchestrated_ecosystem": {
+    "title": "Finalmente, la IA que domina toda su operación.",
+    "subtitle": "No somos solo otra integración superficial. Desarrollamos capas agénticas nativas que transforman las herramientas que ya utiliza en una fuerza de trabajo autónoma. Nuestra ingeniería de vanguardia garantiza que sus datos fluyan de manera inteligente entre sistemas, convirtiendo el software pasivo en herramientas de ejecución estratégica diseñadas para su beneficio.",
+    "logos": [
+      { "key": "totvs" },
+      { "key": "sap" },
+      { "key": "mercado_pago" },
+      { "key": "stripe" },
+      { "key": "loggi" },
+      { "key": "salesforce" },
+      { "key": "meta_ads" },
+      { "key": "rd_station" }
+    ]
   }
 }

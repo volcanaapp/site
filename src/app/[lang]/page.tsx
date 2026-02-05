@@ -7,6 +7,7 @@ import { FeatureSection } from "@/components/feature-section";
 import { TestimonialSection } from "@/components/testimonial-section";
 import { PowerOfAutonomySection } from "@/components/power-of-autonomy-section";
 import { UseCaseCarousel } from "@/components/use-case-carousel";
+import { OrchestratedEcosystemSection } from "@/components/orchestrated-ecosystem-section";
 
 export default async function Home({
   params: { lang },
@@ -22,6 +23,7 @@ export default async function Home({
       <TestimonialSection dictionary={dictionary.testimonial_section} />
       <PowerOfAutonomySection dictionary={dictionary.power_of_autonomy} />
       <UseCaseCarousel dictionary={dictionary.use_case_carousel} />
+      <OrchestratedEcosystemSection dictionary={dictionary.orchestrated_ecosystem} />
       <PricingSection dictionary={dictionary.pricing} />
     </>
   );
