@@ -232,5 +232,20 @@
     "title": "Brazilian Engineering for the Future of E-commerce.",
     "subtitle": "We were born to challenge the status quo and build the infrastructure for the next generation of digital commerce in Latin America.",
     "cta_primary": "Talk to an expert"
+  },
+  "manifesto": {
+    "title": "The New Era of Digital Ground",
+    "paragraphs": [
+      "The e-commerce market is stuck in the past. It has become rigid, expensive, and full of frills. They said that to sell online you needed an army of agencies, fees that eat your margin, and contracts that tie you down.",
+      "We disagree.",
+      "Volcana was born to cause an eruption in this model. We are the first AI-First platform in Brazil. Here, technology is not a passive tool; it is the active engine of your business.",
+      "We believe that the profit should stay with those who take the risk: you, the retailer. That's why we say no to sales fees and no to abusive fixed costs.",
+      "We are cutting-edge technology, tropicalized for our reality. And because we know that technology and nature must go hand in hand, every token used on our platform helps regenerate the planet.",
+      "Volcana. The power of AI. The strength of your store."
+    ],
+    "signature": {
+      "name": "Renan",
+      "title": "CEO & Founder of Volcana"
+    }
   }
 }

@@ -232,5 +232,20 @@
     "title": "Engenharia Brasileira para o Futuro do E-commerce.",
     "subtitle": "Nascemos para desafiar o status quo e construir a infraestrutura para a próxima geração do comércio digital na América Latina.",
     "cta_primary": "Fale com um especialista"
+  },
+  "manifesto": {
+    "title": "A Nova Era do Solo Digital",
+    "paragraphs": [
+      "O mercado de e-commerce parou no tempo. Ele ficou rígido, caro e cheio de penduricalhos. Disseram que para vender online você precisava de um exército de agências, taxas que comem sua margem e contratos que te prendem.",
+      "Nós discordamos.",
+      "A Volcana nasceu para causar uma erupção nesse modelo. Somos a primeira plataforma First AI do Brasil. Aqui, a tecnologia não é uma ferramenta passiva; ela é o motor ativo do seu negócio.",
+      "Acreditamos que o lucro deve ficar com quem assume o risco: você, lojista. Por isso, dizemos não às taxas sobre vendas e não aos custos fixos abusivos.",
+      "Somos tecnologia de ponta, tropicalizada para a nossa realidade. E porque sabemos que tecnologia e natureza devem andar juntas, cada token utilizado na nossa plataforma ajuda a regenerar o planeta.",
+      "Volcana. O poder da IA. A força da sua loja."
+    ],
+    "signature": {
+      "name": "Renan",
+      "title": "CEO e Founder da Volcana"
+    }
   }
 }

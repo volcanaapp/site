@@ -232,5 +232,20 @@
     "title": "Ingeniería Brasileña para el Futuro del E-commerce.",
     "subtitle": "Nacimos para desafiar el status quo y construir la infraestructura para la próxima generación de comercio digital en América Latina.",
     "cta_primary": "Hable con un experto"
+  },
+  "manifesto": {
+    "title": "La Nueva Era del Suelo Digital",
+    "paragraphs": [
+      "El mercado de e-commerce se ha quedado estancado. Se ha vuelto rígido, caro y lleno de adornos. Dijeron que para vender en línea necesitabas un ejército de agencias, comisiones que devoran tu margen y contratos que te atan.",
+      "No estamos de acuerdo.",
+      "Volcana nació para provocar una erupción en este modelo. Somos la primera plataforma AI-First de Brasil. Aquí, la tecnología no es una herramienta pasiva; es el motor activo de tu negocio.",
+      "Creemos que las ganancias deben quedarse con quienes asumen el riesgo: tú, el comerciante. Por eso, decimos no a las comisiones sobre las ventas y no a los costos fijos abusivos.",
+      "Somos tecnología de punta, tropicalizada para nuestra realidad. Y porque sabemos que la tecnología y la naturaleza deben ir de la mano, cada token utilizado en nuestra plataforma ayuda a regenerar el planeta.",
+      "Volcana. El poder de la IA. La fuerza de tu tienda."
+    ],
+    "signature": {
+      "name": "Renan",
+      "title": "CEO y Fundador de Volcana"
+    }
   }
 }
