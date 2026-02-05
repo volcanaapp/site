@@ -6,6 +6,7 @@ import { PricingSection } from "@/components/pricing-section";
 import { FeatureSection } from "@/components/feature-section";
 import { TestimonialSection } from "@/components/testimonial-section";
 import { PowerOfAutonomySection } from "@/components/power-of-autonomy-section";
+import { UseCaseCarousel } from "@/components/use-case-carousel";
 
 export default async function Home({
   params: { lang },
@@ -20,6 +21,7 @@ export default async function Home({
       <FeatureSection dictionary={dictionary.feature_section} />
       <TestimonialSection dictionary={dictionary.testimonial_section} />
       <PowerOfAutonomySection dictionary={dictionary.power_of_autonomy} />
+      <UseCaseCarousel dictionary={dictionary.use_case_carousel} />
       <PricingSection dictionary={dictionary.pricing} />
     </>
   );

@@ -86,5 +86,29 @@
       "title": "AGENTS.",
       "text": "No se limite a mantener las luces encendidas. Evolucione. No se conforme con una plataforma pasiva. Nos aseguramos de que su infraestructura esté lista para agentes, desbloqueando el máximo ROI de sus agentes y sistemas actuales. Transformamos la tecnología en una fuerza laboral especializada para dominar su mercado."
     }
+  },
+  "use_case_carousel": {
+    "title": "Explore nuestra biblioteca de casos de uso.",
+    "subtitle": "Implemente IA rápidamente con nuestra biblioteca de casos de uso. No se preocupe más por dónde o cómo empezar.",
+    "slides": [
+      {
+        "title": "Optimice los procesos manuales con flujos de trabajo agénticos.",
+        "description": "Nombrada la Principal Tendencia Tecnológica Estratégica de 2025 por Gartner, Volcana lidera el camino en IA Agéntica para aplicaciones empresariales.",
+        "button_text": "Más detalles",
+        "image_url": "https://a.storyblok.com/f/314917/1024x1024/013a2ac9b3/01.png"
+      },
+      {
+        "title": "Automatice el soporte al cliente con bots inteligentes.",
+        "description": "Reduzca los tiempos de respuesta y aumente la satisfacción del cliente con agentes de IA que resuelven problemas 24/7.",
+        "button_text": "Ver en acción",
+        "image_url": "https://a.storyblok.com/f/314917/1024x1024/50f825a393/02.png"
+      },
+      {
+        "title": "Personalice la experiencia de compra a escala.",
+        "description": "Nuestros agentes analizan el comportamiento del usuario para ofrecer recomendaciones de productos ultra relevantes, aumentando las tasas de conversión.",
+        "button_text": "Descubra cómo",
+        "image_url": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png"
+      }
+    ]
   }
 }

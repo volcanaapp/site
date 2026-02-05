@@ -86,5 +86,29 @@
       "title": "AGENTS.",
       "text": "Don't just keep the lights on. Evolve. Don't settle for a passive platform. We ensure your infrastructure is agentic-ready, unlocking the maximum ROI from your current agents and systems. We transform technology into a specialized workforce to dominate your market."
     }
+  },
+  "use_case_carousel": {
+    "title": "Explore our use case library.",
+    "subtitle": "Deploy AI quickly with our use case library. No more worries about where or how to start.",
+    "slides": [
+      {
+        "title": "Streamline manual processes with agentic workflows.",
+        "description": "Named the Top Strategic Tech Trend of 2025 by Gartner, Volcana leads the way in Agentic AI for enterprise business apps.",
+        "button_text": "More details",
+        "image_url": "https://a.storyblok.com/f/314917/1024x1024/013a2ac9b3/01.png"
+      },
+      {
+        "title": "Automate customer support with intelligent bots.",
+        "description": "Reduce response times and increase customer satisfaction with AI agents that solve problems 24/7.",
+        "button_text": "See it in action",
+        "image_url": "https://a.storyblok.com/f/314917/1024x1024/50f825a393/02.png"
+      },
+      {
+        "title": "Personalize the shopping experience at scale.",
+        "description": "Our agents analyze user behavior to offer ultra-relevant product recommendations, boosting conversion rates.",
+        "button_text": "Discover how",
+        "image_url": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png"
+      }
+    ]
   }
 }
