@@ -190,6 +190,36 @@
     "text": "1% para el Planeta. Porque el futuro del e-commerce também es sostenible.",
     "link": "Conoce nuestro compromiso"
   },
+  "product_page": {
+    "bestseller": "Más Vendido",
+    "color": "Color",
+    "size": "Talla",
+    "quantity": "Cantidad",
+    "add_to_cart": "Añadir al Carrito",
+    "shipping_info": "Envío gratis en pedidos superiores a 50 €",
+    "details_title": "Detalles del Producto",
+    "shipping_title": "Envío y Devoluciones",
+    "shipping_content": "Ofrecemos envíos a todo el mundo. Devoluciones gratuitas en 30 días.",
+    "related_title": "También te podría gustar",
+    "mock_product": {
+      "name": "Cápsula Volcana Nature",
+      "price": "49,90 €",
+      "description": "Una fusión de tecnología y naturaleza, encapsulada para revitalizar tu rutina. Hecho con ingredientes sostenibles de la selva amazónica.",
+      "colors": [
+        { "name": "Verde Bosque", "hex": "#228B22" },
+        { "name": "Marrón Tierra", "hex": "#A0522D" },
+        { "name": "Azul Cielo", "hex": "#87CEEB" }
+      ],
+      "sizes": ["S", "M", "L", "XL"],
+      "details": "Nuestra cápsula se produce con una mezcla exclusiva de extractos botánicos, vitaminas y minerales. Libre de crueldad, vegano y con embalaje 100% reciclable.",
+      "related_products": [
+        { "id": 1, "name": "Esencia Revitalizante", "price": "39 €", "image": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png" },
+        { "id": 2, "name": "Sérum del Bosque", "price": "45 €", "image": "https://a.storyblok.com/f/314917/1024x1024/50f825a393/02.png" },
+        { "id": 3, "name": "Tónico Natural", "price": "29 €", "image": "https://a.storyblok.com/f/314917/1024x1024/b5e6a3c9d8/use-case-workflow.png" },
+        { "id": 4, "name": "Hidratante Amazonia", "price": "55 €", "image": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png" }
+      ]
+    }
+  },
   "new_footer": {
     "contact_slogan": "¿Tiene preguntas o quiere conversar?",
     "contact_email": "hello@volcana.ai",
