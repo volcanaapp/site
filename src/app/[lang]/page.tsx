@@ -2,7 +2,6 @@ import { Hero01 } from "@/components/hero-01";
 import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/lib/i18n-config";
 import { Hero02 } from "@/components/hero-02";
-import { PricingSection } from "@/components/pricing-section";
 import { FeatureSection } from "@/components/feature-section";
 import { TestimonialSection } from "@/components/testimonial-section";
 import { PowerOfAutonomySection } from "@/components/power-of-autonomy-section";
@@ -24,7 +23,6 @@ export default async function Home({
       <PowerOfAutonomySection dictionary={dictionary.power_of_autonomy} />
       <UseCaseCarousel dictionary={dictionary.use_case_carousel} />
       <OrchestratedEcosystemSection dictionary={dictionary.orchestrated_ecosystem} />
-      <PricingSection dictionary={dictionary.pricing} />
     </>
   );
 }
