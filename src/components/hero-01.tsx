@@ -2,17 +2,10 @@ import { Button } from "@/components/ui/button";
 
 export function Hero01({ dictionary }: { dictionary: any }) {
   return (
-    <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-center relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <iframe
-          src="https://my.spline.design/greenchips-aByj2tjzOVnSsUrDgh9ygd4o/index.html"
-          frameBorder="0"
-          className="w-full h-full"
-        ></iframe>
-        <div className="absolute inset-0 bg-background/60 md:bg-gradient-to-r from-background via-background/70 to-transparent" />
-      </div>
+    <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-center relative overflow-hidden bg-background">
+      {/* Text content on the left */}
       <div className="container z-10 relative">
-        <div className="w-full md:w-3/4 lg:w-2/3 flex flex-col items-start text-left">
+        <div className="w-full md:w-3/4 lg:w-1/2 flex flex-col items-start text-left">
           <h1 className="text-5xl md:text-[5.5rem] font-bold tracking-tighter mb-6 uppercase leading-none text-foreground">
             {dictionary.title}
           </h1>
@@ -25,6 +18,15 @@ export function Hero01({ dictionary }: { dictionary: any }) {
             </Button>
           </div>
         </div>
+      </div>
+
+      {/* Spline animation on the right, bleeding off-screen */}
+      <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block">
+        <iframe
+          src="https://my.spline.design/greenchips-aByj2tjzOVnSsUrDgh9ygd4o/index.html"
+          frameBorder="0"
+          className="w-full h-full scale-150 lg:scale-125"
+        ></iframe>
       </div>
     </section>
   );
