@@ -1,27 +1,25 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export function TestimonialSection({ dictionary }: { dictionary: any }) {
   return (
     <div className="dark">
       <section className="w-full bg-background py-20 md:py-32">
-        <div className="container max-w-screen-md mx-auto text-center">
-          <figure>
-            <blockquote>
-              <p className="text-3xl md:text-4xl font-medium text-foreground leading-tight">
-                "{dictionary.quote}"
-              </p>
-            </blockquote>
-            <figcaption className="mt-8 flex items-center justify-center gap-4">
-              <Avatar className="h-12 w-12">
-                <AvatarImage src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt={dictionary.author} crossOrigin="anonymous" />
-                <AvatarFallback>{dictionary.author.charAt(0)}</AvatarFallback>
-              </Avatar>
-              <div className="text-left">
-                <div className="font-bold text-foreground">{dictionary.author}</div>
-                <div className="text-muted-foreground">{dictionary.author_title}</div>
-              </div>
-            </figcaption>
-          </figure>
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl space-y-6">
+            <h2 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl">
+              TURBINE SUA OPERAÇÃO COM IA AGÊNTICA
+            </h2>
+            <p className="text-lg text-muted-foreground md:text-xl">
+              Transforme a maneira como seu time trabalha com automação movida a IA, inteligência operacional instantânea e suporte especializado de agentes.
+            </p>
+            <div className="pt-2">
+              <Button size="lg">
+                Ver detalhes
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
