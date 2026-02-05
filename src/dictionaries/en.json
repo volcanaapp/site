@@ -190,36 +190,6 @@
     "text": "1% for the Planet. Because the future of e-commerce is sustainable.",
     "link": "Learn about our commitment"
   },
-  "product_page": {
-    "bestseller": "Best Seller",
-    "color": "Color",
-    "size": "Size",
-    "quantity": "Quantity",
-    "add_to_cart": "Add to Cart",
-    "shipping_info": "Free shipping on orders over $50",
-    "details_title": "Product Details",
-    "shipping_title": "Shipping & Returns",
-    "shipping_content": "We offer shipping worldwide. Free returns within 30 days.",
-    "related_title": "You might also like",
-    "mock_product": {
-      "name": "Volcana Nature Capsule",
-      "price": "$49.90",
-      "description": "A fusion of technology and nature, encapsulated to revitalize your routine. Made with sustainable ingredients from the Amazon rainforest.",
-      "colors": [
-        { "name": "Forest Green", "hex": "#228B22" },
-        { "name": "Earth Brown", "hex": "#A0522D" },
-        { "name": "Sky Blue", "hex": "#87CEEB" }
-      ],
-      "sizes": ["S", "M", "L", "XL"],
-      "details": "Our capsule is produced with an exclusive blend of botanical extracts, vitamins, and minerals. Cruelty-free, vegan, and with 100% recyclable packaging.",
-      "related_products": [
-        { "id": 1, "name": "Revitalizing Essence", "price": "$39", "image": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png" },
-        { "id": 2, "name": "Forest Serum", "price": "$45", "image": "https://a.storyblok.com/f/314917/1024x1024/50f825a393/02.png" },
-        { "id": 3, "name": "Natural Tonic", "price": "$29", "image": "https://a.storyblok.com/f/314917/1024x1024/b5e6a3c9d8/use-case-workflow.png" },
-        { "id": 4, "name": "Amazon Moisturizer", "price": "$55", "image": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png" }
-      ]
-    }
-  },
   "new_footer": {
     "contact_slogan": "Have questions or want to chat?",
     "contact_email": "hello@volcana.ai",

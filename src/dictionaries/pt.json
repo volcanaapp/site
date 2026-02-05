@@ -190,36 +190,6 @@
     "text": "1% para o Planeta. Porque o futuro do e-commerce também é sustentável.",
     "link": "Saiba mais sobre nosso compromisso"
   },
-  "product_page": {
-    "bestseller": "Mais Vendido",
-    "color": "Cor",
-    "size": "Tamanho",
-    "quantity": "Quantidade",
-    "add_to_cart": "Adicionar ao Carrinho",
-    "shipping_info": "Frete grátis para pedidos acima de R$200",
-    "details_title": "Detalhes do Produto",
-    "shipping_title": "Envio e Devoluções",
-    "shipping_content": "Oferecemos envio para todo o Brasil. Devoluções gratuitas em até 30 dias.",
-    "related_title": "Você também pode gostar",
-    "mock_product": {
-      "name": "Cápsula Volcana Nature",
-      "price": "R$189,90",
-      "description": "Uma fusão de tecnologia e natureza, encapsulada para revitalizar sua rotina. Feito com ingredientes sustentáveis da floresta amazônica.",
-      "colors": [
-        { "name": "Forest Green", "hex": "#228B22" },
-        { "name": "Earth Brown", "hex": "#A0522D" },
-        { "name": "Sky Blue", "hex": "#87CEEB" }
-      ],
-      "sizes": ["P", "M", "G", "GG"],
-      "details": "Nossa cápsula é produzida com um blend exclusivo de extratos botânicos, vitaminas e minerais. Livre de crueldade, vegano e com embalagem 100% reciclável.",
-      "related_products": [
-        { "id": 1, "name": "Essência Revitalizante", "price": "R$129", "image": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png" },
-        { "id": 2, "name": "Sérum Floresta", "price": "R$149", "image": "https://a.storyblok.com/f/314917/1024x1024/50f825a393/02.png" },
-        { "id": 3, "name": "Tônico Natural", "price": "R$99", "image": "https://a.storyblok.com/f/314917/1024x1024/b5e6a3c9d8/use-case-workflow.png" },
-        { "id": 4, "name": "Hidratante Amazônia", "price": "R$199", "image": "https://a.storyblok.com/f/314917/1024x1024/356a6a256c/03.png" }
-      ]
-    }
-  },
   "new_footer": {
     "contact_slogan": "Tem dúvidas ou quer conversar?",
     "contact_email": "hello@volcana.ai",
