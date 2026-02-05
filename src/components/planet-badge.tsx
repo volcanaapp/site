@@ -14,7 +14,7 @@ export function PlanetBadge({ dictionary }: { dictionary: any }) {
         <HoverCardTrigger asChild>
           <div className="relative h-28 w-40 cursor-pointer overflow-hidden rounded-xl transition-transform duration-200 hover:scale-105">
             <Image
-              src="/volcana-nature.png"
+              src="/volcana-nature.svg"
               alt="Volcana Nature"
               fill
               sizes="160px"
