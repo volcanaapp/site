@@ -59,13 +59,17 @@ export function Footer({ dictionary, footerDictionary }: { dictionary: any, foot
             <div>
               <h4 className="font-bold text-foreground mb-4">{columns.company.title}</h4>
               <ul className="space-y-3">
-                {columns.company.links.map((link: string) => (
-                  <li key={link}>
-                    <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                      {link}
-                    </Link>
-                  </li>
-                ))}
+                {columns.company.links.map((link: string, index: number) => {
+                  const isAboutLink = index === 0;
+                  const href = isAboutLink ? "/about" : "#";
+                  return (
+                    <li key={link}>
+                      <Link href={href} className="text-muted-foreground hover:text-foreground transition-colors">
+                        {link}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

@@ -227,5 +227,10 @@
         ]
       }
     }
+  },
+  "about_page": {
+    "title": "Brazilian Engineering for the Future of E-commerce.",
+    "subtitle": "We were born to challenge the status quo and build the infrastructure for the next generation of digital commerce in Latin America.",
+    "cta_primary": "Talk to an expert"
   }
 }

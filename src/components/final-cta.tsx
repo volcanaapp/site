@@ -31,7 +31,7 @@ export function FinalCTA({ dictionary }: { dictionary: any }) {
                   {dictionary.about.title}
                 </h2>
                 <Link
-                  href="#"
+                  href="/about"
                   className="rounded-full border border-foreground p-3 transition-colors duration-300 ease-in-out hover:bg-foreground hover:text-background group-hover:border-primary-foreground group-hover:text-primary-foreground group-hover:hover:bg-primary-foreground group-hover:hover:text-primary"
                 >
                   <ArrowUpRight className="h-6 w-6" />

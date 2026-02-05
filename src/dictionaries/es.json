@@ -227,5 +227,10 @@
         ]
       }
     }
+  },
+  "about_page": {
+    "title": "Ingeniería Brasileña para el Futuro del E-commerce.",
+    "subtitle": "Nacimos para desafiar el status quo y construir la infraestructura para la próxima generación de comercio digital en América Latina.",
+    "cta_primary": "Hable con un experto"
   }
 }

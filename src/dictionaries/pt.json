@@ -227,5 +227,10 @@
         ]
       }
     }
+  },
+  "about_page": {
+    "title": "Engenharia Brasileira para o Futuro do E-commerce.",
+    "subtitle": "Nascemos para desafiar o status quo e construir a infraestrutura para a próxima geração do comércio digital na América Latina.",
+    "cta_primary": "Fale com um especialista"
   }
 }
