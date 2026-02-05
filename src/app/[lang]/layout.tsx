@@ -34,7 +34,7 @@ export default async function RootLayout({
           <div className="relative flex min-h-screen flex-col bg-background">
             <Header dictionary={dictionary} />
             <main className="flex-1">{children}</main>
-            <Footer dictionary={dictionary.footer} />
+            <Footer dictionary={dictionary.footer} footerDictionary={dictionary.new_footer} />
             <PlanetBadge dictionary={dictionary.planet_badge} />
           </div>
         </AppWrapper>

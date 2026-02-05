@@ -175,5 +175,53 @@
         "featured": false
       }
     ]
+  },
+  "final_cta": {
+    "demo": {
+      "title": "AGENDE UNA DEMO",
+      "text": "Transformemos la forma en que funciona su operación. Agende una conversación para ver a nuestros agentes de IA en acción."
+    },
+    "about": {
+      "title": "SOBRE NOSOTROS",
+      "text": "Conozca nuestro viaje de ingeniería brasileña en la redefinición del comercio electrónico autónomo para América Latina."
+    }
+  },
+  "new_footer": {
+    "contact_slogan": "¿Tiene preguntas o quiere conversar?",
+    "contact_email": "hello@volcana.ai",
+    "columns": {
+      "platform": {
+        "title": "Plataforma",
+        "links": [
+          "Agentes de IA",
+          "Marketplace de Prompts",
+          "Comparativo (The Fixed Way)"
+        ]
+      },
+      "solutions": {
+        "title": "Soluciones",
+        "links": [
+          "Industrias & D2C",
+          "Retail de Alta Escala",
+          "Transformación Digital"
+        ]
+      },
+      "resources": {
+        "title": "Recursos",
+        "links": [
+          "Documentación Técnica",
+          "Casos de Éxito",
+          "Centro de Seguridad"
+        ]
+      },
+      "company": {
+        "title": "Empresa",
+        "links": [
+          "Sobre Volcana™",
+          "Carreras",
+          "Contacto"
+        ]
+      }
+    }
   }
 }

@@ -175,5 +175,53 @@
         "featured": false
       }
     ]
+  },
+  "final_cta": {
+    "demo": {
+      "title": "SCHEDULE A DEMO",
+      "text": "Let's transform the way your operation works. Schedule a conversation to see our AI agents in action."
+    },
+    "about": {
+      "title": "ABOUT US",
+      "text": "Learn about our journey of Brazilian engineering in redefining autonomous e-commerce for Latin America."
+    }
+  },
+  "new_footer": {
+    "contact_slogan": "Have questions or want to chat?",
+    "contact_email": "hello@volcana.ai",
+    "columns": {
+      "platform": {
+        "title": "Platform",
+        "links": [
+          "AI Agents",
+          "Prompt Marketplace",
+          "Comparison (The Fixed Way)"
+        ]
+      },
+      "solutions": {
+        "title": "Solutions",
+        "links": [
+          "Industries & D2C",
+          "High-Scale Retail",
+          "Digital Transformation"
+        ]
+      },
+      "resources": {
+        "title": "Resources",
+        "links": [
+          "Technical Documentation",
+          "Success Cases",
+          "Security Center"
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "links": [
+          "About Volcana™",
+          "Careers",
+          "Contact"
+        ]
+      }
+    }
   }
 }
