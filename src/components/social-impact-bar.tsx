@@ -3,22 +3,22 @@ import Link from "next/link";
 
 export function SocialImpactBar({ dictionary }: { dictionary: any }) {
   return (
-    <section className="bg-[#181817] border-t border-[#353634] py-3">
+    <section className="bg-primary py-3">
       <div className="container max-w-screen-xl">
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-3 text-primary-foreground">
           <Image
             src="/one-percent-logo.svg"
             alt="1% for the Planet Logo"
             width={80}
             height={20}
-            className="h-5 w-auto filter grayscale brightness-[3]"
+            className="h-5 w-auto"
           />
-          <p className="text-sm font-normal text-[#ECEFE7] m-0">
+          <p className="text-sm font-normal m-0">
             {dictionary.text}
             <Link
               href="https://www.onepercentfortheplanet.org/"
               target="_blank"
-              className="font-semibold text-lime no-underline ml-2 hover:underline"
+              className="font-semibold no-underline ml-2 hover:underline"
             >
               {dictionary.link} &rarr;
             </Link>
