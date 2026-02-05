@@ -14,12 +14,11 @@ export function PlanetBadge({ dictionary }: { dictionary: any }) {
         <HoverCardTrigger asChild>
           <div className="relative h-28 w-40 cursor-pointer overflow-hidden rounded-xl transition-transform duration-200 hover:scale-105">
             <Image
-              src="https://a.storyblok.com/f/314917/512x512/8b8042d3e3/pasted-image-2026-02-05t12-22-39-079z.png"
+              src="/volcana-nature.png"
               alt="Volcana Nature"
               fill
               sizes="160px"
               className="object-cover"
-              unoptimized
             />
           </div>
         </HoverCardTrigger>
