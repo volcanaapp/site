@@ -19,6 +19,7 @@ export function PlanetBadge({ dictionary }: { dictionary: any }) {
               fill
               sizes="80px"
               className="object-contain"
+              unoptimized
             />
           </div>
         </HoverCardTrigger>
