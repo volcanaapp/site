@@ -39,7 +39,7 @@ export function Hero02({ dictionary }: { dictionary: any }) {
             ))}
           </div>
           <div className="mt-24 text-left">
-            <h2 className="text-[5.5rem] leading-tight font-bold tracking-tighter text-primary max-w-4xl">
+            <h2 className="text-4xl md:text-[5rem] leading-tight font-bold tracking-tighter text-primary max-w-7xl">
               {dictionary.hero2.main_statement}
             </h2>
           </div>
