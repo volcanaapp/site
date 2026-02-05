@@ -124,5 +124,56 @@
       { "key": "meta_ads" },
       { "key": "rd_station" }
     ]
+  },
+  "pricing_page": {
+    "title": "Planes flexibles para empresas de todos los tamaños.",
+    "subtitle": "Empieza gratis y escala a medida que creces. Sin contratos, sin sorpresas.",
+    "plans": [
+      {
+        "name": "Starter",
+        "description": "Perfecto para individuos y equipos pequeños que están empezando.",
+        "price": "$29",
+        "period": "/mes",
+        "features": [
+          "1 Agente de IA",
+          "100 Pedidos/mes",
+          "Integraciones básicas",
+          "Soporte por correo electrónico"
+        ],
+        "cta": "Empezar",
+        "featured": false
+      },
+      {
+        "name": "Pro",
+        "description": "Para empresas en crecimiento que necesitan más potencia y automatización.",
+        "price": "$59",
+        "period": "/mes",
+        "features": [
+          "5 Agentes de IA",
+          "Pedidos ilimitados",
+          "Integraciones Premium",
+          "Soporte prioritario 24/7",
+          "Acceso a API"
+        ],
+        "cta": "Empieza Ahora",
+        "featured": true,
+        "badge": "Más Popular"
+      },
+      {
+        "name": "Enterprise",
+        "description": "Soluciones personalizadas para grandes operaciones y necesidades específicas.",
+        "price": "Personalizado",
+        "period": "",
+        "features": [
+          "Agentes de IA ilimitados",
+          "Infraestructura dedicada",
+          "Gerente de cuenta",
+          "SLA personalizado",
+          "Seguridad avanzada"
+        ],
+        "cta": "Contáctanos",
+        "featured": false
+      }
+    ]
   }
 }
