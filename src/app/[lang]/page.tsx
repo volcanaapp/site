@@ -5,6 +5,7 @@ import { Hero02 } from "@/components/hero-02";
 import { PricingSection } from "@/components/pricing-section";
 import { FeatureSection } from "@/components/feature-section";
 import { TestimonialSection } from "@/components/testimonial-section";
+import { PowerOfAutonomySection } from "@/components/power-of-autonomy-section";
 
 export default async function Home({
   params: { lang },
@@ -18,6 +19,7 @@ export default async function Home({
       <Hero02 dictionary={dictionary} />
       <FeatureSection dictionary={dictionary.feature_section} />
       <TestimonialSection dictionary={dictionary.testimonial_section} />
+      <PowerOfAutonomySection dictionary={dictionary.power_of_autonomy} />
       <PricingSection dictionary={dictionary.pricing} />
     </>
   );

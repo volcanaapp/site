@@ -71,5 +71,20 @@
   "planet_badge": {
     "title": "Volcana Nature",
     "description": "Comprometidos con la sostenibilidad y el poder de la naturaleza en cada producto."
+  },
+  "power_of_autonomy": {
+    "title": "El Poder de la Autonomía",
+    "insights": {
+      "title": "INSIGHTS.",
+      "text": "Inteligencia de nivel experto, sin esperas. Agentes que proporcionan análisis profundos en tiempo real sobre los datos críticos de su operación. Olvídese de depender de informes manuales lentos o de hojas de cálculo complejas que paralizan la toma de decisiones. Obtenga las respuestas que su negocio necesita, en el momento en que las necesita."
+    },
+    "execution": {
+      "title": "EXECUTION.",
+      "text": "Flujos de trabajo autónomos que realmente cumplen. Flujos de trabajo listos para usar, diseñados para automatizar tareas repetitivas y aumentar la precisión operativa. Acelere la ejecución en todo su recorrido minorista, permitiendo que su equipo se concentre en la estrategia mientras la IA se encarga de mantener el éxito."
+    },
+    "agents": {
+      "title": "AGENTS.",
+      "text": "No se limite a mantener las luces encendidas. Evolucione. No se conforme con una plataforma pasiva. Nos aseguramos de que su infraestructura esté lista para agentes, desbloqueando el máximo ROI de sus agentes y sistemas actuales. Transformamos la tecnología en una fuerza laboral especializada para dominar su mercado."
+    }
   }
 }
