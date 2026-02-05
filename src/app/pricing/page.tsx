@@ -1,7 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
-export function PricingSection({ dictionary }: { dictionary: any }) {
+// Este conteúdo normalmente viria de um arquivo de localização (ex: i18n).
+const dictionary = {
+  title: "Preços simples e transparentes",
+  subtitle: "Escolha o plano certo para você. Sem taxas escondidas, nunca.",
+  plan_name: "Plano Pro",
+  plan_description: "Para empresas em crescimento e profissionais.",
+  price: "R$49",
+  per_month: "/ mês",
+  cta: "Comece Agora",
+  features: {
+    ai_agents: "Agentes com IA",
+    zero_fees: "Taxa de transação zero",
+    unlimited_products: "Produtos ilimitados",
+    priority_support: "Suporte prioritário 24/7",
+  },
+};
+
+export default function PricingPage() {
   const features = [
     dictionary.features.ai_agents,
     dictionary.features.zero_fees,
@@ -10,7 +27,7 @@ export function PricingSection({ dictionary }: { dictionary: any }) {
   ];
 
   return (
-    <section id="pricing" className="w-full py-20 md:py-32 bg-background">
+    <section id="pricing" className="w-full py-20 md:py-32 bg-background min-h-screen flex items-center justify-center">
       <div className="container max-w-screen-xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
