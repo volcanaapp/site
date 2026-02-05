@@ -29,12 +29,12 @@ export function LoadingScreen({ onFinished }: LoadingScreenProps) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-500",
+        "fixed inset-0 z-[100] flex items-center justify-center bg-primary transition-opacity duration-500",
         isAnimatingOut ? "opacity-0" : "opacity-100"
       )}
     >
       <div className="animate-pulse">
-        <Logo className="h-12 text-foreground" />
+        <Logo className="h-12 text-primary-foreground" />
       </div>
     </div>
   );
