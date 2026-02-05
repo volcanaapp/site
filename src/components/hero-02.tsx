@@ -39,7 +39,15 @@ export function Hero02({ dictionary }: { dictionary: any }) {
             ))}
           </div>
           <div className="mt-24 text-left">
-            <h2 className="text-4xl md:text-[5rem] leading-tight font-bold tracking-tighter text-primary max-w-7xl">
+            <h2
+              className={cn(
+                "text-4xl md:text-[5rem] leading-tight font-bold tracking-tighter text-primary max-w-7xl transition-all duration-700 ease-out",
+                isInView
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              )}
+              style={{ transitionDelay: "600ms" }}
+            >
               {dictionary.hero2.main_statement}
             </h2>
           </div>
