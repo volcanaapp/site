@@ -1,14 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import dynamic from 'next/dynamic';
-
-const Spline = dynamic(
-  () => import('@splinetool/react-spline'),
-  {
-    ssr: false,
-  }
-);
+import Spline from '@splinetool/react-spline';
 
 export function Hero01({ dictionary }: { dictionary: any }) {
   return (
