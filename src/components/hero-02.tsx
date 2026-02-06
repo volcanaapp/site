@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { useInView } from "@/hooks/use-in-view";
+import { useTypewriter } from "@/hooks/use-typewriter";
 
 export function Hero02({ dictionary }: { dictionary: any }) {
   const { ref: sectionRef, isInView } = useInView<HTMLElement>({
@@ -10,6 +11,12 @@ export function Hero02({ dictionary }: { dictionary: any }) {
   });
 
   const columns = dictionary.hero2.columns;
+  const fullText = dictionary.hero2.main_statement;
+  const { displayText: typedText, isDone } = useTypewriter(
+    fullText,
+    50,
+    isInView
+  );
 
   return (
     <div className="dark">
@@ -33,14 +40,23 @@ export function Hero02({ dictionary }: { dictionary: any }) {
                 )}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <h3 className="text-5xl font-bold tracking-tighter mb-4 text-white">{column.title}</h3>
-                <p className="text-lg text-muted-foreground max-w-sm">{column.text}</p>
+                <h3 className="text-5xl font-bold tracking-tighter mb-4 text-white">
+                  {column.title}
+                </h3>
+                <p className="text-lg text-muted-foreground max-w-sm">
+                  {column.text}
+                </p>
               </div>
             ))}
           </div>
           <div className="mt-24 text-left">
-            <h2 className="text-[5.5rem] leading-tight font-bold tracking-tighter text-primary max-w-4xl">
-              {dictionary.hero2.main_statement}
+            <h2 className="text-5xl md:text-[5rem] leading-tight font-bold tracking-tighter text-primary max-w-4xl min-h-[8rem] md:min-h-[13rem]">
+              {typedText}
+              {!isDone && (
+                <span className="animate-pulse opacity-75 relative -top-1 md:-top-2">
+                  |
+                </span>
+              )}
             </h2>
           </div>
         </div>
