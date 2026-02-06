@@ -1,8 +1,10 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import dynamic from 'next/dynamic';
 
-const SplineAnimation = dynamic(
-  () => import('@/components/spline-animation').then((mod) => mod.SplineAnimation),
+const Spline = dynamic(
+  () => import('@splinetool/react-spline/next'),
   {
     ssr: false,
   }
@@ -30,7 +32,10 @@ export function Hero01({ dictionary }: { dictionary: any }) {
 
       {/* Spline animation on the right, bleeding off-screen */}
       <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block">
-        <SplineAnimation />
+        <Spline
+          scene="https://prod.spline.design/8sPGLwy4MxIBJMzD9L84K60v/scene.splinecode" 
+          className="w-full h-full scale-150 lg:scale-125"
+        />
       </div>
     </section>
   );
