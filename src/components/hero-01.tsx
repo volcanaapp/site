@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export function Hero({ dictionary }: { dictionary: any }) {
+export function Hero01({ dictionary }: { dictionary: any }) {
   return (
     <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-center relative overflow-hidden bg-background">
       {/* Text content on the left */}
