@@ -46,9 +46,6 @@ export function UseCaseCarousel({ dictionary }: { dictionary: any }) {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-foreground uppercase">
             {dictionary.title}
           </h2>
-          <p className="text-lg text-muted-foreground">
-            {dictionary.subtitle}
-          </p>
         </div>
 
         <Carousel setApi={setApi} className="w-full">
