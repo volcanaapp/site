@@ -6,7 +6,6 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import volcanaNature from "/public/volcana-nature.png";
 
 export function PlanetBadge({ dictionary }: { dictionary: any }) {
   return (
@@ -15,7 +14,7 @@ export function PlanetBadge({ dictionary }: { dictionary: any }) {
         <HoverCardTrigger asChild>
           <div className="relative h-28 w-40 cursor-pointer overflow-hidden rounded-xl transition-transform duration-200 hover:scale-105">
             <Image
-              src={volcanaNature}
+              src="/volcana-nature.png"
               alt="Volcana Nature"
               fill
               sizes="160px"
