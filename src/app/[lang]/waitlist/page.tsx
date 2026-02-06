@@ -30,7 +30,7 @@ export default async function WaitlistPage({
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/10 rounded-full blur-3xl pointer-events-none" />
         <div className="container max-w-4xl mx-auto z-10 relative">
           {/* Hero */}
-          <div className="mb-20">
+          <div className="mb-16">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
               {waitlistDict.hero_title}
             </h1>
@@ -39,21 +39,23 @@ export default async function WaitlistPage({
             </p>
           </div>
 
-          {/* Social Proof */}
+          {/* Form Section */}
           <div className="mb-20">
-            <p className="text-lg font-medium">
+            <WaitlistForm dictionary={waitlistDict} />
+          </div>
+
+          {/* Social Proof */}
+          <div>
+            <p className="text-lg font-medium mb-12">
               {waitlistDict.counter_text.replace("{count}", initialCount.toString())}
             </p>
-            <div className="mt-12">
+            <div>
               <h2 className="text-sm uppercase tracking-widest text-muted-foreground mb-8">
                 {waitlistDict.logos_title}
               </h2>
               <WaitlistLogoCloud />
             </div>
           </div>
-
-          {/* Form Section */}
-          <WaitlistForm dictionary={waitlistDict} />
         </div>
       </section>
     </div>
