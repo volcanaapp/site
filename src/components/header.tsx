@@ -104,7 +104,9 @@ export function Header({ dictionary }: { dictionary: any }) {
           {/* Right side: Buttons */}
           <div className="flex flex-1 justify-end space-x-2">
             <Button variant="ghost">{dictionary.header.login}</Button>
-            <Button className="font-bold bg-primary text-primary-foreground hover:bg-primary/90">{dictionary.header.start_now}</Button>
+            <Button asChild className="font-bold bg-primary text-primary-foreground hover:bg-primary/90">
+              <Link href="/waitlist">{dictionary.header.start_now}</Link>
+            </Button>
           </div>
         </div>
       </header>

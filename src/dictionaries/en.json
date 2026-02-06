@@ -247,5 +247,20 @@
       "name": "Renan",
       "title": "CEO & Founder of Volcana"
     }
+  },
+  "waitlist": {
+    "hero_title": "The future of autonomous scaling is for the few. Join the elite.",
+    "hero_subtitle": "We are releasing access in limited batches to ensure the agentic precision of each operation. Join the brands that have decided to stop paying taxes on their own success.",
+    "counter_text": "{count} brands from Latin America are already in line.",
+    "logos_title": "D2C and Industry brands that have already secured their spot",
+    "form_badge": "LIMITED SPOTS FOR BATCH 01",
+    "form_title": "The Agentic Revolution is coming.",
+    "form_subtitle": "Exclusive early access for merchants with revenue over $20k/month seeking zero fees.",
+    "form_placeholder": "Your corporate email",
+    "form_button": "Reserve my spot in line",
+    "form_footer": "Priority for industries and private labels (D2C).",
+    "success_toast": "Success! You are on the waitlist.",
+    "error_toast_duplicate": "This email is already on the waitlist.",
+    "error_toast_generic": "An error occurred. Please try again."
   }
 }

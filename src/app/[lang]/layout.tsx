@@ -8,6 +8,7 @@ import { Locale } from "@/lib/i18n-config";
 import { AppWrapper } from "@/components/app-wrapper";
 import { PlanetBadge } from "@/components/planet-badge";
 import { SocialImpactBar } from "@/components/social-impact-bar";
+import { Toaster } from "@/components/ui/sonner";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default async function RootLayout({
             <Footer dictionary={dictionary.footer} footerDictionary={dictionary.new_footer} />
             <PlanetBadge dictionary={dictionary.planet_badge} />
           </div>
+          <Toaster richColors theme="dark" />
         </AppWrapper>
       </body>
     </html>

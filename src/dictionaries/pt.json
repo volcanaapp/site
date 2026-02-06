@@ -247,5 +247,20 @@
       "name": "Renan",
       "title": "CEO e Founder da Volcana"
     }
+  },
+  "waitlist": {
+    "hero_title": "O futuro da escala autônoma é para poucos. Entre para a elite.",
+    "hero_subtitle": "Estamos liberando o acesso em lotes limitados para garantir a precisão agêntica de cada operação. Junte-se às marcas que decidiram parar de pagar impostos sobre o próprio sucesso.",
+    "counter_text": "{count} marcas da América Latina já estão na fila.",
+    "logos_title": "Marcas de D2C e Indústria que já garantiram seu lugar",
+    "form_badge": "VAGAS LIMITADAS PARA O LOTE 01",
+    "form_title": "A Revolução Agêntica está chegando.",
+    "form_subtitle": "Acesso antecipado exclusivo para lojistas que faturam acima de R$ 100k/mês e buscam taxa zero.",
+    "form_placeholder": "Seu e-mail corporativo",
+    "form_button": "Reservar meu lugar na fila",
+    "form_footer": "Prioridade para indústrias e marcas próprias (D2C).",
+    "success_toast": "Sucesso! Você está na lista de espera.",
+    "error_toast_duplicate": "Este e-mail já está na lista de espera.",
+    "error_toast_generic": "Ocorreu um erro. Por favor, tente novamente."
   }
 }
