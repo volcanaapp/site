@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Spline from '@splinetool/react-spline/next';
 
 export function Hero01({ dictionary }: { dictionary: any }) {
   return (
@@ -23,16 +23,12 @@ export function Hero01({ dictionary }: { dictionary: any }) {
         </div>
       </div>
 
-      {/* Background Image on the right, bleeding off-screen */}
-      <div className="absolute top-0 right-0 h-full w-full md:w-1/2 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1506464273959-54b0a1520b3b?q=80&w=2070&auto=format&fit=crop"
-          alt="Abstract background"
-          fill
-          className="object-cover opacity-20 md:opacity-100"
-          priority
+      {/* Spline animation on the right, bleeding off-screen */}
+      <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block">
+        <Spline
+          scene="https://prod.spline.design/6atEI76RYKKZm-Ig/scene.splinecode" 
+          className="w-full h-full scale-150 lg:scale-125"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent md:via-transparent"></div>
       </div>
     </section>
   );
