@@ -3,6 +3,7 @@
 import { useInView } from "@/hooks/use-in-view";
 import { cn } from "@/lib/utils";
 import { integrationLogos } from "./integration-logos";
+import { AwsLogo } from "./aws-logo";
 
 export function OrchestratedEcosystemSection({ dictionary }: { dictionary: any }) {
   const { ref, isInView } = useInView<HTMLElement>({
@@ -30,7 +31,10 @@ export function OrchestratedEcosystemSection({ dictionary }: { dictionary: any }
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
           {dictionary.logos.map((logo: any, index: number) => {
-            const LogoComponent = integrationLogos[logo.key];
+            const isAwsLogo = index === 0;
+            const LogoComponent = isAwsLogo ? AwsLogo : integrationLogos[logo.key];
+            const logoClassName = isAwsLogo ? "h-12 w-auto text-background" : "h-8 w-auto text-background";
+            
             return (
               <div
                 key={index}
@@ -40,7 +44,7 @@ export function OrchestratedEcosystemSection({ dictionary }: { dictionary: any }
                 )}
                 style={{ transitionDelay: `${100 + index * 100}ms` }}
               >
-                {LogoComponent && <LogoComponent className="h-8 w-auto text-background" />}
+                {LogoComponent && <LogoComponent className={logoClassName} />}
               </div>
             );
           })}
