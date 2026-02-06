@@ -64,7 +64,7 @@ export function UseCaseCarousel({ dictionary }: { dictionary: any }) {
                       {slide.description}
                     </p>
                     <div className="flex">
-                      <Button size="lg" variant="secondary" className="bg-foreground text-background hover:bg-foreground/80 font-bold">
+                      <Button size="lg" variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary/80 font-bold">
                         {slide.button_text}
                       </Button>
                     </div>
