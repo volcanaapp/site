@@ -76,11 +76,13 @@ export async function middleware(request: NextRequest) {
     }
   )
 
-  // Atualizar a sessão do usuário importante para mantê-lo logado
-  await supabase.auth.getSession()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   const pathname = request.nextUrl.pathname
 
+  // Handle locale redirection
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )
@@ -95,9 +97,20 @@ export async function middleware(request: NextRequest) {
     )
   }
 
+  const locale = pathname.split('/')[1]
+
+  // Auth redirects
+  if (!user && pathname.includes('/dashboard')) {
+    return NextResponse.redirect(new URL(`/${locale}/login`, request.url))
+  }
+
+  if (user && pathname.includes('/login')) {
+    return NextResponse.redirect(new URL(`/${locale}/dashboard`, request.url))
+  }
+
   return response
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|auth/callback).*)'],
 }

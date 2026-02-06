@@ -8,8 +8,15 @@ import { Menu } from "lucide-react";
 import { TopBar } from "./top-bar";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
+import type { Session } from "@supabase/supabase-js";
 
-export function Header({ dictionary }: { dictionary: any }) {
+export function Header({
+  dictionary,
+  session,
+}: {
+  dictionary: any;
+  session: Session | null;
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,7 +37,7 @@ export function Header({ dictionary }: { dictionary: any }) {
     { href: "#", label: dictionary.header.comparison },
     { href: "#", label: dictionary.header.use_cases },
     { href: "/pricing", label: dictionary.header.pricing },
-    { href: "#", "label": dictionary.header.content },
+    { href: "#", label: dictionary.header.content },
   ];
 
   return (
@@ -45,7 +52,6 @@ export function Header({ dictionary }: { dictionary: any }) {
         )}
       >
         <div className="container flex h-14 max-w-screen-2xl items-center">
-          {/* Left side: Logo (desktop) / Menu (mobile) */}
           <div className="flex flex-1 justify-start">
             <div className="hidden md:flex">
               <Link href="/" className="mr-6 flex items-center">
@@ -61,7 +67,11 @@ export function Header({ dictionary }: { dictionary: any }) {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
-                  <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href="/"
+                    className="flex items-center"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     <Logo className="h-7" />
                   </Link>
                   <div className="flex flex-col gap-4 mt-8">
@@ -81,7 +91,6 @@ export function Header({ dictionary }: { dictionary: any }) {
             </div>
           </div>
 
-          {/* Center: Nav (desktop) / Logo (mobile) */}
           <div className="flex justify-center">
             <nav className="hidden md:flex items-center gap-6 text-sm">
               {navLinks.map((link) => (
@@ -96,15 +105,25 @@ export function Header({ dictionary }: { dictionary: any }) {
             </nav>
             <div className="flex md:hidden">
               <Link href="/" className="flex items-center">
-                  <Logo className="h-7" />
+                <Logo className="h-7" />
               </Link>
             </div>
           </div>
 
-          {/* Right side: Buttons */}
           <div className="flex flex-1 justify-end space-x-2">
-            <Button variant="ghost">{dictionary.header.login}</Button>
-            <Button asChild className="font-bold bg-primary text-primary-foreground hover:bg-primary/90">
+            {session ? (
+              <Button asChild variant="secondary">
+                <Link href="/dashboard">Dashboard</Link>
+              </Button>
+            ) : (
+              <Button asChild variant="ghost">
+                <Link href="/login">{dictionary.header.login}</Link>
+              </Button>
+            )}
+            <Button
+              asChild
+              className="font-bold bg-primary text-primary-foreground hover:bg-primary/90"
+            >
               <Link href="/waitlist">{dictionary.header.start_now}</Link>
             </Button>
           </div>
