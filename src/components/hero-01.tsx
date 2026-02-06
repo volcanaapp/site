@@ -1,17 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import Spline from '@splinetool/react-spline';
+import Image from "next/image";
 
 export function Hero01({ dictionary }: { dictionary: any }) {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    // This ensures the Spline component only renders on the client, after the initial page load.
-    setIsMounted(true);
-  }, []);
-
   return (
     <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-center relative overflow-hidden bg-background">
       {/* Text content on the left */}
@@ -31,14 +23,16 @@ export function Hero01({ dictionary }: { dictionary: any }) {
         </div>
       </div>
 
-      {/* Spline animation on the right, bleeding off-screen */}
-      <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block">
-        {isMounted && (
-          <Spline
-            scene="https://prod.spline.design/6Wq1Q7Y_E-091g-i/scene.splinecode" 
-            className="w-full h-full scale-150 lg:scale-125"
-          />
-        )}
+      {/* Background Image on the right, bleeding off-screen */}
+      <div className="absolute top-0 right-0 h-full w-full md:w-1/2 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1506464273959-54b0a1520b3b?q=80&w=2070&auto=format&fit=crop"
+          alt="Abstract background"
+          fill
+          className="object-cover opacity-20 md:opacity-100"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent md:via-transparent"></div>
       </div>
     </section>
   );
