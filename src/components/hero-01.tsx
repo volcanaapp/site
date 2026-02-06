@@ -1,9 +1,17 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Spline from '@splinetool/react-spline';
 
 export function Hero01({ dictionary }: { dictionary: any }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // This ensures the Spline component only renders on the client, after the initial page load.
+    setIsMounted(true);
+  }, []);
+
   return (
     <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-center relative overflow-hidden bg-background">
       {/* Text content on the left */}
@@ -25,10 +33,12 @@ export function Hero01({ dictionary }: { dictionary: any }) {
 
       {/* Spline animation on the right, bleeding off-screen */}
       <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block">
-        <Spline
-          scene="https://prod.spline.design/6Wq1Q7Y_E-091g-i/scene.splinecode" 
-          className="w-full h-full scale-150 lg:scale-125"
-        />
+        {isMounted && (
+          <Spline
+            scene="https://prod.spline.design/6Wq1Q7Y_E-091g-i/scene.splinecode" 
+            className="w-full h-full scale-150 lg:scale-125"
+          />
+        )}
       </div>
     </section>
   );
