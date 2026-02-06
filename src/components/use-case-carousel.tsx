@@ -26,6 +26,8 @@ export function UseCaseCarousel({ dictionary }: { dictionary: any }) {
       setCurrent(api.selectedScrollSnap());
     };
 
+
+
     api.on("select", onSelect);
 
     return () => {
@@ -89,7 +91,7 @@ export function UseCaseCarousel({ dictionary }: { dictionary: any }) {
               onClick={() => scrollTo(index)}
               className={cn(
                 "h-2 rounded-full transition-all duration-300",
-                current === index ? "w-6 bg-foreground" : "w-2 bg-muted-foreground/50"
+                current === index ? "w-6 bg-secondary" : "w-2 bg-muted-foreground/50"
               )}
               aria-label={`Go to slide ${index + 1}`}
             />
