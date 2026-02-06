@@ -26,7 +26,7 @@ export function Hero01({ dictionary }: { dictionary: any }) {
       {/* Spline animation on the right, bleeding off-screen */}
       <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block">
         <Spline
-          scene="https://prod.spline.design/8sPGLwy4MxIBJMzD9L84K60v/scene.splinecode" 
+          scene="https://prod.spline.design/6Wq1Q7Y_E-091g-i/scene.splinecode" 
           className="w-full h-full scale-150 lg:scale-125"
         />
       </div>
