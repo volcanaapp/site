@@ -26,7 +26,7 @@ export function TopBar({ dictionary }: { dictionary: any }) {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="sm" className="flex items-center gap-2">
-              <Globe className="h-4 w-4" />
+              <Globe className="h-4 w-4 text-secondary" />
               <span>{dictionary.language}</span>
             </Button>
           </DropdownMenuTrigger>
