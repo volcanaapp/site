@@ -1,7 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Spline from '@splinetool/react-spline/next';
+import dynamic from 'next/dynamic';
+
+const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
+  ssr: false,
+  loading: () => <div className="w-full h-full bg-muted/20 animate-pulse rounded-lg" />,
+});
 
 export function Hero01({ dictionary }: { dictionary: any }) {
   return (
@@ -25,10 +30,7 @@ export function Hero01({ dictionary }: { dictionary: any }) {
 
       {/* Spline animation on the right, bleeding off-screen */}
       <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block">
-        <Spline
-          scene="https://prod.spline.design/6atEI76RYKKZm-Ig/scene.splinecode" 
-          className="w-full h-full scale-150 lg:scale-125"
-        />
+        <SplineAnimation />
       </div>
     </section>
   );
