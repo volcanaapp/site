@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import onePercentLogo from "/public/one-percent-logo.svg";
 
 export function SocialImpactBar({ dictionary }: { dictionary: any }) {
   return (
@@ -7,7 +8,7 @@ export function SocialImpactBar({ dictionary }: { dictionary: any }) {
       <div className="container max-w-screen-xl">
         <div className="flex items-center justify-center gap-3 text-primary-foreground">
           <Image
-            src="/one-percent-logo.svg"
+            src={onePercentLogo}
             alt="1% for the Planet Logo"
             width={80}
             height={20}
