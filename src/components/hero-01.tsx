@@ -1,12 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import dynamic from 'next/dynamic';
-
-const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
-  ssr: false,
-  loading: () => <div className="w-full h-full bg-muted/20 animate-pulse rounded-lg" />,
-});
+import Image from "next/image";
 
 export function Hero01({ dictionary }: { dictionary: any }) {
   return (
@@ -28,9 +23,16 @@ export function Hero01({ dictionary }: { dictionary: any }) {
         </div>
       </div>
 
-      {/* Spline animation on the right, bleeding off-screen */}
-      <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block">
-        <SplineAnimation />
+      {/* Background Image on the right, bleeding off-screen */}
+      <div className="absolute top-0 right-0 h-full w-full md:w-1/2 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1506464273959-54b0a1520b3b?q=80&w=2070&auto=format&fit=crop"
+          alt="Abstract background"
+          fill
+          className="object-cover opacity-20 md:opacity-100"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent md:via-transparent"></div>
       </div>
     </section>
   );
