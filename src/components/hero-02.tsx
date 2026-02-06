@@ -50,7 +50,7 @@ export function Hero02({ dictionary }: { dictionary: any }) {
             ))}
           </div>
           <div className="mt-24 text-left">
-            <h2 className="text-5xl md:text-[5rem] leading-tight font-bold tracking-tighter text-primary max-w-4xl min-h-[8rem] md:min-h-[13rem]">
+            <h2 className="text-5xl md:text-[5rem] leading-tight font-bold tracking-tighter text-primary max-w-4xl min-h-[8rem] md:min-h-[13rem] [text-shadow:0_0_10px_hsl(var(--primary))]">
               {typedText}
               {!isDone && (
                 <span className="animate-pulse opacity-75 relative -top-1 md:-top-2">
