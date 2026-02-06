@@ -1,7 +1,8 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { signOut } from "@/app/actions/auth";
+import { AccountForm } from "@/components/account-form";
+import { Button } from "@/components/ui/button";
 
 export default async function DashboardPage() {
   const supabase = createClient();
@@ -14,21 +15,31 @@ export default async function DashboardPage() {
     return redirect("/login");
   }
 
+  const { data: profile, error } = await supabase
+    .from("profiles")
+    .select("*")
+    .eq("id", user.id)
+    .single();
+
+  if (error && error.code !== 'PGRST116') { // PGRST116: "The result contains 0 rows"
+    console.error("Error fetching profile:", error);
+  }
+
   return (
     <div className="dark bg-background">
-      <section className="container flex flex-col items-center justify-center py-20 md:py-32">
-        <div className="max-w-xl text-center">
-          <h1 className="text-4xl font-bold tracking-tighter">
-            Welcome to your Dashboard
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            You are logged in as {user.email}.
-          </p>
-          <form action={signOut} className="mt-6">
-            <Button type="submit" variant="secondary">
-              Sign Out
-            </Button>
-          </form>
+      <section className="container flex flex-col items-center py-20 md:py-32">
+        <div className="w-full max-w-4xl">
+          <div className="flex justify-between items-center mb-8 px-4 sm:px-0">
+            <h1 className="text-3xl font-bold tracking-tighter">
+              Welcome, {profile?.first_name || user.email}
+            </h1>
+            <form action={signOut}>
+              <Button type="submit" variant="secondary">
+                Sign Out
+              </Button>
+            </form>
+          </div>
+          <AccountForm user={user} profile={profile} />
         </div>
       </section>
     </div>
