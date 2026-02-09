@@ -28,6 +28,7 @@ export function Header({
   session: Session | null;
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -63,14 +64,10 @@ export function Header({
             : "border-b border-transparent"
         )}
       >
-        <div className="container flex h-14 max-w-screen-2xl items-center">
-          <div className="flex flex-1 justify-start">
-            <div className="hidden md:flex">
-              <Link href="/" className="mr-6 flex items-center">
-                <Logo className="h-7" />
-              </Link>
-            </div>
-            <div className="flex md:hidden">
+        <div className="container flex h-14 max-w-screen-2xl items-center justify-between relative">
+          {/* Left Side */}
+          <div className="flex items-center">
+            <div className="md:hidden">
               <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">
@@ -101,66 +98,73 @@ export function Header({
                 </SheetContent>
               </Sheet>
             </div>
-          </div>
-
-          <div className="flex justify-center">
-            <nav className="hidden md:flex items-center gap-1 text-sm">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <Link href="#" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                        {dictionary.header.product}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className={linkClassName}>
-                      {dictionary.header.solutions}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <SolutionsMegamenu dictionary={dictionary} />
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="#" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                        {dictionary.header.comparison}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="#" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                        {dictionary.header.use_cases}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="/pricing" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                        {dictionary.header.pricing}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href="#" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                        {dictionary.header.content}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-            </nav>
-            <div className="flex md:hidden">
-              <Link href="/" className="flex items-center">
+            <div className="hidden md:flex">
+              <Link href="/" className="mr-6 flex items-center">
                 <Logo className="h-7" />
               </Link>
             </div>
           </div>
 
-          <div className="flex flex-1 justify-end space-x-2">
+          {/* Center Navigation (Desktop) */}
+          <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <NavigationMenu onValueChange={(value) => setIsMegamenuOpen(!!value)}>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <Link href="#" legacyBehavior passHref>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                      {dictionary.header.product}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className={linkClassName}>
+                    {dictionary.header.solutions}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <SolutionsMegamenu dictionary={dictionary} />
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="#" legacyBehavior passHref>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                      {dictionary.header.comparison}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="#" legacyBehavior passHref>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                      {dictionary.header.use_cases}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="/pricing" legacyBehavior passHref>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                      {dictionary.header.pricing}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                  <Link href="#" legacyBehavior passHref>
+                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                      {dictionary.header.content}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+          
+          {/* Center Logo (Mobile) */}
+          <div className="md:hidden">
+            <Link href="/" className="flex items-center">
+              <Logo className="h-7" />
+            </Link>
+          </div>
+
+          {/* Right Side */}
+          <div className="flex items-center space-x-2">
             {session ? (
               <Button asChild variant="secondary">
                 <Link href="/dashboard">Dashboard</Link>
@@ -179,6 +183,9 @@ export function Header({
           </div>
         </div>
       </header>
+      {isMegamenuOpen && (
+        <div className="fixed inset-0 top-[calc(theme(spacing.14)+theme(spacing.10))] bg-background/80 backdrop-blur-sm z-40" />
+      )}
     </>
   );
 }
