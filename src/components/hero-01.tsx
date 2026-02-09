@@ -15,8 +15,10 @@ export function Hero01({ dictionary }: { dictionary: any }) {
       {/* Text content on the left */}
       <div className="container z-10 relative">
         <div className="w-full md:w-3/4 lg:w-1/2 flex flex-col items-start text-left">
-          <h1 className="text-5xl md:text-[5.5rem] font-bold tracking-tighter mb-6 uppercase leading-none text-foreground">
-            {dictionary.title}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6 text-foreground leading-tight">
+            {dictionary.title_part1}
+            <br />
+            <span className="text-primary">{dictionary.title_part2}</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl">
             {dictionary.subtitle}

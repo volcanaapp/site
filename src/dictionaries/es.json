@@ -1,6 +1,7 @@
 {
   "hero": {
-    "title": "La primera Plataforma de E-commerce Autónoma de América Latina.",
+    "title_part1": "Bienvenido a Volcana.",
+    "title_part2": "La primera plataforma de e-commerce AI-Native de América Latina.",
     "subtitle": "Ingeniería brasileña. Costo fijo. Operación agéntica.",
     "cta_primary": "Crear mi tienda"
   },
@@ -76,7 +77,7 @@
     "title": "El Poder de la Autonomía",
     "insights": {
       "title": "INSIGHTS.",
-      "text": "Inteligencia de nivel experto, sin esperas. Agentes que proporcionan análisis profundos en tiempo real sobre los datos críticos de su operación. Olvídese de depender de informes manuales lentos o de hojas de cálculo complejas que paralizan la toma de decisiones. Obtenga las respuestas que su negocio necesita, en el momento en que las necesita."
+      "text": "Inteligencia de nivel experto, sin esperas. Agentes que proporcionan análisis profundos en tiempo real sobre los datos críticos de su operación. Olvídese de depender de informes manuales lentos o de hojas de cálculo complexas que paralizan la toma de decisiones. Obtenga las respuestas que su negocio necesita, en el momento en que las necesita."
     },
     "execution": {
       "title": "EXECUTION.",
