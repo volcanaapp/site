@@ -1,47 +1,78 @@
-import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
-import { signOut } from "@/app/actions/auth";
-import { AccountForm } from "@/components/account-form";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DollarSign, Users, CreditCard, Activity } from "lucide-react";
 
 export default async function DashboardPage() {
-  const supabase = createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    return redirect("/login");
-  }
-
-  const { data: profile, error } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", user.id)
-    .single();
-
-  if (error && error.code !== 'PGRST116') { // PGRST116: "The result contains 0 rows"
-    console.error("Error fetching profile:", error);
-  }
-
   return (
-    <div className="dark bg-background">
-      <section className="container flex flex-col items-center py-20 md:py-32">
-        <div className="w-full max-w-4xl">
-          <div className="flex justify-between items-center mb-8 px-4 sm:px-0">
-            <h1 className="text-3xl font-bold tracking-tighter">
-              Welcome to your Dashboard
-            </h1>
-            <form action={signOut}>
-              <Button type="submit" variant="secondary">
-                Sign Out
-              </Button>
-            </form>
-          </div>
-          <AccountForm user={user} profile={profile} />
-        </div>
-      </section>
+    <div>
+      <h1 className="text-3xl font-bold tracking-tighter mb-8">
+        Dashboard
+      </h1>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">
+              Receita Total
+            </CardTitle>
+            <DollarSign className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">R$ 45.231,89</div>
+            <p className="text-xs text-muted-foreground">
+              +20.1% do último mês
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">
+              Clientes
+            </CardTitle>
+            <Users className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">+2350</div>
+            <p className="text-xs text-muted-foreground">
+              +180.1% do último mês
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Vendas</CardTitle>
+            <CreditCard className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">+12,234</div>
+            <p className="text-xs text-muted-foreground">
+              +19% do último mês
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">
+              Taxa de Conversão
+            </CardTitle>
+            <Activity className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">+5.73%</div>
+            <p className="text-xs text-muted-foreground">
+              +2.1% do último mês
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+      <div className="mt-8">
+        <Card>
+          <CardHeader>
+            <CardTitle>Atividade Recente</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">Nenhuma atividade recente para mostrar.</p>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

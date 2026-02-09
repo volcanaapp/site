@@ -53,7 +53,7 @@ export function AccountForm({ user, profile }: AccountFormProps) {
   }, [state]);
 
   return (
-    <Card className="w-full max-w-lg mx-auto">
+    <Card>
       <CardHeader>
         <CardTitle>Perfil</CardTitle>
         <CardDescription>Atualize suas informações pessoais.</CardDescription>
