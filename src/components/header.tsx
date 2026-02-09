@@ -9,6 +9,16 @@ import { TopBar } from "./top-bar";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
 import type { Session } from "@supabase/supabase-js";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu";
+import { SolutionsMegamenu } from "./solutions-megamenu";
 
 export function Header({
   dictionary,
@@ -39,6 +49,8 @@ export function Header({
     { href: "/pricing", label: dictionary.header.pricing },
     { href: "#", label: dictionary.header.content },
   ];
+
+  const linkClassName = "bg-transparent hover:bg-transparent transition-colors hover:text-foreground/80 text-foreground/60";
 
   return (
     <>
@@ -92,16 +104,54 @@ export function Header({
           </div>
 
           <div className="flex justify-center">
-            <nav className="hidden md:flex items-center gap-6 text-sm">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="transition-colors hover:text-foreground/80 text-foreground/60"
-                >
-                  {link.label}
-                </Link>
-              ))}
+            <nav className="hidden md:flex items-center gap-1 text-sm">
+              <NavigationMenu>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <Link href="#" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.product}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className={linkClassName}>
+                      {dictionary.header.solutions}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <SolutionsMegamenu dictionary={dictionary} />
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="#" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.comparison}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="#" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.use_cases}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="/pricing" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.pricing}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="#" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.content}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
             </nav>
             <div className="flex md:hidden">
               <Link href="/" className="flex items-center">

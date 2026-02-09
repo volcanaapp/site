@@ -262,5 +262,23 @@
     "success_toast": "¡Éxito! Estás en la lista de espera.",
     "error_toast_duplicate": "Este correo electrónico ya está en la lista de espera.",
     "error_toast_generic": "Ocurrió un error. Por favor, inténtalo de nuevo."
+  },
+  "megamenu": {
+    "solutions": {
+      "title": "Soluciones para cada necesidad",
+      "links": [
+        "Empezar de cero",
+        "Migrar tu tienda de plataforma",
+        "Ya vendes en redes sociales",
+        "Ya vendes en tienda física",
+        "Ya vendes en marketplace",
+        "Para vender sin stock"
+      ],
+      "success_story": {
+        "title": "Casos de éxito",
+        "description": "Historias de quienes crecieron con Volcana",
+        "image_alt": "Tableta mostrando una tienda de e-commerce"
+      }
+    }
   }
 }

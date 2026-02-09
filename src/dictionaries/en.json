@@ -262,5 +262,23 @@
     "success_toast": "Success! You are on the waitlist.",
     "error_toast_duplicate": "This email is already on the waitlist.",
     "error_toast_generic": "An error occurred. Please try again."
+  },
+  "megamenu": {
+    "solutions": {
+      "title": "Solutions for every need",
+      "links": [
+        "Start from scratch",
+        "Migrate your store from another platform",
+        "Already sell on social media",
+        "Already sell in a physical store",
+        "Already sell on marketplaces",
+        "To sell without stock"
+      ],
+      "success_story": {
+        "title": "Success stories",
+        "description": "Stories of those who grew with Volcana",
+        "image_alt": "Tablet showing an e-commerce store"
+      }
+    }
   }
 }
