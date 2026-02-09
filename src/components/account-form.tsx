@@ -14,6 +14,8 @@ type Profile = {
   first_name: string | null;
   last_name: string | null;
   avatar_url: string | null;
+  cnpj: string | null;
+  niche: string | null;
 };
 
 interface AccountFormProps {
@@ -33,7 +35,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" disabled={pending}>
-      {pending ? "Saving..." : "Save Changes"}
+      {pending ? "Salvando..." : "Salvar Alterações"}
     </Button>
   );
 }
@@ -43,7 +45,7 @@ export function AccountForm({ user, profile }: AccountFormProps) {
 
   useEffect(() => {
     if (state.success) {
-      toast.success("Profile updated successfully!");
+      toast.success("Perfil atualizado com sucesso!");
     }
     if (state.error) {
       toast.error(state.error);
@@ -53,8 +55,8 @@ export function AccountForm({ user, profile }: AccountFormProps) {
   return (
     <Card className="w-full max-w-lg mx-auto">
       <CardHeader>
-        <CardTitle>Profile</CardTitle>
-        <CardDescription>Update your personal information.</CardDescription>
+        <CardTitle>Perfil</CardTitle>
+        <CardDescription>Atualize suas informações pessoais.</CardDescription>
       </CardHeader>
       <form action={formAction}>
         <CardContent className="space-y-6">
@@ -64,12 +66,22 @@ export function AccountForm({ user, profile }: AccountFormProps) {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="firstName">First Name</Label>
+              <Label htmlFor="firstName">Nome</Label>
               <Input id="firstName" name="firstName" defaultValue={profile?.first_name ?? ""} />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="lastName">Last Name</Label>
+              <Label htmlFor="lastName">Sobrenome</Label>
               <Input id="lastName" name="lastName" defaultValue={profile?.last_name ?? ""} />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="cnpj">CNPJ</Label>
+              <Input id="cnpj" value={profile?.cnpj ?? ""} disabled />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="niche">Nicho de Mercado</Label>
+              <Input id="niche" value={profile?.niche ?? ""} disabled />
             </div>
           </div>
         </CardContent>
