@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useInView } from "@/hooks/use-in-view";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export function FeatureSection({ dictionary }: { dictionary: any }) {
   const { ref, isInView } = useInView<HTMLElement>({
@@ -33,8 +34,8 @@ export function FeatureSection({ dictionary }: { dictionary: any }) {
               {dictionary.description1}
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <Button size="lg" className="font-bold text-lg py-6 px-8 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90">
-                {dictionary.learn_more}
+              <Button asChild size="lg" className="font-bold text-lg py-6 px-8 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90">
+                <Link href="/about">{dictionary.learn_more}</Link>
               </Button>
             </div>
           </div>

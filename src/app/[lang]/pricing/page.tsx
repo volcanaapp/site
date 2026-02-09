@@ -4,6 +4,7 @@ import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/lib/i18n-config";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 export default async function PricingPage({
   params: { lang },
@@ -59,6 +60,7 @@ export default async function PricingPage({
                 ))}
               </ul>
               <Button
+                asChild
                 size="lg"
                 className={cn(
                   "w-full font-bold text-lg py-6",
@@ -67,7 +69,7 @@ export default async function PricingPage({
                     : "bg-foreground text-background hover:bg-foreground/80"
                 )}
               >
-                {plan.cta}
+                <Link href="/onboarding">{plan.cta}</Link>
               </Button>
             </div>
           ))}

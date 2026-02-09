@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import dynamic from 'next/dynamic';
+import Link from "next/link";
 
 const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
   ssr: false,
@@ -21,8 +22,8 @@ export function Hero01({ dictionary }: { dictionary: any }) {
             {dictionary.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="font-bold text-lg py-6 px-8 bg-primary text-primary-foreground hover:bg-primary/90">
-              {dictionary.cta_primary}
+            <Button asChild size="lg" className="font-bold text-lg py-6 px-8 bg-primary text-primary-foreground hover:bg-primary/90">
+              <Link href="/onboarding">{dictionary.cta_primary}</Link>
             </Button>
           </div>
         </div>

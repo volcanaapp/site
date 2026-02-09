@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
@@ -61,8 +62,8 @@ export function UseCaseCarousel({ dictionary }: { dictionary: any }) {
                       {slide.description}
                     </p>
                     <div className="flex">
-                      <Button size="lg" variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary/80 font-bold">
-                        {slide.button_text}
+                      <Button asChild size="lg" variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary/80 font-bold">
+                        <Link href="/waitlist">{slide.button_text}</Link>
                       </Button>
                     </div>
                   </div>

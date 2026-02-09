@@ -13,7 +13,7 @@ export function FinalCTA({ dictionary }: { dictionary: any }) {
                   {dictionary.demo.title}
                 </h2>
                 <Link
-                  href="#"
+                  href="/waitlist"
                   className="rounded-full border border-foreground p-3 transition-colors duration-300 ease-in-out hover:bg-foreground hover:text-background group-hover:border-secondary-foreground group-hover:text-secondary-foreground group-hover:hover:bg-secondary-foreground group-hover:hover:text-secondary"
                 >
                   <ArrowUpRight className="h-6 w-6" />
