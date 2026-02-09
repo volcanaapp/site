@@ -279,6 +279,40 @@
         "description": "Stories of those who grew with Volcana",
         "image_alt": "Tablet showing an e-commerce store"
       }
+    },
+    "product": {
+      "cards": [
+        {
+          "title": "Start quickly",
+          "description": "You can start selling tomorrow.",
+          "image_url": "https://images.unsplash.com/photo-1618193139121-3861cb243d3d?q=80&w=2070&auto=format&fit=crop"
+        },
+        {
+          "title": "Switch to Volcana",
+          "description": "Win more customers. Increase sales.",
+          "image_url": "https://images.unsplash.com/photo-1556742111-a301076d9d18?q=80&w=2070&auto=format&fit=crop"
+        },
+        {
+          "title": "The choice of big brands",
+          "description": "Ideal for any size, complexity, or goal.",
+          "image_url": "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop"
+        }
+      ],
+      "integrations": {
+        "title": "INTEGRATION FOR ALL STORES",
+        "items": [
+          {
+            "title": "The world's best checkout",
+            "description": "Proven to be the best converting.",
+            "image_url": "/shop-pay-placeholder.svg"
+          },
+          {
+            "title": "AI Agent",
+            "description": "Your e-commerce specific AI assistant.",
+            "image_url": "/sidekick-placeholder.svg"
+          }
+        ]
+      }
     }
   }
 }

@@ -19,6 +19,7 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import { SolutionsMegamenu } from "./solutions-megamenu";
+import { ProductMegamenu } from "./product-megamenu";
 
 export function Header({
   dictionary,
@@ -110,11 +111,12 @@ export function Header({
             <NavigationMenu onValueChange={(value) => setIsMegamenuOpen(!!value)}>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                      {dictionary.header.product}
-                    </NavigationMenuLink>
-                  </Link>
+                  <NavigationMenuTrigger className={linkClassName}>
+                    {dictionary.header.product}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ProductMegamenu dictionary={dictionary} />
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className={linkClassName}>
