@@ -31,6 +31,11 @@ export function Header({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,54 +113,56 @@ export function Header({
 
           {/* Center Navigation (Desktop) */}
           <div className="hidden md:flex absolute left-0 right-0 top-1/2 -translate-y-1/2 justify-center">
-            <NavigationMenu onValueChange={(value) => setIsMegamenuOpen(!!value)}>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className={linkClassName}>
-                    {dictionary.header.product}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ProductMegamenu dictionary={dictionary} />
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className={linkClassName}>
-                    {dictionary.header.solutions}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <SolutionsMegamenu dictionary={dictionary} />
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                      {dictionary.header.comparison}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                      {dictionary.header.use_cases}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="/pricing" legacyBehavior passHref>
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                      {dictionary.header.pricing}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link href="#" legacyBehavior passHref>
-                    <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
-                      {dictionary.header.content}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            {isMounted && (
+              <NavigationMenu onValueChange={(value) => setIsMegamenuOpen(!!value)}>
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className={linkClassName}>
+                      {dictionary.header.product}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ProductMegamenu dictionary={dictionary} />
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className={linkClassName}>
+                      {dictionary.header.solutions}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <SolutionsMegamenu dictionary={dictionary} />
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="#" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.comparison}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="#" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.use_cases}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="/pricing" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.pricing}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href="#" legacyBehavior passHref>
+                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                        {dictionary.header.content}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            )}
           </div>
           
           {/* Center Logo (Mobile) */}
@@ -167,21 +174,27 @@ export function Header({
 
           {/* Right Side */}
           <div className="flex items-center space-x-2">
-            {session ? (
-              <Button asChild variant="secondary">
-                <Link href="/dashboard">Dashboard</Link>
-              </Button>
+            {isMounted ? (
+              session ? (
+                <Button asChild variant="secondary">
+                  <Link href="/dashboard">Dashboard</Link>
+                </Button>
+              ) : (
+                <>
+                  <Button asChild variant="ghost">
+                    <Link href="/login">{dictionary.header.login}</Link>
+                  </Button>
+                  <Button
+                    asChild
+                    className="font-bold bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    <Link href="/onboarding">{dictionary.header.start_now}</Link>
+                  </Button>
+                </>
+              )
             ) : (
-              <Button asChild variant="ghost">
-                <Link href="/login">{dictionary.header.login}</Link>
-              </Button>
+              <div className="w-[215px] h-[40px]" />
             )}
-            <Button
-              asChild
-              className="font-bold bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              <Link href="/onboarding">{dictionary.header.start_now}</Link>
-            </Button>
           </div>
         </div>
       </header>
