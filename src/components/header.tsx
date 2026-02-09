@@ -106,7 +106,7 @@ export function Header({
           </div>
 
           {/* Center Navigation (Desktop) */}
-          <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="hidden md:flex absolute left-0 right-0 top-1/2 -translate-y-1/2 justify-center">
             <NavigationMenu onValueChange={(value) => setIsMegamenuOpen(!!value)}>
               <NavigationMenuList>
                 <NavigationMenuItem>
