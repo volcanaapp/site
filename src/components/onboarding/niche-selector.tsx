@@ -30,10 +30,10 @@ export function NicheSelector({ onSelect }: NicheSelectorProps) {
           key={niche}
           onClick={() => handleSelect(niche)}
           className={cn(
-            "px-6 py-3 rounded-lg border-2 border-[#181817] text-xl font-bold transition-all duration-300",
+            "px-6 py-3 rounded-lg border-2 border-border text-xl font-bold transition-all duration-300",
             selected === niche
-              ? "bg-[#181817] text-lime"
-              : "bg-transparent text-[#181817] hover:bg-gray-100"
+              ? "bg-lime text-background"
+              : "bg-transparent text-foreground hover:bg-muted"
           )}
         >
           {niche}

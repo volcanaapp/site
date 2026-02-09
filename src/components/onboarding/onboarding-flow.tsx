@@ -12,6 +12,7 @@ import { CnpjCard } from "./cnpj-card";
 import { NicheSelector } from "./niche-selector";
 import { BuildingAnimation } from "./building-animation";
 import { Button } from "../ui/button";
+import { Logo } from "@/components/logo";
 
 type Step =
   | "GREETING_1"
@@ -134,8 +135,6 @@ export function OnboardingFlow() {
     if (signUpError) {
       toast.error(signUpError.message);
       setIsProcessing(false);
-      // NOTE: A more robust solution would allow the user to correct their input.
-      // For now, we show an error and they would need to refresh to try again.
       return;
     }
 
@@ -169,14 +168,14 @@ export function OnboardingFlow() {
 
     if (step === "DONE") {
       return (
-        <div className="flex flex-col items-center justify-center h-screen text-center">
+        <div className="flex flex-col items-center justify-center h-full text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <AiMessage message="Infraestrutura Pronta. Verifique seu e-mail para confirmar sua conta." showCursor={false} />
-            <Button asChild size="lg" className="mt-8 bg-lime text-[#181817] hover:bg-lime/90 font-bold text-lg py-8 px-12 rounded-xl">
+            <Button asChild size="lg" className="mt-8 bg-lime text-background hover:bg-lime/90 font-bold text-lg py-8 px-12 rounded-xl">
               <Link href="/login">IR PARA O LOGIN</Link>
             </Button>
           </motion.div>
@@ -185,7 +184,8 @@ export function OnboardingFlow() {
     }
 
     return (
-      <div className="flex flex-col h-screen justify-end pb-20 px-8">
+      <div className="w-full">
+        <Logo className="h-8 mb-16" />
         <div className="space-y-8">
           <AnimatePresence>
             {history.map((item, index) => (
@@ -237,5 +237,5 @@ export function OnboardingFlow() {
     );
   };
 
-  return <div className="container max-w-3xl mx-auto">{renderContent()}</div>;
+  return <div className="container max-w-xl mx-auto">{renderContent()}</div>;
 }

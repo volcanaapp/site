@@ -11,19 +11,19 @@ export function CnpjCard({ onConfirm }: CnpjCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-      className="border border-[#181817] rounded-lg p-6"
+      className="border border-border rounded-lg p-6"
     >
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <p className="text-sm text-gray-500">Razão Social</p>
-          <p className="text-xl font-bold text-[#181817]">VOLCANA TECNOLOGIA LTDA</p>
-          <p className="text-sm text-gray-500 mt-2">Localização</p>
-          <p className="text-lg font-medium text-[#181817]">São Paulo/SP</p>
+          <p className="text-sm text-muted-foreground">Razão Social</p>
+          <p className="text-xl font-bold text-foreground">VOLCANA TECNOLOGIA LTDA</p>
+          <p className="text-sm text-muted-foreground mt-2">Localização</p>
+          <p className="text-lg font-medium text-foreground">São Paulo/SP</p>
         </div>
         <div className="flex items-center gap-4 w-full md:w-auto">
           <Button
             onClick={onConfirm}
-            className="w-full md:w-auto bg-[#181817] text-white hover:bg-black/80 font-bold px-6 py-3 rounded-lg"
+            className="w-full md:w-auto bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-6 py-3 rounded-lg"
           >
             CONFIRMAR
           </Button>

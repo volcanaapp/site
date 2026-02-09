@@ -49,7 +49,7 @@ export function UserInput({ type, placeholder, onSubmit }: UserInputProps) {
               type="email"
               placeholder={placeholder}
               autoComplete="off"
-              className="w-full bg-transparent text-2xl md:text-3xl font-bold text-[#181817] placeholder:text-[#B0B0B0] placeholder:font-light focus:outline-none border-b-2 border-[#181817] py-2"
+              className="w-full bg-transparent text-2xl md:text-3xl font-bold text-foreground placeholder:text-muted-foreground placeholder:font-light focus:outline-none border-b-2 border-foreground py-2"
             />
           </div>
           <div className="w-full relative">
@@ -58,10 +58,10 @@ export function UserInput({ type, placeholder, onSubmit }: UserInputProps) {
               type="password"
               placeholder="Sua senha"
               autoComplete="off"
-              className="w-full bg-transparent text-2xl md:text-3xl font-bold text-[#181817] placeholder:text-[#B0B0B0] placeholder:font-light focus:outline-none border-b-2 border-[#181817] py-2"
+              className="w-full bg-transparent text-2xl md:text-3xl font-bold text-foreground placeholder:text-muted-foreground placeholder:font-light focus:outline-none border-b-2 border-foreground py-2"
             />
           </div>
-          <button type="submit" className="bg-[#181817] text-white font-bold px-8 py-4 rounded-lg text-lg h-full">
+          <button type="submit" className="bg-primary text-primary-foreground font-bold px-8 py-4 rounded-lg text-lg h-full">
             Finalizar
           </button>
         </div>
@@ -75,10 +75,10 @@ export function UserInput({ type, placeholder, onSubmit }: UserInputProps) {
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
             onChange={handleMask}
-            className="w-full bg-transparent text-2xl md:text-3xl font-bold text-[#181817] placeholder:text-[#B0B0B0] placeholder:font-light focus:outline-none"
+            className="w-full bg-transparent text-2xl md:text-3xl font-bold text-foreground placeholder:text-muted-foreground placeholder:font-light focus:outline-none"
           />
           <motion.div
-            className="absolute bottom-0 left-0 h-0.5 bg-[#181817]"
+            className="absolute bottom-0 left-0 h-0.5 bg-foreground"
             initial={{ width: "0%" }}
             animate={{ width: isFocused || watch("mainInput") ? "100%" : "0%" }}
             transition={{ duration: 0.3, ease: "easeOut" }}
