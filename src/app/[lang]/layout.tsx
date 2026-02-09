@@ -9,7 +9,7 @@ import { AppWrapper } from "@/components/app-wrapper";
 import { PlanetBadge } from "@/components/planet-badge";
 import { SocialImpactBar } from "@/components/social-impact-bar";
 import { Toaster } from "@/components/ui/sonner";
-// import { createClient } from "@/lib/supabase/server";
+import { createClient } from "@/lib/supabase/server";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -29,11 +29,10 @@ export default async function RootLayout({
   params: { lang: Locale };
 }) {
   const dictionary = await getDictionary(params.lang);
-  // const supabase = createClient();
-  // const {
-  //   data: { session },
-  // } = await supabase.auth.getSession();
-  const session = null;
+  const supabase = createClient();
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
 
   return (
     <html lang={params.lang}>

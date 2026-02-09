@@ -1,14 +1,17 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { toast } from "sonner";
+import { createClient } from "@/lib/supabase/client";
+
 import { UserInput } from "./user-input";
 import { AiMessage } from "./ai-message";
 import { CnpjCard } from "./cnpj-card";
 import { NicheSelector } from "./niche-selector";
 import { BuildingAnimation } from "./building-animation";
 import { Button } from "../ui/button";
-import Link from "next/link";
 
 type Step =
   | "GREETING_1"
@@ -35,10 +38,9 @@ export function OnboardingFlow() {
     name: "",
     cnpj: "",
     niche: "",
-    email: "",
-    password: "",
   });
   const [isProcessing, setIsProcessing] = useState(false);
+  const supabase = createClient();
 
   const addHistory = (item: Omit<HistoryItem, "id">) => {
     setHistory((prev) => [...prev, { ...item, id: prev.length }]);
@@ -104,7 +106,7 @@ export function OnboardingFlow() {
     setFormData((prev) => ({ ...prev, niche: value }));
     addHistory({ type: "user", content: value });
     setStep("GET_CREDENTIALS");
-     setTimeout(() => {
+    setTimeout(() => {
       addHistory({
         type: "ai",
         content: "Defina seu acesso mestre ao Command Center.",
@@ -112,10 +114,52 @@ export function OnboardingFlow() {
     }, 500);
   };
 
-  const handleCredentialsSubmit = (data: any) => {
-    setFormData(prev => ({ ...prev, email: data.email, password: data.password }));
-    addHistory({ type: 'user', content: 'Credenciais definidas.' });
-    setStep('BUILDING');
+  const handleCredentialsSubmit = async (data: any) => {
+    setIsProcessing(true);
+    addHistory({ type: "user", content: "Credenciais definidas." });
+
+    const { email, password } = data;
+    const { name, cnpj, niche } = formData;
+
+    const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          first_name: name,
+        },
+      },
+    });
+
+    if (signUpError) {
+      toast.error(signUpError.message);
+      setIsProcessing(false);
+      // NOTE: A more robust solution would allow the user to correct their input.
+      // For now, we show an error and they would need to refresh to try again.
+      return;
+    }
+
+    if (signUpData.user) {
+      const { error: profileError } = await supabase
+        .from("profiles")
+        .update({
+          first_name: name,
+          cnpj: cnpj,
+          niche: niche,
+          updated_at: new Date().toISOString(),
+        })
+        .eq("id", signUpData.user.id);
+
+      if (profileError) {
+        toast.error("Não foi possível salvar as informações do seu perfil.");
+        console.error("Profile update error:", profileError);
+        setIsProcessing(false);
+        return;
+      }
+    }
+
+    setStep("BUILDING");
+    setIsProcessing(false);
   };
 
   const renderContent = () => {
@@ -126,16 +170,16 @@ export function OnboardingFlow() {
     if (step === "DONE") {
       return (
         <div className="flex flex-col items-center justify-center h-screen text-center">
-           <motion.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-           >
-            <AiMessage message="Infraestrutura Pronta. Bem-vindo à Volcana." showCursor={false} />
+          >
+            <AiMessage message="Infraestrutura Pronta. Verifique seu e-mail para confirmar sua conta." showCursor={false} />
             <Button asChild size="lg" className="mt-8 bg-lime text-[#181817] hover:bg-lime/90 font-bold text-lg py-8 px-12 rounded-xl">
-              <Link href="/dashboard">ACESSAR PAINEL</Link>
+              <Link href="/login">IR PARA O LOGIN</Link>
             </Button>
-           </motion.div>
+          </motion.div>
         </div>
       );
     }
