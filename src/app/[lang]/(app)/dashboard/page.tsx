@@ -1,11 +1,40 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DollarSign, Users, CreditCard, Activity } from "lucide-react";
+import { createClient } from "@/lib/supabase/server";
+import { getDictionary } from "@/lib/get-dictionary";
+import { Locale } from "@/lib/i18n-config";
+import { redirect } from "next/navigation";
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
+  const dashboardDict = dictionary.dashboard;
+
+  const supabase = createClient();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    return redirect(`/${lang}/login`);
+  }
+
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("first_name")
+    .eq("id", user.id)
+    .single();
+
+  const displayName = profile?.first_name || user.email?.split("@")[0] || "User";
+
   return (
     <div>
       <h1 className="text-3xl font-bold tracking-tighter mb-8">
-        Dashboard
+        {dashboardDict.welcome_message.replace("{name}", displayName)}
       </h1>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>

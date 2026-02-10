@@ -315,5 +315,8 @@
         ]
       }
     }
+  },
+  "dashboard": {
+    "welcome_message": "Bem-vindo de volta, {name}!"
   }
 }
