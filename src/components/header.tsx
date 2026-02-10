@@ -189,7 +189,7 @@ export function Header({
                     asChild
                     className="font-bold bg-primary text-primary-foreground hover:bg-primary/90"
                   >
-                    <Link href="/onboarding">{dictionary.header.start_now}</Link>
+                    <Link href="/waitlist">{dictionary.header.start_now}</Link>
                   </Button>
                 </>
               )
