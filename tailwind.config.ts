@@ -20,7 +20,7 @@ export default {
         sans: ['var(--font-outfit)'],
       },
   		colors: {
-        lime: '#D3FE3E',
+        volcana-lime: '#D3FE3E',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
