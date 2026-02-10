@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Link from "next/link";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -123,8 +124,8 @@ export function PricingSimulator() {
               </CardContent>
             </Card>
             <div className="mt-8 text-center w-full max-w-md">
-                <Button size="lg" className="w-full bg-black text-white hover:bg-gray-800 text-lg font-bold py-6">
-                    COMEÇAR COM PLANO FREE
+                <Button asChild size="lg" className="w-full bg-black text-white hover:bg-gray-800 text-lg font-bold py-6">
+                    <Link href="/onboarding">COMEÇAR COM PLANO FREE</Link>
                 </Button>
                 <p className="mt-3 text-sm text-gray-600">
                     Ganhe R$ 50,00 em créditos ao criar sua conta.
