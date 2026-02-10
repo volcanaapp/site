@@ -133,32 +133,44 @@ export function Header({
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="#" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="#"
+                        className={cn(navigationMenuTriggerStyle(), linkClassName)}
+                      >
                         {dictionary.header.comparison}
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="#" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="#"
+                        className={cn(navigationMenuTriggerStyle(), linkClassName)}
+                      >
                         {dictionary.header.use_cases}
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="/pricing" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="/pricing"
+                        className={cn(navigationMenuTriggerStyle(), linkClassName)}
+                      >
                         {dictionary.header.pricing}
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href="#" legacyBehavior passHref>
-                      <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), linkClassName)}>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href="#"
+                        className={cn(navigationMenuTriggerStyle(), linkClassName)}
+                      >
                         {dictionary.header.content}
-                      </NavigationMenuLink>
-                    </Link>
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
