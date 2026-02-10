@@ -53,7 +53,6 @@ export function Header({
     { href: "#", label: dictionary.header.solutions },
     { href: "#", label: dictionary.header.comparison },
     { href: "#", label: dictionary.header.use_cases },
-    { href: "/pricing", label: dictionary.header.pricing },
     { href: "#", label: dictionary.header.content },
   ];
 
@@ -149,16 +148,6 @@ export function Header({
                         className={cn(navigationMenuTriggerStyle(), linkClassName)}
                       >
                         {dictionary.header.use_cases}
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/pricing"
-                        className={cn(navigationMenuTriggerStyle(), linkClassName)}
-                      >
-                        {dictionary.header.pricing}
                       </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
