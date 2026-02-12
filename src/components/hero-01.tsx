@@ -5,6 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import dynamic from 'next/dynamic';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
   ssr: false,
@@ -16,6 +22,13 @@ export function Hero01({ dictionary }: { dictionary: any }) {
     "Loja de cosméticos veganos",
     "E-commerce de artigos esportivos",
     "Brechó online com curadoria",
+  ];
+
+  const agents = [
+    { name: "Sherpa.seo", description: "Otimiza sua loja para os motores de busca." },
+    { name: "Sherpa.cro", description: "Aumenta a taxa de conversão da sua loja." },
+    { name: "Sherpa.crm", description: "Gerencia o relacionamento com seus clientes." },
+    { name: "Sherpa.ads", description: "Cria e otimiza suas campanhas de anúncios." },
   ];
 
   return (
@@ -36,7 +49,7 @@ export function Hero01({ dictionary }: { dictionary: any }) {
             {dictionary.subtitle}
           </p>
           
-          {/* Novo campo de prompt */}
+          {/* Campo de prompt */}
           <div className="w-full max-w-2xl flex items-center gap-2 p-2 rounded-xl bg-card border shadow-sm mb-4">
             <Input 
               type="text" 
@@ -50,7 +63,7 @@ export function Hero01({ dictionary }: { dictionary: any }) {
           </div>
 
           {/* Prompts pré-definidos */}
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-16">
             <span className="text-sm text-muted-foreground mr-2">Experimente:</span>
             {suggestedPrompts.map((prompt) => (
               <Badge 
@@ -62,10 +75,33 @@ export function Hero01({ dictionary }: { dictionary: any }) {
               </Badge>
             ))}
           </div>
+
+          {/* Seção dos Agents */}
+          <div className="w-full max-w-2xl text-center">
+            <h3 className="text-sm font-semibold text-muted-foreground tracking-wider uppercase mb-4">
+              CONHEÇA NOSSOS SHERPA AGENTS
+            </h3>
+            <TooltipProvider>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                {agents.map((agent) => (
+                  <Tooltip key={agent.name}>
+                    <TooltipTrigger asChild>
+                      <div className="py-2 px-4 border rounded-full bg-card/50 cursor-pointer">
+                        <span className="font-mono text-sm font-medium text-foreground">{agent.name}</span>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{agent.description}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                ))}
+              </div>
+            </TooltipProvider>
+          </div>
         </div>
       </div>
 
-      {/* Spline animation (escondido em telas pequenas) */}
+      {/* Spline animation */}
       <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block opacity-30">
         <SplineAnimation />
       </div>
