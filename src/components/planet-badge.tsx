@@ -16,9 +16,9 @@ export function PlanetBadge({ dictionary }: { dictionary: any }) {
             <Image
               src="/volcana-nature.png"
               alt="Volcana Nature"
-              fill
-              sizes="160px"
-              className="object-cover"
+              width={160}
+              height={112}
+              className="object-cover w-full h-full"
             />
           </div>
         </HoverCardTrigger>
