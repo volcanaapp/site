@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ 
+  subsets: ["latin"],
+  variable: '--font-outfit',
+});
 
 export const metadata: Metadata = {
   title: "Volcana™ - O E-commerce que se opera sozinho",
@@ -35,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={outfit.variable}>
       <body>
         <script
           type="application/ld+json"
