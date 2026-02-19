@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import { AuthForm } from "@/components/auth-form";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
+
+export const metadata: Metadata = {
+  title: "Login | Volcana™",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default async function LoginPage() {
   const supabase = createClient();

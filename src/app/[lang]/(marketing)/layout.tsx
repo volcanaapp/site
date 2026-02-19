@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { getDictionary } from "@/lib/get-dictionary";
 import { createClient } from "@/lib/supabase/server";
 import { Locale } from "@/lib/i18n-config";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default async function MarketingLayout({
   children,
