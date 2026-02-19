@@ -11,12 +11,12 @@ export default function WaitlistPage() {
     <div className="bg-white text-gray-900">
       <ScarcityBanner />
       <WaitlistHeader />
-      <main>
+      <main className="pb-48">
         <WaitlistHero />
         <InterestSection />
         <DesireSection />
-        <ActionSection />
       </main>
+      <ActionSection />
       <TrustFooter />
     </div>
   );
