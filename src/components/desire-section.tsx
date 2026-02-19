@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useInView } from "@/hooks/use-in-view";
-import { StickyCTA } from "./sticky-cta";
+import { StickyCTA } from "@/components/sticky-cta";
 
 const features = [
   {
