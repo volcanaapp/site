@@ -34,13 +34,15 @@ function SubmitButton() {
   };
 
   return (
-    <Button
-      type="submit"
-      disabled={pending}
-      className="bg-[#D3FE3E] text-gray-900 hover:bg-[#D3FE3E]/90 font-bold text-base h-12 px-6 rounded-lg w-full sm:w-auto flex-shrink-0 transition-all transform hover:scale-105 hover:shadow-lg"
-    >
-      {texts[status]}
-    </Button>
+    <div className="p-[2px] rounded-lg w-full sm:w-auto animated-border-gradient">
+      <Button
+        type="submit"
+        disabled={pending}
+        className="bg-[#D3FE3E] text-gray-900 hover:bg-[#D3FE3E]/90 font-bold text-base h-12 px-6 rounded-md w-full sm:w-auto flex-shrink-0 transition-all transform hover:scale-105 hover:shadow-lg"
+      >
+        {texts[status]}
+      </Button>
+    </div>
   );
 }
 
