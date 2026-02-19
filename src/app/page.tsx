@@ -4,6 +4,7 @@ import { DesireSection } from "@/components/desire-section";
 import { WaitlistHeader } from "@/components/waitlist-header";
 import { SocialProofSection } from "@/components/social-proof-section";
 import { getDictionary } from "@/lib/get-dictionary";
+import { SimpleFooter } from "@/components/simple-footer";
 
 export default async function WaitlistPage() {
   const dictionary = await getDictionary("pt");
@@ -18,6 +19,7 @@ export default async function WaitlistPage() {
         <SocialProofSection title={waitlistDict.logos_title} />
         <DesireSection />
       </main>
+      <SimpleFooter />
     </div>
   );
 }
