@@ -19,7 +19,7 @@ export function WaitlistHero() {
       />
       <div className="container max-w-4xl mx-auto z-10 relative">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-transparent bg-clip-text bg-gradient-to-t from-gray-900 to-gray-600">
-          Volcana™: A Primeira Plataforma de E-commerce Native IA da América Latina
+          A Primeira Plataforma de E-commerce Native IA da América Latina
         </h1>
       </div>
     </section>
