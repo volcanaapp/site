@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
@@ -69,7 +68,7 @@ export function OptimizedWaitlistForm() {
         name="email"
         placeholder="Seu melhor e-mail corporativo"
         required
-        className="bg-zinc-800 border-zinc-700 text-white placeholder:text-zinc-500 h-12 px-4 rounded-lg flex-grow w-full"
+        className="bg-white border-gray-300 text-gray-900 placeholder:text-gray-500 h-12 px-4 rounded-lg flex-grow w-full focus:ring-2 focus:ring-lime-300"
       />
       <SubmitButton />
     </form>

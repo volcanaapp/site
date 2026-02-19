@@ -1,9 +1,8 @@
-
 import Image from "next/image";
 
 export function TrustFooter() {
   return (
-    <footer className="py-8">
+    <footer className="py-8 border-t border-gray-200">
       <div className="container mx-auto flex justify-center items-center">
         <Image
           src="/one-percent-logo.svg"
