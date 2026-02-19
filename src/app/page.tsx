@@ -1,25 +1,23 @@
 import { WaitlistHero } from "@/components/waitlist-hero";
 import { ScarcityBanner } from "@/components/scarcity-banner";
-import { InterestSection } from "@/components/interest-section";
 import { DesireSection } from "@/components/desire-section";
-import { ActionSection } from "@/components/action-section";
-import { TrustFooter } from "@/components/trust-footer";
 import { WaitlistHeader } from "@/components/waitlist-header";
+import { SocialProofSection } from "@/components/social-proof-section";
+import { getDictionary } from "@/lib/get-dictionary";
 
-export default function WaitlistPage() {
+export default async function WaitlistPage() {
+  const dictionary = await getDictionary("pt");
+  const waitlistDict = dictionary.waitlist;
+
   return (
     <div className="bg-white text-gray-900">
       <ScarcityBanner />
       <WaitlistHeader />
-      <main className="pb-56">
+      <main>
         <WaitlistHero />
-        <InterestSection />
+        <SocialProofSection title={waitlistDict.logos_title} />
         <DesireSection />
       </main>
-      <div className="fixed bottom-0 left-0 w-full z-50 shadow-[0_-4px_14px_rgba(0,0,0,0.05)]">
-        <TrustFooter />
-        <ActionSection />
-      </div>
     </div>
   );
 }
