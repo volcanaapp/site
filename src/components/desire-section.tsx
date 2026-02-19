@@ -17,7 +17,7 @@ const features = [
   },
   {
     title: "A Elite Agêntica",
-    description: "Você não precisa de mais funcionários de operação. Você precisa de agentes que não dormem.",
+    description: "Você não precisa de mais funcionários e ferramentas na sua operação. Você precisa de agentes que não dormem.",
   },
   {
     title: "Inteligência Preditiva",
