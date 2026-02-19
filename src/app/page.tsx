@@ -15,7 +15,7 @@ export default async function WaitlistPage() {
       <ScarcityBanner />
       <WaitlistHeader />
       <main>
-        <WaitlistHero />
+        <WaitlistHero dictionary={waitlistDict} />
         <SocialProofSection title={waitlistDict.logos_title} />
         <DesireSection />
       </main>
