@@ -28,7 +28,7 @@ function SubmitButton() {
   }, [pending]);
 
   const texts: { [key: string]: any } = {
-    idle: <>Garantir prioridade no Lote 01 <ArrowRight className="ml-2 h-4 w-4" /></>,
+    idle: <>Quero participar! <ArrowRight className="ml-2 h-4 w-4" /></>,
     pending: <>Enviando... <Loader2 className="ml-2 h-4 w-4 animate-spin" /></>,
     verifying: <>Verificando elegibilidade... <Loader2 className="ml-2 h-4 w-4 animate-spin" /></>,
   };
