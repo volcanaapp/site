@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function TrustFooter() {
   return (
-    <footer className="bg-[#D3FE3E] py-2">
+    <footer className="bg-[#D3FE3E] py-2 shadow-[0_-4px_12px_rgba(0,0,0,0.08)]">
       <div className="container mx-auto flex justify-center items-center">
         <Link href="https://www.onepercentfortheplanet.org/" target="_blank" className="flex items-center gap-3 group">
           <Image
