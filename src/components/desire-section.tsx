@@ -13,7 +13,7 @@ import { StickyCTA } from "@/components/sticky-cta";
 const features = [
   {
     title: "O Gatilho da Margem",
-    description: "Saia do imposto de 3% sobre o faturamento. Entre na era do Custo Fixo de $59.",
+    description: "Saia do imposto de % das plataformas tradicionais sobre o seu faturamento. Entre na era do custo previsível e efetivo dos nossos agentes.",
   },
   {
     title: "A Elite Agêntica",
