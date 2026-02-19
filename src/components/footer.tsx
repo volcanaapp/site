@@ -61,7 +61,7 @@ export function Footer({ dictionary, footerDictionary }: { dictionary: any, foot
               <ul className="space-y-3">
                 {columns.company.links.map((link: string, index: number) => {
                   const isAboutLink = index === 0;
-                  const href = isAboutLink ? "/about" : "#";
+                  const href = isAboutLink ? "/site/about" : "#";
                   return (
                     <li key={link}>
                       <Link href={href} className="text-muted-foreground hover:text-foreground transition-colors">

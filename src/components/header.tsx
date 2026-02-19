@@ -82,7 +82,7 @@ export function Header({
                 </SheetTrigger>
                 <SheetContent side="left">
                   <Link
-                    href="/"
+                    href="/site"
                     className="flex items-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -104,7 +104,7 @@ export function Header({
               </Sheet>
             </div>
             <div className="hidden md:flex">
-              <Link href="/" className="mr-6 flex items-center">
+              <Link href="/site" className="mr-6 flex items-center">
                 <Logo className="h-7" />
               </Link>
             </div>
@@ -168,7 +168,7 @@ export function Header({
           
           {/* Center Logo (Mobile) */}
           <div className="md:hidden">
-            <Link href="/" className="flex items-center">
+            <Link href="/site" className="flex items-center">
               <Logo className="h-7" />
             </Link>
           </div>
@@ -189,7 +189,7 @@ export function Header({
                     asChild
                     className="font-bold bg-primary text-primary-foreground hover:bg-primary/90"
                   >
-                    <Link href="/waitlist">{dictionary.header.start_now}</Link>
+                    <Link href="/">{dictionary.header.start_now}</Link>
                   </Button>
                 </>
               )
