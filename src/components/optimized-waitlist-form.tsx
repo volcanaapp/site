@@ -37,7 +37,7 @@ function SubmitButton() {
     <Button
       type="submit"
       disabled={pending}
-      className="bg-[#D3FE3E] text-black hover:bg-[#D3FE3E]/90 font-bold text-base h-12 px-6 rounded-lg w-full sm:w-auto flex-shrink-0 transition-all"
+      className="bg-gray-900 text-white hover:bg-gray-800 font-bold text-base h-12 px-6 rounded-lg w-full sm:w-auto flex-shrink-0 transition-all transform hover:scale-105 hover:shadow-lg"
     >
       {texts[status]}
     </Button>
@@ -62,7 +62,7 @@ export function OptimizedWaitlistForm() {
   }, [state]);
 
   return (
-    <form ref={formRef} action={formAction} className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto">
+    <form ref={formRef} action={formAction} className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto w-full">
       <Input
         type="email"
         name="email"
