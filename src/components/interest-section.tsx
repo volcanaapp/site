@@ -1,10 +1,12 @@
 export function InterestSection() {
   return (
-    <section className="py-16">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto text-center">
-        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-          Não somos uma ferramenta de gestão. Somos uma camada de inteligência nativa que executa o seu back-office enquanto você foca na marca.
-        </p>
+        <blockquote className="max-w-4xl mx-auto">
+          <p className="text-2xl md:text-3xl font-medium text-gray-800 leading-snug">
+            “Não somos uma ferramenta de gestão. Somos uma camada de inteligência nativa que executa o seu back-office enquanto você foca na marca.”
+          </p>
+        </blockquote>
       </div>
     </section>
   );
