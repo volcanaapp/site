@@ -22,6 +22,15 @@ export async function addToWaitlist(prevState: any, formData: FormData) {
 
   const { email } = validatedFields.data;
 
+  const genericDomains = ["gmail.com", "outlook.com", "yahoo.com", "hotmail.com", "aol.com", "icloud.com"];
+  const domain = email.split("@")[1];
+
+  if (genericDomains.includes(domain)) {
+    return {
+      error: "generic_domain",
+    };
+  }
+
   const { error } = await supabase.from("waitlist").insert({ email });
 
   if (error) {
