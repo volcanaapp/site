@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { Toaster } from "@/components/ui/sonner";
+import { Locale } from "@/lib/i18n-config";
 
 const outfit = Outfit({ 
   subsets: ["latin"],
@@ -32,13 +33,15 @@ const jsonLd = {
   }
 };
 
-export default function RootLayout({
+export default function LangRootLayout({
   children,
+  params: { lang },
 }: Readonly<{
   children: React.ReactNode;
+  params: { lang: Locale };
 }>) {
   return (
-    <html lang="pt-BR" className={outfit.variable}>
+    <html lang={lang} className={outfit.variable}>
       <body>
         <script
           type="application/ld+json"

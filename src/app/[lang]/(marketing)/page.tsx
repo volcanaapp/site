@@ -8,9 +8,14 @@ import { FinalCTA } from "@/components/final-cta";
 import { SocialImpactBar } from "@/components/social-impact-bar";
 import { PlanetBadge } from "@/components/planet-badge";
 import { getDictionary } from "@/lib/get-dictionary";
+import { Locale } from "@/lib/i18n-config";
 
-export default async function HomePage() {
-  const dictionary = await getDictionary("pt");
+export default async function HomePage({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
   return (
     <>
       <Hero01 dictionary={dictionary.hero} />

@@ -6,9 +6,14 @@ import { HowItWorksSection } from "@/components/how-it-works-section";
 import { InterestSection } from "@/components/interest-section";
 import { getDictionary } from "@/lib/get-dictionary";
 import { SimpleFooter } from "@/components/simple-footer";
+import { Locale } from "@/lib/i18n-config";
 
-export default async function WaitlistPage() {
-  const dictionary = await getDictionary("pt");
+export default async function WaitlistPage({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
   const waitlistDict = dictionary.waitlist;
 
   return (
