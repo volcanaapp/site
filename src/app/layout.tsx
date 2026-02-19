@@ -10,6 +10,25 @@ export const metadata: Metadata = {
   description: "O E-commerce que se opera sozinho chegou à América Latina.",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Volcana™",
+  "applicationCategory": "EcommercePlatform",
+  "operatingSystem": "Web",
+  "description": "A primeira plataforma de e-commerce AI-Native da América Latina. Engenharia brasileira. Custo fixo. Operação agêntica.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1284"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "299",
+    "priceCurrency": "BRL"
+  }
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,7 +36,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
         <Toaster position="bottom-center" />
       </body>
