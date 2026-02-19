@@ -2,7 +2,7 @@ import { OptimizedWaitlistForm } from "./optimized-waitlist-form";
 
 export function ActionSection() {
   return (
-    <section className="w-full bg-[#D3FE3E] py-6">
+    <section className="w-full bg-white py-6">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-center md:text-left">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight">

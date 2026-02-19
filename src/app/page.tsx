@@ -16,7 +16,7 @@ export default function WaitlistPage() {
         <InterestSection />
         <DesireSection />
       </main>
-      <div className="fixed bottom-0 left-0 w-full z-50">
+      <div className="fixed bottom-0 left-0 w-full z-50 shadow-[0_-4px_14px_rgba(0,0,0,0.05)]">
         <TrustFooter />
         <ActionSection />
       </div>
