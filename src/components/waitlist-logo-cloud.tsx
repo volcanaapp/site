@@ -8,6 +8,7 @@ export function WaitlistLogoCloud() {
     "stripe",
     "loggi",
     "meta_ads",
+    "google",
   ];
 
   return (
