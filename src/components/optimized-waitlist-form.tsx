@@ -64,7 +64,7 @@ export function OptimizedWaitlistForm() {
   }, [state]);
 
   return (
-    <form ref={formRef} action={formAction} className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto w-full">
+    <form ref={formRef} action={formAction} className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl w-full">
       <Input
         type="email"
         name="email"
