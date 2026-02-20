@@ -17,22 +17,47 @@ export default function SplineAnimation({ sceneUrl = DEFAULT_URL }: SplineAnimat
     const container = containerRef.current;
     if (!container) return;
 
-    // O ResizeObserver irá disparar quando o elemento do contêiner for renderizado
-    // e tiver um tamanho. Esta é uma maneira mais confiável de evitar condições de corrida
-    // do que usar um temporizador fixo.
+    let isContainerSized = false;
+    // Verifica se a janela já foi carregada no momento da execução do efeito.
+    let isWindowLoaded = document.readyState === 'complete';
+
+    const checkAndSetReady = () => {
+      // Só define como pronto se AMBAS as condições forem verdadeiras.
+      if (isContainerSized && isWindowLoaded) {
+        setIsReady(true);
+      }
+    };
+
+    // Condição 1: Espera a janela inteira carregar.
+    const handleWindowLoad = () => {
+      isWindowLoaded = true;
+      checkAndSetReady();
+      window.removeEventListener('load', handleWindowLoad);
+    };
+
+    if (!isWindowLoaded) {
+      window.addEventListener('load', handleWindowLoad);
+    }
+
+    // Condição 2: Espera o contêiner ter um tamanho.
     const observer = new ResizeObserver((entries) => {
       for (const entry of entries) {
         if (entry.contentRect.width > 0 && entry.contentRect.height > 0) {
-          // Assim que o contêiner tiver dimensões, podemos carregar com segurança a cena do Spline.
-          setIsReady(true);
-          observer.disconnect(); // Só precisamos executar isso uma vez.
+          isContainerSized = true;
+          checkAndSetReady();
+          observer.disconnect(); // Só precisamos disso uma vez.
         }
       }
     });
 
     observer.observe(container);
 
+    // Faz uma verificação inicial caso tudo já esteja pronto.
+    checkAndSetReady();
+
     return () => {
+      // Limpeza para evitar vazamentos de memória.
+      window.removeEventListener('load', handleWindowLoad);
       observer.disconnect();
     };
   }, []);
@@ -42,7 +67,7 @@ export default function SplineAnimation({ sceneUrl = DEFAULT_URL }: SplineAnimat
       {isReady ? (
         <Spline scene={sceneUrl} className="w-full h-full" />
       ) : (
-        // Exibe um placeholder enquanto esperamos o contêiner estar pronto.
+        // Exibe um placeholder enquanto esperamos as condições serem atendidas.
         <div className="w-full h-full bg-muted/20 animate-pulse rounded-lg" />
       )}
     </div>
