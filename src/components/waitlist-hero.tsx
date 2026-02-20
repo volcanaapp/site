@@ -19,7 +19,7 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
             O primeiro E-commerce Autônomo da América Latina.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl">
-            Não é uma plataforma. É uma operação digital executada por agentes de IA que substituem agência, time técnico e parte do back-office.
+            A Volcana é a primeira plataforma AI-Native da América Latina. Agentes inteligentes executam o trabalho de múltiplas áreas enquanto você escala.
           </p>
           <div className="mt-12 flex justify-center md:justify-start">
             <OptimizedWaitlistForm />
