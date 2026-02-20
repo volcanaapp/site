@@ -1,0 +1,12 @@
+.scroller {
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 1.5rem));
+  }
+}

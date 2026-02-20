@@ -1,4 +1,6 @@
 import { integrationLogos } from "./integration-logos";
+import Image from "next/image";
+import styles from "./waitlist-logo-cloud.module.css";
 
 export function WaitlistLogoCloud() {
   const logosToShow = [
@@ -11,16 +13,32 @@ export function WaitlistLogoCloud() {
     "google",
   ];
 
+  const logos = {
+    ...integrationLogos,
+    google: () => <Image src="/google-logo.png" alt="Google" width={90} height={32} className="h-8 w-auto" />,
+  };
+
   return (
-    <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
-      {logosToShow.map((key) => {
-        const LogoComponent = integrationLogos[key];
-        return (
-          <div key={key} className="h-8 text-muted-foreground/60 grayscale hover:grayscale-0 transition-all">
-            {LogoComponent && <LogoComponent className="h-full w-auto" />}
-          </div>
-        );
-      })}
+    <div
+      className="relative w-full overflow-hidden py-4"
+      style={{
+        maskImage:
+          "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+      }}
+    >
+      <div className={`flex w-max items-center gap-x-12 ${styles.scroller}`}>
+        {[...logosToShow, ...logosToShow].map((key, index) => {
+          const LogoComponent = logos[key];
+          return (
+            <div
+              key={`${key}-${index}`}
+              className="h-8 flex-shrink-0 text-muted-foreground/60 grayscale transition-all hover:grayscale-0"
+            >
+              {LogoComponent && <LogoComponent className="h-full w-auto" />}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
