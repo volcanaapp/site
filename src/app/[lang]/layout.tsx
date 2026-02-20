@@ -12,6 +12,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Volcana™ - O E-commerce que se opera sozinho",
   description: "O E-commerce que se opera sozinho chegou à América Latina.",
+  verification: {
+    google: "KlAtdVG4nC3eSqW4FuqpeMUm_Jm1wXbiovSwdhVsbwY",
+  },
 };
 
 const jsonLd = {
