@@ -85,7 +85,6 @@
   .animated-border-gradient {
     position: relative;
     overflow: hidden;
-    z-index: 0;
   }
 
   .animated-border-gradient::before {
