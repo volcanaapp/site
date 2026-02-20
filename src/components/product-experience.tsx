@@ -60,7 +60,7 @@ export function ProductExperience() {
                 src="https://a.storyblok.com/f/314917/1634x1248/c71656cb82/mbp.png"
                 alt="Volcana Dashboard"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
               />
               
               {/* Overlay de brilho */}
