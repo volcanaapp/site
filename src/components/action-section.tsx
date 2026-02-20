@@ -15,7 +15,7 @@ export function ActionSection() {
               Junte-se ao Futuro do E-commerce Agêntico
             </h2>
             <p className="text-gray-700 text-sm md:text-base">
-              Mais de 1.284 líderes já garantiram acesso prioritário. Não fique de fora.
+              Estamos liberando acesso por capacidade operacional.
             </p>
           </div>
           <div className="w-full md:w-auto flex-shrink-0">
