@@ -10,7 +10,7 @@ export function InterestSection() {
               “Diferente de plataformas de ecommerce legadas que vendem apenas ferramentas, a Volcana entrega agentes inteligentes em uma arquitetura verdadeiramente moderna para operações digitais de alta performance.”
             </p>
             <p className="mt-6 text-lg text-gray-600">
-              A Volcana tem compromisso com a sustentabilidade, destinando 1% dos nossos lucros para o planeta.
+              A Volcana™ tem compromisso com o impacto ambiental ao destinar 1% dos nossos lucros para à sustentabilidade do planeta.
             </p>
             <footer className="mt-8 flex items-center">
               <Image
