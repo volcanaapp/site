@@ -17,7 +17,7 @@ export default async function HomePage({
 }) {
   const dictionary = await getDictionary(lang);
   return (
-    <>
+    <div className="bg-white text-gray-900">
       <Hero01 dictionary={dictionary.hero} />
       <Hero02 dictionary={dictionary} />
       <FeatureSection dictionary={dictionary.feature_section} />
@@ -29,6 +29,6 @@ export default async function HomePage({
       <FinalCTA dictionary={dictionary.final_cta} />
       <SocialImpactBar dictionary={dictionary.social_impact} />
       <PlanetBadge dictionary={dictionary.planet_badge} />
-    </>
+    </div>
   );
 }
