@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export function InterestSection() {
   return (
     <section className="pb-20 md:pb-24 bg-white">
@@ -11,9 +13,13 @@ export function InterestSection() {
               A Volcana tem compromisso com a sustentabilidade, destinando 1% dos nossos lucros para o planeta.
             </p>
             <footer className="mt-8 flex items-center">
-              <div className="w-16 h-16 rounded-full bg-gray-200 mr-6 flex-shrink-0">
-                {/* Placeholder for photo */}
-              </div>
+              <Image
+                src="/pasted-image-2026-02-20T17-52-43-733Z.png"
+                alt="Foto de Renan Santos"
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-full object-cover mr-6 flex-shrink-0"
+              />
               <div>
                 <p className="text-lg font-semibold text-gray-900">Renan Santos</p>
                 <p className="text-base text-gray-600">Founder e Especialista em ecommerce</p>
