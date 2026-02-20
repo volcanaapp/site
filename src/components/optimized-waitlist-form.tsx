@@ -28,13 +28,13 @@ function SubmitButton() {
   }, [pending]);
 
   const texts: { [key: string]: any } = {
-    idle: <>Quero participar! <ArrowRight className="ml-2 h-4 w-4" /></>,
+    idle: <>Quero operar com IA <ArrowRight className="ml-2 h-4 w-4" /></>,
     pending: <>Enviando... <Loader2 className="ml-2 h-4 w-4 animate-spin" /></>,
     verifying: <>Verificando elegibilidade... <Loader2 className="ml-2 h-4 w-4 animate-spin" /></>,
   };
 
   return (
-    <div className="p-[2px] pb-[6px] rounded-lg w-full sm:w-auto animated-border-gradient">
+    <div className="p-1 pb-2 rounded-lg w-full sm:w-auto animated-border-gradient">
       <Button
         type="submit"
         disabled={pending}
