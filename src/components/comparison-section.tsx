@@ -1,6 +1,6 @@
 "use client";
 
-import { X, Check, XCircle, CheckCircle2 } from 'lucide-react';
+import { XCircle, CheckCircle2 } from 'lucide-react';
 import { CtaButton } from './ui/cta-button';
 import React from 'react';
 import { cn } from '@/lib/utils';
@@ -77,15 +77,7 @@ export function ComparisonSection() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center max-w-4xl mx-auto mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">
-            Infraestrutura tradicional vs. Operação AI-Native
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Plataformas legadas foram construídas para gestão manual. A Volcana™ foi construída para execução autônoma por agentes inteligentes.
-          </p>
-        </div>
-
+        
         {/* Modern Table Container */}
         <div className="relative isolate">
           {/* Sticky Header Background Backdrop - Changed top-14 to top-0 */}
