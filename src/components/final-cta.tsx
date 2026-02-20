@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export function FinalCTA({ dictionary }: { dictionary: any }) {
+export function FinalCTA({ dictionary, lang }: { dictionary: any, lang: string }) {
   return (
     <section className="w-full py-20 md:py-32 bg-background border-t border-border/40">
       <div className="container max-w-screen-xl">
@@ -13,7 +13,7 @@ export function FinalCTA({ dictionary }: { dictionary: any }) {
                   {dictionary.demo.title}
                 </h2>
                 <Link
-                  href="/waitlist"
+                  href={`/${lang}/waitlist`}
                   className="rounded-full border border-foreground p-3 transition-colors duration-300 ease-in-out hover:bg-foreground hover:text-background group-hover:border-secondary-foreground group-hover:text-secondary-foreground group-hover:hover:bg-secondary-foreground group-hover:hover:text-secondary"
                 >
                   <ArrowUpRight className="h-6 w-6" />
@@ -31,7 +31,7 @@ export function FinalCTA({ dictionary }: { dictionary: any }) {
                   {dictionary.about.title}
                 </h2>
                 <Link
-                  href="/about"
+                  href={`/${lang}/about`}
                   className="rounded-full border border-foreground p-3 transition-colors duration-300 ease-in-out hover:bg-foreground hover:text-background group-hover:border-secondary-foreground group-hover:text-secondary-foreground group-hover:hover:bg-secondary-foreground group-hover:hover:text-secondary"
                 >
                   <ArrowUpRight className="h-6 w-6" />

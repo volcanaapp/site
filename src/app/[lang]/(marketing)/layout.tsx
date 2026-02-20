@@ -27,11 +27,12 @@ export default async function MarketingLayout({
 
   return (
     <div className="dark bg-background">
-      <Header dictionary={dictionary} session={session} />
+      <Header dictionary={dictionary} session={session} lang={lang} />
       <main>{children}</main>
       <Footer
         dictionary={dictionary.footer}
         footerDictionary={dictionary.new_footer}
+        lang={lang}
       />
     </div>
   );

@@ -24,9 +24,11 @@ import { ProductMegamenu } from "./product-megamenu";
 export function Header({
   dictionary,
   session,
+  lang,
 }: {
   dictionary: any;
   session: Session | null;
+  lang: string;
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMegamenuOpen, setIsMegamenuOpen] = useState(false);
@@ -82,7 +84,7 @@ export function Header({
                 </SheetTrigger>
                 <SheetContent side="left">
                   <Link
-                    href="/"
+                    href={`/${lang}`}
                     className="flex items-center"
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -104,7 +106,7 @@ export function Header({
               </Sheet>
             </div>
             <div className="hidden md:flex">
-              <Link href="/" className="mr-6 flex items-center">
+              <Link href={`/${lang}`} className="mr-6 flex items-center">
                 <Logo className="h-7" />
               </Link>
             </div>
@@ -168,7 +170,7 @@ export function Header({
           
           {/* Center Logo (Mobile) */}
           <div className="md:hidden">
-            <Link href="/" className="flex items-center">
+            <Link href={`/${lang}`} className="flex items-center">
               <Logo className="h-7" />
             </Link>
           </div>
@@ -178,18 +180,18 @@ export function Header({
             {isMounted ? (
               session ? (
                 <Button asChild variant="secondary">
-                  <Link href="/dashboard">Dashboard</Link>
+                  <Link href={`/${lang}/dashboard`}>Dashboard</Link>
                 </Button>
               ) : (
                 <>
                   <Button asChild variant="ghost">
-                    <Link href="/login">{dictionary.header.login}</Link>
+                    <Link href={`/${lang}/login`}>{dictionary.header.login}</Link>
                   </Button>
                   <Button
                     asChild
                     className="font-bold bg-primary text-primary-foreground hover:bg-primary/90"
                   >
-                    <Link href="/waitlist">{dictionary.header.start_now}</Link>
+                    <Link href={`/${lang}/waitlist`}>{dictionary.header.start_now}</Link>
                   </Button>
                 </>
               )

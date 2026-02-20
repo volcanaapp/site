@@ -18,15 +18,15 @@ export default async function HomePage({
   const dictionary = await getDictionary(lang);
   return (
     <div className="bg-white text-gray-900">
-      <Hero01 dictionary={dictionary.hero} />
+      <Hero01 dictionary={dictionary.hero} lang={lang} />
       <Hero02 dictionary={dictionary} />
-      <FeatureSection dictionary={dictionary.feature_section} />
+      <FeatureSection dictionary={dictionary.feature_section} lang={lang} />
       <PowerOfAutonomySection dictionary={dictionary.power_of_autonomy} />
-      <UseCaseCarousel dictionary={dictionary.use_case_carousel} />
+      <UseCaseCarousel dictionary={dictionary.use_case_carousel} lang={lang} />
       <OrchestratedEcosystemSection
         dictionary={dictionary.orchestrated_ecosystem}
       />
-      <FinalCTA dictionary={dictionary.final_cta} />
+      <FinalCTA dictionary={dictionary.final_cta} lang={lang} />
       <SocialImpactBar dictionary={dictionary.social_impact} />
       <PlanetBadge dictionary={dictionary.planet_badge} />
     </div>

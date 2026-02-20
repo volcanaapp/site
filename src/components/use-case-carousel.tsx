@@ -12,7 +12,7 @@ import {
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
-export function UseCaseCarousel({ dictionary }: { dictionary: any }) {
+export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: string }) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
 
@@ -63,7 +63,7 @@ export function UseCaseCarousel({ dictionary }: { dictionary: any }) {
                     </p>
                     <div className="flex">
                       <Button asChild size="lg" variant="secondary" className="bg-secondary text-secondary-foreground hover:bg-secondary/80 font-bold">
-                        <Link href="/waitlist">{slide.button_text}</Link>
+                        <Link href={`/${lang}/waitlist`}>{slide.button_text}</Link>
                       </Button>
                     </div>
                   </div>

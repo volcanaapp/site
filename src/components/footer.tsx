@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./logo";
 
-export function Footer({ dictionary, footerDictionary }: { dictionary: any, footerDictionary: any }) {
+export function Footer({ dictionary, footerDictionary, lang }: { dictionary: any, footerDictionary: any, lang: string }) {
   const columns = footerDictionary.columns;
 
   return (
@@ -61,7 +61,7 @@ export function Footer({ dictionary, footerDictionary }: { dictionary: any, foot
               <ul className="space-y-3">
                 {columns.company.links.map((link: string, index: number) => {
                   const isAboutLink = index === 0;
-                  const href = isAboutLink ? "/about" : "#";
+                  const href = isAboutLink ? `/${lang}/about` : "#";
                   return (
                     <li key={link}>
                       <Link href={href} className="text-muted-foreground hover:text-foreground transition-colors">

@@ -18,7 +18,7 @@ const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
   loading: () => <div className="w-full h-full bg-muted/20 animate-pulse rounded-lg" />,
 });
 
-export function Hero01({ dictionary }: { dictionary: any }) {
+export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) {
   const suggestedPrompts = [
     "Loja de cosméticos veganos",
     "E-commerce de artigos esportivos",
@@ -57,7 +57,7 @@ export function Hero01({ dictionary }: { dictionary: any }) {
               className="h-14 text-lg bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0"
             />
             <Button asChild size="lg" className="h-14 px-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg">
-              <Link href="/waitlist">
+              <Link href={`/${lang}/waitlist`}>
                 {dictionary.cta_primary}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
