@@ -28,7 +28,7 @@ function SubmitButton() {
   }, [pending]);
 
   const texts: { [key: string]: any } = {
-    idle: <>Quero operar com IA <ArrowRight className="ml-2 h-4 w-4" /></>,
+    idle: <>Entrar na lista de espera <ArrowRight className="ml-2 h-4 w-4" /></>,
     pending: <>Enviando... <Loader2 className="ml-2 h-4 w-4 animate-spin" /></>,
     verifying: <>Verificando elegibilidade... <Loader2 className="ml-2 h-4 w-4 animate-spin" /></>,
   };
