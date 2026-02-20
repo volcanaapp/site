@@ -31,9 +31,7 @@ export function ProductExperience() {
             style={{ opacity, y }}
             className="text-3xl md:text-5xl font-bold tracking-tighter text-white"
           >
-            O comando da sua operação.
-            <br />
-            <span className="text-gray-500">Como você nunca viu.</span>
+            O cockpit da sua operação AI-Native.
           </motion.h2>
         </div>
 
