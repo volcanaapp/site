@@ -1,19 +1,33 @@
 "use client";
 
 import { TypeAnimation } from "react-type-animation";
+import React from "react";
 
-export function TypewriterEffect({ className }: { className?: string }) {
+interface TypewriterEffectProps {
+  sequence: (string | number)[];
+  wrapper?: React.ElementType;
+  className?: string;
+  speed?: number;
+  repeat?: number;
+  cursor?: boolean;
+}
+
+export function TypewriterEffect({
+  sequence,
+  wrapper = "span",
+  className,
+  speed = 50,
+  repeat = Infinity,
+  cursor = true,
+}: TypewriterEffectProps) {
   return (
     <TypeAnimation
-      sequence={[
-        'Sua loja virtual operando sozinha. Você focado em crescimento.',
-        5000,
-      ]}
-      wrapper="h1"
-      speed={50}
+      sequence={sequence}
+      wrapper={wrapper}
+      speed={speed}
       className={className}
-      cursor={true}
-      repeat={Infinity}
+      cursor={cursor}
+      repeat={repeat}
     />
   );
 }
