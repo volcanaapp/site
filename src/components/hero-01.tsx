@@ -23,7 +23,11 @@ export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) 
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    // Introduce a small delay to ensure the layout is stable before rendering Spline
+    const timer = setTimeout(() => {
+      setIsMounted(true);
+    }, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   const suggestedPrompts = [
