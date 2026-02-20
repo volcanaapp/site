@@ -10,6 +10,7 @@ import { SimpleFooter } from "@/components/simple-footer";
 import { Locale } from "@/lib/i18n-config";
 import { ComparisonSection } from "@/components/comparison-section";
 import { ProductExperience } from "@/components/product-experience";
+import { TrustedCompanies } from "@/components/trusted-companies";
 
 export async function generateMetadata({
   params,
@@ -47,6 +48,7 @@ export default async function WaitlistPage({
         <WaitlistHero dictionary={waitlistDict} />
         <InterestSection />
         <ProductExperience />
+        <TrustedCompanies />
         <HowItWorksSection />
         <ComparisonSection />
         <DesireSection />
