@@ -8,8 +8,16 @@ const ProfileSchema = z.object({
   lastName: z.string().optional(),
 });
 
-export async function updateProfile(prevState: any, formData: FormData) {
-  const supabase = createClient();
+type PrevState = {
+  error?: string;
+  success?: boolean;
+};
+
+export async function updateProfile(
+  prevState: PrevState,
+  formData: FormData
+): Promise<PrevState> {
+  const supabase = await createClient();
 
   const {
     data: { user },

@@ -33,13 +33,14 @@ const jsonLd = {
   }
 };
 
-export default function LangRootLayout({
+export default async function LangRootLayout({
   children,
-  params: { lang },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }>) {
+  const { lang } = await params;
   return (
     <html lang={lang} className={outfit.variable}>
       <body>

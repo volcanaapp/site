@@ -18,7 +18,7 @@ export function AboutHero({ dictionary }: { dictionary: any }) {
         <div className="container z-10">
           <div className="w-full md:w-3/4 lg:w-2/3 flex flex-col items-start text-left">
             <h1 className="text-5xl md:text-[5.5rem] font-bold tracking-tighter mb-6 uppercase leading-none text-foreground">
-              {titleWords.map((word, index) => (
+              {titleWords.map((word: string, index: number) => (
                 <span
                   key={index}
                   className={cn(

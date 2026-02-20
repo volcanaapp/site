@@ -27,7 +27,7 @@ interface AccountFormProps {
 }
 
 const initialState = {
-  error: null,
+  error: undefined,
   success: false,
 };
 

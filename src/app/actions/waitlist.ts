@@ -7,8 +7,16 @@ const WaitlistSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address." }),
 });
 
-export async function addToWaitlist(prevState: any, formData: FormData) {
-  const supabase = createClient();
+type WaitlistState = {
+  error?: string;
+  success?: boolean;
+};
+
+export async function addToWaitlist(
+  prevState: WaitlistState,
+  formData: FormData
+): Promise<WaitlistState> {
+  const supabase = await createClient();
 
   const validatedFields = WaitlistSchema.safeParse({
     email: formData.get("email"),

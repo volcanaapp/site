@@ -9,7 +9,7 @@ import { addToWaitlist } from "@/app/actions/waitlist";
 import { ArrowRight } from "lucide-react";
 
 const initialState = {
-  error: null,
+  error: undefined,
   success: false,
 };
 

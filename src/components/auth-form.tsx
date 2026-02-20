@@ -36,7 +36,6 @@ export function AuthForm() {
       theme="dark"
       showLinks={false}
       providers={[]}
-      redirectMethod="push"
     />
   );
 }
