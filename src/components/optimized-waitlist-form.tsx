@@ -38,7 +38,7 @@ function SubmitButton() {
       <Button
         type="submit"
         disabled={pending}
-        className="bg-[#D3FE3E] text-gray-900 hover:brightness-110 font-bold text-sm h-11 px-6 rounded-md flex-shrink-0 transition-all transform active:translate-y-1 shadow-[0_3px_0_#a8d12d] active:shadow-none"
+        className="bg-[#D3FE3E] text-gray-900 hover:brightness-110 font-bold text-sm h-11 px-8 rounded-md flex-shrink-0 transition-all transform active:translate-y-1 shadow-[0_3px_0_#a8d12d] active:shadow-none focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#a8d12d] focus:ring-offset-black"
       >
         {texts[status]}
       </Button>
