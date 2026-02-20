@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import dynamic from 'next/dynamic';
+import Link from "next/link";
 import {
   Tooltip,
   TooltipContent,
@@ -55,9 +56,11 @@ export function Hero01({ dictionary }: { dictionary: any }) {
               placeholder="Ex: Uma loja de roupas com estilo minimalista..."
               className="h-14 text-lg bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0"
             />
-            <Button size="lg" className="h-14 px-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg">
-              Criar Loja
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild size="lg" className="h-14 px-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg">
+              <Link href="/waitlist">
+                {dictionary.cta_primary}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
 
