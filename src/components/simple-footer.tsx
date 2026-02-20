@@ -28,7 +28,7 @@ export function SimpleFooter() {
   ];
 
   return (
-    <footer className="bg-[#F3F4F6] py-12 md:py-16 text-gray-800 border-t border-gray-200">
+    <footer className="bg-[#F3F4F6] py-12 md:py-16 text-gray-800 border-t border-gray-200 relative z-[60]">
       <div className="container mx-auto px-4 max-w-6xl">
         
         {/* Top Section: Socials & Newsletter */}
