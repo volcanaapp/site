@@ -17,7 +17,7 @@ const CtaButton = React.forwardRef<HTMLButtonElement, CtaButtonProps>(
       >
         <Button
           className={cn(
-            "bg-[#D3FE3E] text-gray-900 hover:brightness-110 font-bold text-sm h-12 px-12 rounded-md flex-shrink-0 transition-all transform active:translate-y-1 shadow-[0_3px_0_#a8d12d] active:shadow-none focus:outline-none w-full sm:w-auto",
+            "bg-[#D3FE3E] text-gray-900 hover:brightness-110 font-bold text-sm h-12 px-16 rounded-md flex-shrink-0 transition-all transform active:translate-y-1 shadow-[0_3px_0_#a8d12d] active:shadow-none focus:outline-none w-full sm:w-auto",
             className
           )}
           ref={ref}
