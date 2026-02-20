@@ -16,7 +16,7 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
       <div className="container mx-auto z-10 relative flex items-center">
         <div className="w-full md:w-1/2 lg:w-7/12 text-center md:text-left">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-black">
-            {dictionary.hero_title}
+            O primeiro E-commerce Autônomo da América Latina.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl">
             {dictionary.hero_subtitle}
@@ -31,7 +31,7 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
       </div>
       <div className="absolute top-0 right-0 h-full w-full md:w-1/2 lg:w-5/12 z-0 flex items-center justify-center">
         <div className="w-full h-full hidden md:block">
-          <SplineAnimation sceneUrl={WAITLIST_SPLINE_URL} />
+          <SplineAnimation sceneUrl={WAITLIST_SPLine_URL} />
         </div>
       </div>
     </section>
