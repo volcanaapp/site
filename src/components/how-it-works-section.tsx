@@ -1,140 +1,86 @@
-import { CheckCircle2, XCircle } from "lucide-react";
-import { CtaButton } from "./cta-button";
+import { CheckCircle2, XCircle, Users, Bot } from 'lucide-react';
+import { WaitlistLogoCloud } from './waitlist-logo-cloud';
 
-const comparisonData = [
-  {
-    pillar: "Arquitetura",
-    legacy: [
-      "Arquitetura monolítica ou parcialmente headless",
-      "IA como recurso adicional (IA-enable)",
-      "Dependência de múltiplos apps",
-      "Customizações complexas",
-    ],
-    volcana: [
-      "Arquitetura multi-tenant",
-      "100% headless e composable",
-      "Core AI-Native",
-      "Integração API-first baseada em eventos",
-      "Evolução contínua",
-    ],
-  },
-  {
-    pillar: "Modelo Operacional",
-    legacy: [
-      "Dependência de agência",
-      "Especialistas internos",
-      "Execução manual",
-      "Crescimento aumenta estrutura",
-    ],
-    volcana: [
-      "Agentes especialistas por função",
-      "Operação 24/7",
-      "Execução automática",
-      "Crescimento sem inflar equipe",
-    ],
-  },
-  {
-    pillar: "Inteligência Aplicada",
-    legacy: [
-      "Dashboards informativos",
-      "Decisão manual",
-      "SEO manual",
-      "CRO manual",
-      "SAC operacional",
-    ],
-    volcana: [
-      "Agente de Cadastro",
-      "Agente de Promoções",
-      "Agente de SEO",
-      "Agente de CRO",
-      "Agente de SAC",
-      "Execução orientada por dados",
-    ],
-  },
-  {
-    pillar: "Estrutura de Custos",
-    legacy: [
-      "Taxa da plataforma",
-      "Custo de agência",
-      "Especialistas internos",
-      "Ferramentas adicionais",
-      "Retrabalho",
-    ],
-    volcana: [
-      "Modelo previsível",
-      "Redução estrutural de custo",
-      "Consolidação de camadas",
-      "Foco em margem",
-    ],
-  },
+const legacyFeatures = [
+  { text: "Taxa da plataforma", included: false },
+  { text: "Custo de agência", included: false },
+  { text: "Especialistas internos", included: false },
+  { text: "Ferramentas adicionais", included: false },
+  { text: "Retrabalho e desalinhamento", included: false },
 ];
 
-export const HowItWorksSection = () => {
+const volcanaFeatures = [
+  { text: "Arquitetura baseada em Agentes", included: true },
+  { text: "Custo operacional reduzido", included: true },
+  { text: "Operação autônoma 24/7", included: true },
+  { text: "Evolução e deploy contínuos", included: true },
+  { text: "Hiper-personalização com IA", included: true },
+];
+
+export function HowItWorksSection() {
   return (
-    <section id="diferenciais" className="py-20 lg:py-32 bg-gray-50">
-      <div className="container mx-auto max-w-7xl px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-            Infraestrutura tradicional vs. Operação AI-Native
-          </h2>
-          <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Plataformas legadas foram construídas para gestão manual. A Volcana™
-            foi construída para execução autônoma por agentes inteligentes.
+    <>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto max-w-6xl text-center">
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Porque somos diferentes?</h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            Plataformas legadas te entregam ferramentas. A Volcana™ te entrega uma operação autônoma e inteligente.
           </p>
-        </div>
-
-        <div className="hidden lg:grid grid-cols-[1fr_1.5fr_1.5fr] gap-4 items-center text-center font-bold text-lg mb-4 text-gray-800">
-          <h3>Pilar estratégico</h3>
-          <h3>Plataformas Legadas</h3>
-          <h3>Volcana™</h3>
-        </div>
-
-        <div className="space-y-8">
-          {comparisonData.map((item) => (
-            <div
-              key={item.pillar}
-              className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr_1.5fr] gap-4 lg:gap-8 items-stretch"
-            >
-              <div className="flex items-center justify-center lg:justify-start p-6 bg-white rounded-xl shadow-sm border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 text-center lg:text-left">{item.pillar}</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start relative">
+            {/* Coluna Plataformas Legadas */}
+            <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm text-left h-full">
+              <div className="flex items-center mb-6">
+                <div className="p-3 rounded-full bg-gray-100 mr-4">
+                  <Users className="h-6 w-6 text-gray-500" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800">Plataformas Legadas</h3>
               </div>
+              <ul className="space-y-4">
+                {legacyFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <XCircle className="h-6 w-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-lg text-gray-600">{feature.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
-                <h3 className="font-bold text-lg text-gray-800 mb-4 lg:hidden">Plataformas Legadas</h3>
-                <ul className="space-y-3">
-                  {item.legacy.map((text) => (
-                    <li key={text} className="flex items-start">
-                      <XCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600">{text}</span>
-                    </li>
-                  ))}
-                </ul>
+            {/* Coluna Volcana™ */}
+            <div className="bg-white p-8 rounded-xl border-2 border-[#A3C934] shadow-lg text-left h-full">
+              <div className="flex items-center mb-6">
+                <div className="p-3 rounded-full bg-lime-100 mr-4">
+                  <Bot className="h-6 w-6 text-[#A3C934]" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Volcana™</h3>
               </div>
-
-              <div className="bg-white rounded-xl shadow-sm p-6 border-2 border-green-500 ring-4 ring-green-500/10">
-                <h3 className="font-bold text-lg text-gray-800 mb-4 lg:hidden">Volcana™</h3>
-                <ul className="space-y-3">
-                  {item.volcana.map((text) => (
-                    <li key={text} className="flex items-start">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 font-medium">{text}</span>
-                    </li>
-                  ))}
-                </ul>
+              <ul className="space-y-4">
+                {volcanaFeatures.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-lg text-gray-800">{feature.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            {/* Elemento "VS" no meio */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center justify-center">
+              <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">VS</span>
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className="text-center mt-20">
-          <p className="text-2xl font-bold text-gray-900">
-            &quot;A diferença não está na interface. Está no modelo operacional.&quot;
-          </p>
-          <div className="mt-8">
-            <CtaButton>Solicite uma demonstração estratégica</CtaButton>
           </div>
         </div>
+      </section>
+      <div className="py-16 bg-white relative z-10">
+        <div className="container mx-auto text-center">
+          <h3 className="text-sm font-semibold text-gray-500 tracking-wider uppercase mb-8">
+            EMPRESAS QUE CONFIAM NA VOLCANA
+          </h3>
+          <WaitlistLogoCloud />
+        </div>
       </div>
-    </section>
+    </>
   );
-};
+}
