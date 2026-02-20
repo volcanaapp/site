@@ -1,7 +1,7 @@
 "use client";
 
-import { useFormStatus } from "react-dom";
-import { useActionState, useEffect, useRef, useState } from "react";
+import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -47,7 +47,7 @@ function SubmitButton() {
 }
 
 export function OptimizedWaitlistForm() {
-  const [state, formAction] = useActionState(addToWaitlist, initialState);
+  const [state, formAction] = useFormState(addToWaitlist, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {

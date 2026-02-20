@@ -1,7 +1,7 @@
 "use client";
 
-import { useActionState, useEffect } from "react";
-import { useFormStatus } from "react-dom";
+import { useEffect } from "react";
+import { useFormState, useFormStatus } from "react-dom";
 import { toast } from "sonner";
 import { updateProfile } from "@/app/actions/profile";
 import { Button } from "@/components/ui/button";
@@ -41,7 +41,7 @@ function SubmitButton() {
 }
 
 export function AccountForm({ user, profile }: AccountFormProps) {
-  const [state, formAction] = useActionState(updateProfile, initialState);
+  const [state, formAction] = useFormState(updateProfile, initialState);
 
   useEffect(() => {
     if (state.success) {

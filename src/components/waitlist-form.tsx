@@ -1,7 +1,7 @@
 "use client";
 
-import { useFormStatus } from "react-dom";
-import { useActionState, useEffect, useRef } from "react";
+import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useRef } from "react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -28,7 +28,7 @@ function SubmitButton({ text, pendingText }: { text: string, pendingText: string
 }
 
 export function WaitlistForm({ dictionary }: { dictionary: any }) {
-  const [state, formAction] = useActionState(addToWaitlist, initialState);
+  const [state, formAction] = useFormState(addToWaitlist, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
