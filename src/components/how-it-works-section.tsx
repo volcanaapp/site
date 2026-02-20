@@ -1,11 +1,11 @@
 import { CheckCircle2, XCircle, Users, Bot } from 'lucide-react';
 
 const legacyFeatures = [
-  { text: "Arquitetura Monolítica", included: false },
-  { text: "Alto custo de manutenção", included: false },
-  { text: "Dependência de equipes de TI", included: false },
-  { text: "Atualizações lentas e complexas", included: false },
-  { text: "Personalização limitada", included: false },
+  { text: "Taxa da plataforma", included: false },
+  { text: "Custo de agência", included: false },
+  { text: "Especialistas internos", included: false },
+  { text: "Ferramentas adicionais", included: false },
+  { text: "Retrabalho e desalinhamento", included: false },
 ];
 
 const volcanaFeatures = [
