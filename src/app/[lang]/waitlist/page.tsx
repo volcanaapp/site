@@ -8,6 +8,7 @@ import { InterestSection } from "@/components/interest-section";
 import { getDictionary } from "@/lib/get-dictionary";
 import { SimpleFooter } from "@/components/simple-footer";
 import { Locale } from "@/lib/i18n-config";
+import { ComparisonSection } from "@/components/comparison-section";
 
 export async function generateMetadata({
   params,
@@ -45,6 +46,7 @@ export default async function WaitlistPage({
         <WaitlistHero dictionary={waitlistDict} />
         <InterestSection />
         <HowItWorksSection />
+        <ComparisonSection />
         <DesireSection />
       </main>
       <SimpleFooter />
