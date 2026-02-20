@@ -2,6 +2,7 @@
 
 import { X, Check } from 'lucide-react';
 import { CtaButton } from './ui/cta-button';
+import React from 'react';
 
 const comparisonData = [
   {
@@ -84,40 +85,55 @@ export function ComparisonSection() {
           </p>
         </div>
 
-        <div className="space-y-8">
-          {comparisonData.map((item) => (
-            <div key={item.pillar} className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 items-stretch">
-              <div className="lg:flex lg:items-center lg:justify-end lg:text-right">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 lg:mb-0">
-                  {item.pillar}
-                </h3>
-              </div>
-              
-              <div className="bg-gray-50/80 border border-gray-200 rounded-2xl p-6 shadow-sm">
-                <h4 className="font-bold text-lg text-gray-500 mb-4">Plataformas Legadas</h4>
-                <ul className="space-y-3">
-                  {item.legacy.map((point) => (
-                    <li key={point} className="flex items-start">
-                      <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="bg-white border-2 border-lime-300 rounded-2xl p-6 shadow-lg ring-4 ring-lime-50">
-                <h4 className="font-bold text-lg text-gray-900 mb-4">Volcana™</h4>
-                <ul className="space-y-3">
-                  {item.volcana.map((point) => (
-                    <li key={point} className="flex items-start">
-                      <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-800 font-medium">{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        <div className="max-w-7xl mx-auto border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+          <div className="grid grid-cols-2 lg:grid-cols-[minmax(0,_1fr)_minmax(0,_1.5fr)_minmax(0,_1.5fr)]">
+            
+            {/* Headers for Desktop */}
+            <div className="hidden lg:flex items-center justify-end p-6 font-bold text-gray-500 text-right bg-gray-50">
+              Pilar Estratégico
             </div>
-          ))}
+            <div className="hidden lg:block p-6 font-bold text-gray-800 bg-gray-50 border-l">
+              Plataformas Legadas
+            </div>
+            <div className="hidden lg:block p-6 font-bold text-gray-900 bg-lime-50/50 border-l">
+              Volcana™
+            </div>
+
+            {comparisonData.map((item) => (
+              <React.Fragment key={item.pillar}>
+                {/* Pillar Name (spans 2 cols on mobile) */}
+                <div className="col-span-2 lg:col-span-1 p-6 lg:text-right border-t flex items-center lg:justify-end">
+                  <h3 className="text-xl font-bold text-gray-800">{item.pillar}</h3>
+                </div>
+
+                {/* Legacy Column */}
+                <div className="p-6 border-t lg:border-l">
+                  <h4 className="font-bold text-gray-500 mb-4 lg:hidden">Plataformas Legadas</h4>
+                  <ul className="space-y-3">
+                    {item.legacy.map((point) => (
+                      <li key={point} className="flex items-start">
+                        <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-600">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Volcana Column */}
+                <div className="p-6 bg-lime-50/50 border-t lg:border-l">
+                  <h4 className="font-bold text-gray-900 mb-4 lg:hidden">Volcana™</h4>
+                  <ul className="space-y-3">
+                    {item.volcana.map((point) => (
+                      <li key={point} className="flex items-start">
+                        <Check className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-800 font-medium">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-20">
