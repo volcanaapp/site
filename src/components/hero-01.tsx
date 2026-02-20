@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +12,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
 
 const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
   ssr: false,
@@ -21,15 +19,6 @@ const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
 });
 
 export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) {
-  const [isScaled, setIsScaled] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsScaled(true);
-    }, 100);
-    return () => clearTimeout(timer);
-  }, []);
-
   const suggestedPrompts = [
     "Loja de cosméticos veganos",
     "E-commerce de artigos esportivos",
@@ -115,10 +104,7 @@ export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) 
       </div>
 
       {/* Spline animation */}
-      <div className={cn(
-        "absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block opacity-40 overflow-hidden transition-transform duration-1000 ease-out",
-        isScaled ? "scale-[1.5] lg:scale-[1.75]" : "scale-100"
-      )}>
+      <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block opacity-40 overflow-hidden scale-[1.5] lg:scale-[1.75]">
         <SplineAnimation />
       </div>
     </section>
