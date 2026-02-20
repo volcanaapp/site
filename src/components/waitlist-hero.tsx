@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { OptimizedWaitlistForm } from "@/components/optimized-waitlist-form";
 import dynamic from 'next/dynamic';
 
@@ -12,18 +11,6 @@ const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
 export function WaitlistHero({ dictionary }: { dictionary: any }) {
   return (
     <section className="relative py-20 md:py-24 overflow-hidden min-h-[80vh] flex items-center">
-      <motion.div
-        className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#D3FE3E]/30 rounded-full blur-3xl pointer-events-none"
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.7, 1, 0.7],
-        }}
-        transition={{
-          duration: 4,
-          ease: "easeInOut",
-          repeat: Infinity,
-        }}
-      />
       <div className="container mx-auto z-10 relative flex items-center">
         <div className="w-full md:w-1/2 lg:w-7/12 text-center md:text-left">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-black">
