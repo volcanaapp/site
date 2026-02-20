@@ -11,7 +11,7 @@ export function Logo({ className }: LogoProps) {
       <svg
         id="Camada_2"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="-10 -10 271.27 50.56"
+        viewBox="0 0 251.27 30.56"
         className="h-full w-full"
       >
         <g id="Camada_1-2">
