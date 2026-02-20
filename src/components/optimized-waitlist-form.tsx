@@ -4,7 +4,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { CtaButton } from "@/components/ui/cta-button";
 import { addToWaitlist } from "@/app/actions/waitlist";
 import { Loader2, ArrowRight } from "lucide-react";
 
@@ -34,15 +34,9 @@ function SubmitButton() {
   };
 
   return (
-    <div className="p-1 pb-2 rounded-lg animated-border-gradient w-full sm:w-auto flex justify-center">
-      <Button
-        type="submit"
-        disabled={pending}
-        className="bg-[#D3FE3E] text-gray-900 hover:brightness-110 font-bold text-sm h-11 px-12 rounded-md flex-shrink-0 transition-all transform active:translate-y-1 shadow-[0_3px_0_#a8d12d] active:shadow-none focus:outline-none w-full sm:w-auto"
-      >
-        {texts[status]}
-      </Button>
-    </div>
+    <CtaButton type="submit" disabled={pending}>
+      {texts[status]}
+    </CtaButton>
   );
 }
 
