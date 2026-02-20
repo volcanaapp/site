@@ -39,10 +39,6 @@ export function DesireSection() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto max-w-6xl text-center">
-        <h2 className="text-4xl font-bold mb-4 text-gray-900">O novo padrão operacional do E-commerce.</h2>
-        <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-          A Volcana não é apenas uma plataforma. É um novo paradigma onde agentes de IA trabalham para escalar seu negócio de forma autônoma e inteligente.
-        </p>
         
         {/* Mobile View: Carousel */}
         <div className="lg:hidden">
