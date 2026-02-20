@@ -17,10 +17,10 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
         <div className="w-full md:w-1/2 lg:w-7/12 text-center md:text-left">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-black">
             Mais margem. Menos estrutura.
+            <span className="block mt-4 text-xl md:text-2xl text-gray-600 font-normal">
+              O primeiro e-commerce autônomo da América Latina.
+            </span>
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl">
-            O primeiro e-commerce autônomo da América Latina.
-          </p>
           <div className="mt-12 flex justify-center md:justify-start">
             <OptimizedWaitlistForm />
           </div>
