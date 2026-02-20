@@ -9,6 +9,7 @@ import { getDictionary } from "@/lib/get-dictionary";
 import { SimpleFooter } from "@/components/simple-footer";
 import { Locale } from "@/lib/i18n-config";
 import { ComparisonSection } from "@/components/comparison-section";
+import { ProductExperience } from "@/components/product-experience";
 
 export async function generateMetadata({
   params,
@@ -45,6 +46,7 @@ export default async function WaitlistPage({
       <main>
         <WaitlistHero dictionary={waitlistDict} />
         <InterestSection />
+        <ProductExperience />
         <HowItWorksSection />
         <ComparisonSection />
         <DesireSection />
