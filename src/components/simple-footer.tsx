@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 
+// Substituindo o ícone do X pelo Linkedin que é mais corporativo/B2B
 const XIcon = ({ className }: { className?: string }) => (
   <svg
     role="img"
@@ -19,15 +20,15 @@ export function SimpleFooter() {
   const currentYear = new Date().getFullYear();
 
   const links = [
-    { label: "Features", href: "#" },
-    { label: "About", href: "/about" },
-    { label: "Testimonials", href: "#" },
-    { label: "Contact", href: "#" },
-    { label: "Download", href: "#" },
+    { label: "Produto", href: "#" },
+    { label: "Soluções", href: "#" },
+    { label: "Comparativo", href: "#" },
+    { label: "Sobre nós", href: "/about" },
+    { label: "Contato", href: "#" },
   ];
 
   return (
-    <footer className="bg-[#F3F4F6] py-12 md:py-16 text-gray-800">
+    <footer className="bg-[#F3F4F6] py-12 md:py-16 text-gray-800 border-t border-gray-200">
       <div className="container mx-auto px-4 max-w-6xl">
         
         {/* Top Section: Socials & Newsletter */}
@@ -35,18 +36,18 @@ export function SimpleFooter() {
           
           {/* Socials */}
           <div className="flex items-center gap-4">
-            <span className="font-bold text-gray-900">Follow us</span>
+            <span className="font-bold text-gray-900">Siga a Volcana</span>
             <div className="flex gap-3">
-              <Link href="#" className="bg-black text-white p-1.5 rounded-sm hover:opacity-80 transition-opacity">
-                <Facebook className="h-4 w-4" />
-              </Link>
-              <Link href="#" className="bg-black text-white p-1.5 rounded-sm hover:opacity-80 transition-opacity">
+              <Link href="#" className="bg-black text-white p-1.5 rounded-md hover:bg-[#D3FE3E] hover:text-black transition-colors">
                 <Instagram className="h-4 w-4" />
               </Link>
-              <Link href="#" className="bg-black text-white p-1.5 rounded-sm hover:opacity-80 transition-opacity">
+              <Link href="#" className="bg-black text-white p-1.5 rounded-md hover:bg-[#D3FE3E] hover:text-black transition-colors">
+                <Linkedin className="h-4 w-4" />
+              </Link>
+              <Link href="#" className="bg-black text-white p-1.5 rounded-md hover:bg-[#D3FE3E] hover:text-black transition-colors">
                 <Youtube className="h-4 w-4" />
               </Link>
-              <Link href="#" className="bg-black text-white p-1.5 rounded-sm hover:opacity-80 transition-opacity">
+              <Link href="#" className="bg-black text-white p-1.5 rounded-md hover:bg-[#D3FE3E] hover:text-black transition-colors">
                 <XIcon className="h-4 w-4" />
               </Link>
             </div>
@@ -54,15 +55,15 @@ export function SimpleFooter() {
 
           {/* Newsletter */}
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
-            <span className="font-bold text-gray-900 whitespace-nowrap">Get the Newsletter</span>
+            <span className="font-bold text-gray-900 whitespace-nowrap">Receba nossa Newsletter</span>
             <div className="flex w-full sm:w-auto shadow-sm">
               <Input 
                 type="email" 
-                placeholder="Your email address" 
-                className="bg-white border-none rounded-r-none h-10 w-full sm:w-64 focus-visible:ring-0 focus-visible:ring-offset-0"
+                placeholder="Seu e-mail corporativo" 
+                className="bg-white border-none rounded-r-none h-10 w-full sm:w-64 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400"
               />
-              <Button className="bg-[#1C1C1B] text-white hover:bg-black rounded-l-none h-10 px-6 font-medium">
-                Subscribe
+              <Button className="bg-[#1C1C1B] text-white hover:bg-[#D3FE3E] hover:text-black rounded-l-none h-10 px-6 font-medium transition-colors">
+                Inscrever-se
               </Button>
             </div>
           </div>
@@ -72,7 +73,7 @@ export function SimpleFooter() {
         <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 mb-16 text-sm font-semibold text-gray-600">
           {links.map((link, index) => (
             <div key={link.label} className="flex items-center">
-              <Link href={link.href} className="hover:text-gray-900 transition-colors">
+              <Link href={link.href} className="hover:text-[#A3C934] transition-colors">
                 {link.label}
               </Link>
               {index < links.length - 1 && (
@@ -84,8 +85,8 @@ export function SimpleFooter() {
 
         {/* Bottom Section: Copyright & Address */}
         <div className="text-center text-sm text-gray-500 space-y-2">
-          <p>1234 Kennedy St, New York, NY 123456, USA</p>
-          <p>© {currentYear} Volcana™. All Rights Reserved</p>
+          <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP, Brasil</p>
+          <p>© {currentYear} Volcana™. Todos os direitos reservados.</p>
         </div>
 
       </div>

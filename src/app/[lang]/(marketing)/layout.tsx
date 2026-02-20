@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Footer } from "@/components/footer";
+import { SimpleFooter } from "@/components/simple-footer";
 import { Header } from "@/components/header";
 import { getDictionary } from "@/lib/get-dictionary";
 import { createClient } from "@/lib/supabase/server";
@@ -29,11 +29,7 @@ export default async function MarketingLayout({
     <div className="dark bg-background">
       <Header dictionary={dictionary} session={session} lang={lang} />
       <main>{children}</main>
-      <Footer
-        dictionary={dictionary.footer}
-        footerDictionary={dictionary.new_footer}
-        lang={lang}
-      />
+      <SimpleFooter />
     </div>
   );
 }
