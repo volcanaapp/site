@@ -12,7 +12,7 @@ export default function SplineAnimation({ sceneUrl = DEFAULT_URL }: SplineAnimat
   return (
     <Spline
       scene={sceneUrl}
-      className="w-full h-full scale-[1.5] lg:scale-[1.75]"
+      className="w-full h-full"
     />
   );
 }

@@ -104,7 +104,7 @@ export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) 
       </div>
 
       {/* Spline animation */}
-      <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block opacity-40 overflow-hidden">
+      <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block opacity-40 overflow-hidden scale-[1.5] lg:scale-[1.75]">
         <SplineAnimation />
       </div>
     </section>

@@ -51,7 +51,7 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
         </div>
       </div>
       <div className="absolute top-0 right-0 h-full w-full md:w-1/2 lg:w-5/12 z-0 flex items-center justify-center">
-        <div className="w-full h-full hidden md:block">
+        <div className="w-full h-full hidden md:block scale-[1.5] lg:scale-[1.75]">
           <SplineAnimation sceneUrl={WAITLIST_SPLINE_URL} />
         </div>
       </div>
