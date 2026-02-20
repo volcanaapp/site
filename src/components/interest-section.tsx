@@ -7,7 +7,7 @@ export function InterestSection() {
         <div className="max-w-3xl relative z-10">
           <blockquote className="border-l-4 border-gray-800 pl-8">
             <p className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed italic">
-              “Enquanto plataformas legadas ainda comercializam apenas ferramentas, nós entregamos agentes inteligentes que operam sobre uma arquitetura moderna, escalável e orientada a performance.”
+              “Diferente de plataformas de ecommerce legadas que vendem apenas ferramentas, a Volcana entrega agentes inteligentes em uma arquitetura verdadeiramente moderna para escala em alta performance.”
             </p>
             <p className="mt-6 text-lg text-gray-600">
               A Volcana tem compromisso com a sustentabilidade, destinando 1% dos nossos lucros para o planeta.
