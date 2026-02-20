@@ -8,7 +8,6 @@ import { InterestSection } from "@/components/interest-section";
 import { getDictionary } from "@/lib/get-dictionary";
 import { SimpleFooter } from "@/components/simple-footer";
 import { Locale } from "@/lib/i18n-config";
-import { ComparisonSection } from "@/components/comparison-section";
 import { ProductExperience } from "@/components/product-experience";
 import { TrustedCompanies } from "@/components/trusted-companies";
 
@@ -50,7 +49,6 @@ export default async function WaitlistPage({
         <ProductExperience />
         <TrustedCompanies />
         <HowItWorksSection />
-        <ComparisonSection />
         <DesireSection />
       </main>
       <SimpleFooter />
