@@ -14,7 +14,8 @@ export async function generateMetadata({
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const dictionary = await getDictionary(params.lang);
+  const { lang } = params;
+  const dictionary = await getDictionary(lang);
   const waitlistDict = dictionary.waitlist;
 
   return {
@@ -32,7 +33,8 @@ export default async function WaitlistPage({
 }: {
   params: { lang: Locale };
 }) {
-  const dictionary = await getDictionary(params.lang);
+  const { lang } = params;
+  const dictionary = await getDictionary(lang);
   const waitlistDict = dictionary.waitlist;
 
   return (

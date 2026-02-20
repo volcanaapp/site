@@ -35,11 +35,12 @@ const jsonLd = {
 
 export default function LangRootLayout({
   children,
-  params: { lang },
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: { lang: Locale };
 }>) {
+  const { lang } = params;
   return (
     <html lang={lang} className={outfit.variable}>
       <body>
