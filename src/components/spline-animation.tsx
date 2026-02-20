@@ -14,37 +14,37 @@ export default function SplineAnimation({ sceneUrl = DEFAULT_URL }: SplineAnimat
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Este efeito garante que esperamos até que o resto da página tenha
-    // concluído seus cálculos de layout antes de tentar carregar a cena
-    // pesada do Spline, que é sensível às dimensões de seu contêiner.
-    const handler = setTimeout(() => {
-      // Usamos requestAnimationFrame para garantir que a atualização do estado
-      // aconteça logo antes da próxima pintura do navegador, que é um momento mais seguro.
-      requestAnimationFrame(() => {
-        if (containerRef.current) {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // O ResizeObserver irá disparar quando o elemento do contêiner for renderizado
+    // e tiver um tamanho. Esta é uma maneira mais confiável de evitar condições de corrida
+    // do que usar um temporizador fixo.
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.contentRect.width > 0 && entry.contentRect.height > 0) {
+          // Assim que o contêiner tiver dimensões, podemos carregar com segurança a cena do Spline.
           setIsReady(true);
+          observer.disconnect(); // Só precisamos executar isso uma vez.
         }
-      });
-    }, 1000); // Atraso aumentado para 1000ms para maior estabilidade
+      }
+    });
+
+    observer.observe(container);
 
     return () => {
-      clearTimeout(handler);
+      observer.disconnect();
     };
   }, []);
 
-  // Renderiza um placeholder com uma ref até que estejamos prontos.
-  // A ref nos permite confirmar que o contêiner está no DOM.
-  if (!isReady) {
-    return <div ref={containerRef} className="w-full h-full bg-muted/20 animate-pulse rounded-lg" />;
-  }
-
-  // Quando estiver pronto, renderiza o componente Spline real.
   return (
     <div ref={containerRef} className="w-full h-full">
-      <Spline
-        scene={sceneUrl}
-        className="w-full h-full"
-      />
+      {isReady ? (
+        <Spline scene={sceneUrl} className="w-full h-full" />
+      ) : (
+        // Exibe um placeholder enquanto esperamos o contêiner estar pronto.
+        <div className="w-full h-full bg-muted/20 animate-pulse rounded-lg" />
+      )}
     </div>
   );
 }
