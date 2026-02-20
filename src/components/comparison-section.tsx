@@ -88,16 +88,16 @@ export function ComparisonSection() {
 
         {/* Modern Table Container */}
         <div className="relative isolate">
-          {/* Sticky Header Background Backdrop */}
-          <div className="hidden lg:block sticky top-14 z-20 backdrop-blur-md bg-white/80 border-b border-gray-100">
+          {/* Sticky Header Background Backdrop - Changed top-14 to top-0 */}
+          <div className="hidden lg:block sticky top-0 z-20 backdrop-blur-md bg-white/80 border-b border-gray-100 shadow-sm">
             <div className="grid grid-cols-12 max-w-6xl mx-auto">
-              <div className="col-span-4 p-6 text-sm font-semibold text-gray-400 uppercase tracking-wider">
+              <div className="col-span-4 p-6 text-sm font-semibold text-gray-400 uppercase tracking-wider flex items-center">
                 Pilar Estratégico
               </div>
-              <div className="col-span-4 p-6 text-lg font-bold text-gray-500 text-center">
+              <div className="col-span-4 p-6 text-lg font-bold text-gray-500 text-center flex items-center justify-center">
                 Plataformas Legadas
               </div>
-              <div className="col-span-4 p-6 text-xl font-bold text-gray-900 text-center relative overflow-hidden">
+              <div className="col-span-4 p-6 text-xl font-bold text-gray-900 text-center relative overflow-hidden flex items-center justify-center">
                 <div className="absolute top-0 left-0 w-full h-1 bg-[#A3C934]" />
                 Volcana™
               </div>
