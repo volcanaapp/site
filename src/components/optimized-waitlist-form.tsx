@@ -34,11 +34,11 @@ function SubmitButton() {
   };
 
   return (
-    <div className="p-1 pb-2 rounded-lg w-full sm:w-auto animated-border-gradient">
+    <div className="p-1 pb-2 rounded-lg animated-border-gradient">
       <Button
         type="submit"
         disabled={pending}
-        className="bg-[#D3FE3E] text-gray-900 hover:brightness-110 font-bold text-base h-12 px-8 rounded-md w-full sm:w-auto flex-shrink-0 transition-all transform active:translate-y-1 shadow-[0_4px_0_#a8d12d] active:shadow-none"
+        className="bg-[#D3FE3E] text-gray-900 hover:brightness-110 font-bold text-sm h-11 px-6 rounded-md flex-shrink-0 transition-all transform active:translate-y-1 shadow-[0_3px_0_#a8d12d] active:shadow-none"
       >
         {texts[status]}
       </Button>
