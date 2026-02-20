@@ -2,6 +2,7 @@
 
 import { OptimizedWaitlistForm } from "@/components/optimized-waitlist-form";
 import dynamic from 'next/dynamic';
+import { TypewriterEffect } from "@/components/typewriter-effect";
 
 const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
   ssr: false,
@@ -15,9 +16,7 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
     <section className="relative py-20 md:py-24 min-h-[80vh] flex items-center">
       <div className="container mx-auto z-10 relative flex items-center">
         <div className="w-full md:w-1/2 lg:w-7/12 text-center md:text-left">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-black">
-            Sua loja virtual operando sozinha. Você focado em crescimento.
-          </h1>
+          <TypewriterEffect className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-black h-[180px] md:h-[240px]" />
           <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl">
             A Volcana é a primeira plataforma AI-Native da América Latina. Agentes inteligentes executam o trabalho de múltiplas áreas enquanto você escala.
           </p>
