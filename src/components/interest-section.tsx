@@ -1,11 +1,13 @@
 export function InterestSection() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto text-center">
-        <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-2xl md:text-3xl font-medium text-gray-800 leading-snug">
-            Enquanto plataformas legadas ainda comercializam apenas ferramentas, nós entregamos agentes inteligentes que operam sobre uma arquitetura moderna, escalável e orientada a performance.
-          </p>
+    <section className="pb-20 md:pb-24 bg-white">
+      <div className="container mx-auto">
+        <div className="max-w-3xl">
+          <blockquote className="border-l-4 border-gray-800 pl-8">
+            <p className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed italic">
+              “Enquanto plataformas legadas ainda comercializam apenas ferramentas, nós entregamos agentes inteligentes que operam sobre uma arquitetura moderna, escalável e orientada a performance.”
+            </p>
+          </blockquote>
         </div>
       </div>
     </section>
