@@ -34,7 +34,7 @@ function SubmitButton() {
   };
 
   return (
-    <div className="p-[2px] rounded-lg w-full sm:w-auto animated-border-gradient">
+    <div className="p-[2px] pb-[6px] rounded-lg w-full sm:w-auto animated-border-gradient">
       <Button
         type="submit"
         disabled={pending}
