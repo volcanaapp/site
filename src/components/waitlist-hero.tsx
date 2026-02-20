@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { OptimizedWaitlistForm } from "@/components/optimized-waitlist-form";
 import dynamic from 'next/dynamic';
 import { TypewriterEffect } from "@/components/typewriter-effect";
@@ -12,6 +13,12 @@ const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
 const WAITLIST_SPLINE_URL = 'https://my.spline.design/untitled-9i7lZ1YB4SXBZfHKF54yqYjx/';
 
 export function WaitlistHero({ dictionary }: { dictionary: any }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const titleText = 'Sua loja virtual operando sozinha. Você focado em crescimento.';
   const paragraphText = 'A Volcana é a primeira plataforma AI-Native da América Latina. Agentes inteligentes executam o trabalho de múltiplas áreas enquanto você escala.';
   
@@ -52,7 +59,7 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
       </div>
       <div className="absolute top-0 right-0 h-full w-full md:w-1/2 lg:w-5/12 z-0 flex items-center justify-center">
         <div className="w-full h-full hidden md:block scale-[1.5] lg:scale-[1.75]">
-          <SplineAnimation sceneUrl={WAITLIST_SPLINE_URL} />
+          {isMounted && <SplineAnimation sceneUrl={WAITLIST_SPLINE_URL} />}
         </div>
       </div>
     </section>

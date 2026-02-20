@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -19,6 +20,12 @@ const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
 });
 
 export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const suggestedPrompts = [
     "Loja de cosméticos veganos",
     "E-commerce de artigos esportivos",
@@ -105,7 +112,7 @@ export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) 
 
       {/* Spline animation */}
       <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block opacity-40 overflow-hidden scale-[1.5] lg:scale-[1.75]">
-        <SplineAnimation />
+        {isMounted && <SplineAnimation />}
       </div>
     </section>
   );
