@@ -12,7 +12,7 @@ import { useScrollTrigger } from "@/hooks/use-scroll-trigger";
 
 const features = [
   {
-    title: "O Gatilho da Margem",
+    title: "Margem Estrutural",
     description: "Saia do imposto de % das plataformas tradicionais sobre o seu faturamento. Entre na era do custo previsível e efetivo dos nossos agentes.",
   },
   {
