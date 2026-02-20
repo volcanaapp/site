@@ -16,10 +16,10 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
       <div className="container mx-auto z-10 relative flex items-center">
         <div className="w-full md:w-1/2 lg:w-7/12 text-center md:text-left">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-black">
-            Mais margem. Menos estrutura.
+            Sua loja virtual operando sozinha. Você focado em crescimento.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl">
-            O primeiro e-commerce autônomo da América Latina.
+            A Volcana é a primeira plataforma AI-Native da América Latina. Agentes inteligentes executam o trabalho de múltiplas áreas enquanto você escala.
           </p>
           <div className="mt-12 flex justify-center md:justify-start">
             <OptimizedWaitlistForm />
