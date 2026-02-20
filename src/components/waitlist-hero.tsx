@@ -11,7 +11,7 @@ const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
 
 export function WaitlistHero({ dictionary }: { dictionary: any }) {
   return (
-    <section className="relative py-20 md:py-24 overflow-hidden">
+    <section className="relative py-20 md:py-24 overflow-hidden min-h-[80vh] flex items-center">
       <motion.div
         className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#D3FE3E]/30 rounded-full blur-3xl pointer-events-none"
         animate={{
@@ -24,8 +24,8 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
           repeat: Infinity,
         }}
       />
-      <div className="container mx-auto z-10 relative grid md:grid-cols-2 gap-8 items-center">
-        <div className="text-center md:text-left">
+      <div className="container mx-auto z-10 relative flex items-center">
+        <div className="w-full md:w-1/2 lg:w-7/12 text-center md:text-left">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-black">
             {dictionary.hero_title}
           </h1>
@@ -39,7 +39,9 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
             {dictionary.form_footer}
           </p>
         </div>
-        <div className="relative h-[400px] lg:h-[500px] w-full hidden md:block">
+      </div>
+      <div className="absolute top-0 right-0 h-full w-full md:w-1/2 lg:w-5/12 z-0 flex items-center justify-center">
+        <div className="w-full h-full hidden md:block">
           <SplineAnimation />
         </div>
       </div>
