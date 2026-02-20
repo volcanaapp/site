@@ -14,7 +14,7 @@ export function InterestSection() {
             </p>
             <footer className="mt-8 flex items-center">
               <Image
-                src="/pasted-image-2026-02-20T17-52-43-733Z.png"
+                src="/renan-santos.png"
                 alt="Foto de Renan Santos"
                 width={64}
                 height={64}
