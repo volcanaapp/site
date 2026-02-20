@@ -13,7 +13,7 @@ export default function SplineAnimation({ sceneUrl = DEFAULT_URL }: SplineAnimat
       frameBorder='0'
       width='100%'
       height='100%'
-      className="w-full h-full scale-150 lg:scale-125"
+      className="w-full h-full scale-[1.5] lg:scale-[1.75]"
     ></iframe>
   );
 }
