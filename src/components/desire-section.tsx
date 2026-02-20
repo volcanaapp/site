@@ -7,8 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useInView } from "@/hooks/use-in-view";
 import { StickyCTA } from "@/components/sticky-cta";
+import { useScrollTrigger } from "@/hooks/use-scroll-trigger";
 
 const features = [
   {
@@ -34,13 +34,10 @@ const features = [
 ];
 
 export function DesireSection() {
-  const { ref, isInView } = useInView<HTMLElement>({
-    triggerOnce: false,
-    threshold: 0.1,
-  });
+  const isScrolled = useScrollTrigger(100);
 
   return (
-    <section ref={ref} className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto max-w-6xl text-center">
         <h2 className="text-4xl font-bold mb-4 text-gray-900">A Revolução do E-commerce Agêntico</h2>
         <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
@@ -71,7 +68,7 @@ export function DesireSection() {
           <CarouselNext className="hidden sm:flex" />
         </Carousel>
       </div>
-      <StickyCTA isVisible={isInView} />
+      <StickyCTA isVisible={isScrolled} />
     </section>
   );
 }
