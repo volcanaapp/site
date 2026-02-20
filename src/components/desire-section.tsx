@@ -43,30 +43,51 @@ export function DesireSection() {
         <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
           A Volcana não é apenas uma plataforma. É um novo paradigma onde agentes de IA trabalham para escalar seu negócio de forma autônoma e inteligente.
         </p>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent>
-            {features.map((feature, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <div className="p-8 bg-white border border-gray-200 rounded-xl shadow-sm h-full flex flex-col text-left">
-                    <h3 className="text-2xl font-bold mb-4 text-[#A3C934]">{feature.title}</h3>
-                    <p className="text-lg text-gray-700 flex-grow">
-                      {feature.description}
-                    </p>
+        
+        {/* Mobile View: Carousel */}
+        <div className="lg:hidden">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {features.map((feature, index) => (
+                <CarouselItem key={index} className="md:basis-1/2">
+                  <div className="p-1 h-full">
+                    <div className="p-8 bg-white border border-gray-200 rounded-xl shadow-sm h-full flex flex-col text-left">
+                      <h3 className="text-2xl font-bold mb-4 text-[#A3C934]">{feature.title}</h3>
+                      <p className="text-lg text-gray-700 flex-grow">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex" />
-          <CarouselNext className="hidden sm:flex" />
-        </Carousel>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-4 mt-6">
+              <CarouselPrevious className="static translate-y-0" />
+              <CarouselNext className="static translate-y-0" />
+            </div>
+          </Carousel>
+        </div>
+
+        {/* Desktop View: Grid */}
+        <div className="hidden lg:flex flex-wrap justify-center gap-6">
+          {features.map((feature, index) => (
+            <div key={index} className="w-[calc(33.333%-16px)]">
+              <div className="p-8 bg-white border border-gray-200 rounded-xl shadow-sm h-full flex flex-col text-left hover:border-[#A3C934] transition-colors duration-300">
+                <h3 className="text-2xl font-bold mb-4 text-[#A3C934]">{feature.title}</h3>
+                <p className="text-lg text-gray-700 flex-grow">
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
       <StickyCTA isVisible={isScrolled} />
     </section>
