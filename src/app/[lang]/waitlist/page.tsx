@@ -10,11 +10,11 @@ import { SimpleFooter } from "@/components/simple-footer";
 import { Locale } from "@/lib/i18n-config";
 
 export async function generateMetadata({
-  params: { lang },
+  params,
 }: {
   params: { lang: Locale };
 }): Promise<Metadata> {
-  const dictionary = await getDictionary(lang);
+  const dictionary = await getDictionary(params.lang);
   const waitlistDict = dictionary.waitlist;
 
   return {
@@ -28,11 +28,11 @@ export async function generateMetadata({
 }
 
 export default async function WaitlistPage({
-  params: { lang },
+  params,
 }: {
   params: { lang: Locale };
 }) {
-  const dictionary = await getDictionary(lang);
+  const dictionary = await getDictionary(params.lang);
   const waitlistDict = dictionary.waitlist;
 
   return (
