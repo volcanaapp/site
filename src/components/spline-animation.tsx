@@ -1,9 +1,15 @@
 "use client";
 
-export default function SplineAnimation() {
+interface SplineAnimationProps {
+  sceneUrl?: string;
+}
+
+const DEFAULT_URL = 'https://my.spline.design/untitled-8sPGLwy4MxIBJMzD9L84K60v/';
+
+export default function SplineAnimation({ sceneUrl = DEFAULT_URL }: SplineAnimationProps) {
   return (
     <iframe
-      src='https://my.spline.design/untitled-8sPGLwy4MxIBJMzD9L84K60v/'
+      src={sceneUrl}
       frameBorder='0'
       width='100%'
       height='100%'

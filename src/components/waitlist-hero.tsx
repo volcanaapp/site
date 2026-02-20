@@ -8,6 +8,8 @@ const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
   loading: () => <div className="w-full h-full bg-gray-200/50 animate-pulse rounded-lg" />,
 });
 
+const WAITLIST_SPLINE_URL = 'https://my.spline.design/untitled-9i7lZ1YB4SXBZfHKF54yqYjx/';
+
 export function WaitlistHero({ dictionary }: { dictionary: any }) {
   return (
     <section className="relative py-20 md:py-24 overflow-hidden min-h-[80vh] flex items-center">
@@ -29,7 +31,7 @@ export function WaitlistHero({ dictionary }: { dictionary: any }) {
       </div>
       <div className="absolute top-0 right-0 h-full w-full md:w-1/2 lg:w-5/12 z-0 flex items-center justify-center">
         <div className="w-full h-full hidden md:block">
-          <SplineAnimation />
+          <SplineAnimation sceneUrl={WAITLIST_SPLINE_URL} />
         </div>
       </div>
     </section>
