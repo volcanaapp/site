@@ -7,6 +7,9 @@ export function InterestSection() {
             <p className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed italic">
               “Enquanto plataformas legadas ainda comercializam apenas ferramentas, nós entregamos agentes inteligentes que operam sobre uma arquitetura moderna, escalável e orientada a performance.”
             </p>
+            <p className="mt-6 text-lg text-gray-600">
+              A Volcana tem compromisso com a sustentabilidade, destinando 1% dos nossos lucros para o planeta.
+            </p>
             <footer className="mt-8 flex items-center">
               <div className="w-16 h-16 rounded-full bg-gray-200 mr-6 flex-shrink-0">
                 {/* Placeholder for photo */}
