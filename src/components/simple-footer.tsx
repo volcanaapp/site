@@ -75,7 +75,7 @@ export function SimpleFooter() {
           {/* Brand & Addresses */}
           <div className="lg:col-span-5 space-y-8">
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Volcana LLC</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">Volcana, LLC</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
                 {/* USA */}
                 <div className="space-y-1">
@@ -191,7 +191,7 @@ export function SimpleFooter() {
           </div>
           
           <div className="mt-8 text-center lg:text-left text-gray-600 text-xs border-t border-white/10 pt-4 lg:hidden">
-            © {currentYear} Volcana LLC. Todos os direitos reservados.
+            © {currentYear} Volcana, LLC. Todos os direitos reservados.
           </div>
         </div>
       </div>
