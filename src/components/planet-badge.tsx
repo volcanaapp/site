@@ -12,13 +12,13 @@ export function PlanetBadge({ dictionary }: { dictionary: any }) {
     <div className="fixed bottom-6 right-6 z-50">
       <HoverCard>
         <HoverCardTrigger asChild>
-          <div className="relative h-28 w-40 cursor-pointer overflow-hidden rounded-xl transition-transform duration-200 hover:scale-105">
+          <div className="relative h-28 w-40 cursor-pointer overflow-hidden rounded-xl transition-transform duration-200 hover:scale-105 bg-black/5 flex items-center justify-center p-2">
             <Image
               src="/volcana-nature.png"
               alt="Volcana Nature"
               width={160}
               height={112}
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
             />
           </div>
         </HoverCardTrigger>
