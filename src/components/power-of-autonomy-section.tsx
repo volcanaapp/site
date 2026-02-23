@@ -41,13 +41,11 @@ export function PowerOfAutonomySection({ dictionary }: { dictionary: any }) {
               <div key={index} className="flex flex-col items-center text-center group">
                 <div className="relative h-56 w-56 mb-10 flex items-center justify-center">
                   <div className="absolute inset-0 bg-volcana-lime/5 rounded-full scale-125 blur-2xl group-hover:bg-volcana-lime/10 transition-colors" />
-                  <video
-                    src="https://a.storyblok.com/f/314917/x/168e5e4f12/ai_solutions-loop.webm"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-contain relative z-10 filter brightness-110 contrast-110"
+                  <iframe 
+                    src="https://my.spline.design/slimeblock-XgsTLdpBmAeI3gOUbEaJ7J3V/"
+                    className="w-full h-full relative z-10 border-none pointer-events-none"
+                    title="3D Abstract Shape"
+                    loading="lazy"
                   />
                 </div>
                 
