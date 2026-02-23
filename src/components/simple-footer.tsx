@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Instagram, Youtube, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Substituindo o ícone do X pelo Linkedin que é mais corporativo/B2B
 const XIcon = ({ className }: { className?: string }) => (
   <svg
     role="img"
@@ -93,17 +93,32 @@ export function SimpleFooter() {
         </div>
       </div>
 
-      {/* 1% For the Planet Banner */}
+      {/* 1% For the Planet Banner - Replicado do action-section */}
       <motion.div 
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="w-full bg-[#D3FE3E] py-4 flex justify-center items-center"
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-50px" }}
+        className="w-full bg-[#D3FE3E] py-3 border-t border-[#c2ea39]"
       >
-        <span className="text-black font-bold tracking-tight text-sm md:text-base uppercase">
-          1% for the planet
-        </span>
+        <div className="container mx-auto flex justify-center items-center">
+          <Link 
+            href="https://www.onepercentfortheplanet.org/" 
+            target="_blank" 
+            className="flex items-center gap-3 group px-4"
+          >
+            <Image
+              src="/one-percent-logo.svg"
+              alt="1% for the Planet Logo"
+              width={80}
+              height={20}
+              className="opacity-70 group-hover:opacity-100 transition-opacity"
+            />
+            <p className="text-xs text-gray-700 group-hover:text-gray-900 transition-colors font-medium">
+              Compromisso com a sustentabilidade. Saiba mais &rarr;
+            </p>
+          </Link>
+        </div>
       </motion.div>
     </footer>
   );
