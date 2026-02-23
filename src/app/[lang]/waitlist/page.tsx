@@ -40,7 +40,7 @@ export default async function WaitlistPage({
 
   return (
     <div className="bg-white text-gray-900">
-      <ScarcityBanner />
+      <ScarcityBanner phrases={waitlistDict.scarcity} />
       <WaitlistHeader />
       <main>
         <WaitlistHero dictionary={waitlistDict} />

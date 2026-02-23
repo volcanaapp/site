@@ -250,6 +250,11 @@
     }
   },
   "waitlist": {
+    "scarcity": [
+      "Agende sua demo estratégica e descubra como operar com agentes autônomos",
+      "Diagnóstico estratégico para marcas do Varejo e Industrias — Agende a sua demo",
+      "Vagas Limitadas para o Lote 01: Apenas 12 vagas restantes para Marcas D2C"
+    ],
     "hero_title": "A primeira plataforma de e-commerce AI-Native da América Latina.",
     "hero_subtitle": "Estamos liberando o acesso em lotes limitados para garantir a precisão agêntica de cada operação. Junte-se às marcas que decidiram parar de pagar impostos sobre o próprio sucesso.",
     "counter_text": "{count} marcas da América Latina já estão na fila.",

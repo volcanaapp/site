@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { useInView } from "@/hooks/use-in-view";
 import { useTypewriter } from "@/hooks/use-typewriter";
+import { Badge } from "@/components/ui/badge";
 
 export function Hero02({ dictionary }: { dictionary: any }) {
   const { ref: sectionRef, isInView } = useInView<HTMLElement>({
@@ -23,38 +24,55 @@ export function Hero02({ dictionary }: { dictionary: any }) {
       <section
         ref={sectionRef}
         className={cn(
-          "bg-background py-20 md:py-32 transition-all duration-1000 ease-in-out",
+          "bg-black py-24 md:py-48 transition-all duration-1000 ease-in-out relative overflow-hidden",
           isInView ? "opacity-100" : "opacity-0"
         )}
       >
-        <div className="container max-w-screen-xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        {/* Background mesh/grid */}
+        <div className="absolute inset-0 opacity-[0.15] pointer-events-none" 
+             style={{ 
+               backgroundImage: `linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px)`,
+               backgroundSize: '80px 80px' 
+             }} />
+             
+        <div className="container max-w-screen-xl relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 lg:gap-24 mb-32">
             {columns.map((column: any, index: number) => (
               <div
                 key={index}
                 className={cn(
-                  "transition-all duration-700 ease-out",
+                  "transition-all duration-1000 ease-out flex flex-col items-start",
                   isInView
                     ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
+                    : "opacity-0 translate-y-12"
                 )}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <h3 className="text-5xl font-bold tracking-tighter mb-4 text-white">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-8 h-[2px] bg-volcana-lime" />
+                  <span className="text-volcana-lime font-mono text-xs tracking-widest uppercase">0{index + 1}</span>
+                </div>
+                
+                <h3 className="text-5xl lg:text-6xl font-black tracking-tighter mb-6 text-white leading-none">
                   {column.title}
                 </h3>
-                <p className="text-lg text-muted-foreground max-w-sm">
+                
+                <p className="text-lg lg:text-xl text-gray-400 leading-relaxed font-medium">
                   {column.text}
                 </p>
               </div>
             ))}
           </div>
-          <div className="mt-24 text-left">
-            <h2 className="text-5xl md:text-[5rem] leading-tight font-bold tracking-tighter text-primary max-w-4xl min-h-[8rem] md:min-h-[13rem] [text-shadow:0_0_10px_hsl(var(--primary))]">
-              {typedText}
+
+          <div className="mt-12 text-center md:text-left">
+            <Badge variant="outline" className="mb-8 border-volcana-lime/20 text-volcana-lime/60 font-mono text-[10px] tracking-[0.3em] px-4 py-1">
+              MANIFESTO.EXE
+            </Badge>
+            <h2 className="text-5xl md:text-[5.5rem] lg:text-[7rem] leading-[0.9] font-black tracking-tighter text-white max-w-5xl min-h-[12rem] md:min-h-[15rem] lg:min-h-[20rem]">
+              <span className="text-volcana-lime drop-shadow-[0_0_20px_rgba(211,254,62,0.5)]">{typedText}</span>
               {!isDone && (
-                <span className="animate-pulse opacity-75 relative -top-1 md:-top-2">
-                  |
+                <span className="animate-pulse text-volcana-lime relative -top-1 md:-top-2">
+                  _
                 </span>
               )}
             </h2>

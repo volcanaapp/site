@@ -189,7 +189,8 @@ export function Header({
                   </Button>
                   <Button
                     asChild
-                    className="font-bold bg-primary text-primary-foreground hover:bg-primary/90"
+                    variant="volcana"
+                    className="font-bold"
                   >
                     <Link href={`/${lang}/waitlist`}>{dictionary.header.start_now}</Link>
                   </Button>

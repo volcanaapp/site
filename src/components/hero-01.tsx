@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Link from "next/link";
 import {
@@ -17,6 +17,8 @@ const SplineAnimation = dynamic(() => import('@/components/spline-animation'), {
   ssr: false,
   loading: () => <div className="w-full h-full bg-muted/20 animate-pulse rounded-lg" />,
 });
+
+const HOME_SPLINE_URL = 'https://my.spline.design/untitled-9i7lZ1YB4SXBZfHKF54yqYjx/';
 
 export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) {
   const suggestedPrompts = [
@@ -33,67 +35,72 @@ export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) 
   ];
 
   return (
-    <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-start pt-20 md:pt-24 relative overflow-hidden bg-background">
-      {/* Fundo gradiente */}
-      <div className="absolute inset-0 z-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-primary/30 rounded-full blur-3xl" />
-      </div>
+    <section className="w-full min-h-[calc(100vh-theme(spacing.14))] flex items-center pt-20 md:pt-0 relative overflow-hidden bg-white">
+      {/* Background elements */}
+      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-volcana-lime/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-volcana-lime/5 rounded-full blur-[100px] pointer-events-none" />
 
-      {/* Conteúdo centralizado */}
-      <div className="container z-10 relative flex flex-col items-center">
-        <div className="w-full max-w-4xl flex flex-col items-center text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 text-black leading-tight">
+      <div className="container z-10 relative flex flex-col md:flex-row items-center gap-12">
+        <div className="w-full md:w-1/2 lg:w-7/12 flex flex-col items-center md:items-start text-center md:text-left">
+          <Badge variant="outline" className="mb-6 py-1.5 px-4 border-volcana-lime/50 bg-volcana-lime/5 text-black flex items-center gap-2">
+            <Sparkles className="w-3.5 h-3.5 text-black" />
+            <span className="font-medium">AI-Native E-commerce Platform</span>
+          </Badge>
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-6 text-black leading-[1.1]">
             {dictionary.title_part2}
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl">
-            {dictionary.subtitle}
+          
+          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl">
+            {dictionary.subtitle}. Agentes inteligentes que executam sua operação 24/7 enquanto você foca em escala.
           </p>
           
-          {/* Campo de prompt */}
-          <div className="w-full max-w-2xl flex items-center gap-2 p-2 rounded-xl bg-card border shadow-sm mb-4">
-            <Input 
-              type="text" 
-              placeholder="Ex: Uma loja de roupas com estilo minimalista..."
-              className="h-14 text-lg bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0"
-            />
-            <Button asChild size="lg" className="h-14 px-6 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg">
-              <Link href={`/${lang}/waitlist`}>
-                {dictionary.cta_primary}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+          {/* Action Area */}
+          <div className="w-full max-w-xl flex flex-col gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-3 p-2 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm focus-within:ring-2 focus-within:ring-volcana-lime/50 transition-all">
+              <Input 
+                type="text" 
+                placeholder="Ex: Uma loja de roupas com estilo minimalista..."
+                className="h-12 md:h-14 text-base md:text-lg bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400"
+              />
+              <Button asChild size="lg" variant="volcana" className="w-full sm:w-auto h-12 md:h-14 px-8 rounded-xl font-bold text-base whitespace-nowrap group">
+                <Link href={`/${lang}/waitlist`}>
+                  {dictionary.cta_primary}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
+            
+            {/* Experimente */}
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+              <span className="text-sm text-gray-500 mr-1">Experimente:</span>
+              {suggestedPrompts.map((prompt) => (
+                <button 
+                  key={prompt}
+                  className="text-xs md:text-sm py-1 px-3 rounded-full border border-gray-200 hover:border-volcana-lime hover:bg-volcana-lime/10 transition-colors text-gray-600"
+                >
+                  {prompt}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Prompts pré-definidos */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mb-16">
-            <span className="text-sm text-muted-foreground mr-2">Experimente:</span>
-            {suggestedPrompts.map((prompt) => (
-              <Badge 
-                key={prompt}
-                variant="outline" 
-                className="cursor-pointer hover:bg-muted/50 transition-colors"
-              >
-                {prompt}
-              </Badge>
-            ))}
-          </div>
-
-          {/* Seção dos Agents */}
-          <div className="w-full max-w-2xl text-center">
-            <h3 className="text-sm font-semibold text-muted-foreground tracking-wider uppercase mb-4">
-              CONHEÇA NOSSOS SHERPA AGENTS
+          {/* Agents Preview */}
+          <div className="mt-16 w-full">
+            <h3 className="text-[10px] font-bold text-gray-400 tracking-[0.2em] uppercase mb-5">
+              POWERED BY VOLCANA SHERPA AGENTS
             </h3>
             <TooltipProvider>
-              <div className="flex flex-wrap items-center justify-center gap-3">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
                 {agents.map((agent) => (
                   <Tooltip key={agent.name}>
                     <TooltipTrigger asChild>
-                      <div className="py-2 px-4 border rounded-full bg-card/50 cursor-pointer">
-                        <span className="font-mono text-sm font-medium text-foreground">{agent.name}</span>
+                      <div className="py-2 px-5 border border-gray-100 rounded-full bg-white shadow-sm cursor-pointer hover:border-volcana-lime/50 hover:shadow-md transition-all">
+                        <span className="font-mono text-xs font-bold text-gray-900">{agent.name}</span>
                       </div>
                     </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{agent.description}</p>
+                    <TooltipContent className="bg-black text-white border-none">
+                      <p className="text-xs">{agent.description}</p>
                     </TooltipContent>
                   </Tooltip>
                 ))}
@@ -101,11 +108,14 @@ export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) 
             </TooltipProvider>
           </div>
         </div>
-      </div>
 
-      {/* Spline animation */}
-      <div className="absolute top-0 right-0 h-full w-1/2 z-0 hidden md:block opacity-40 overflow-hidden">
-        <SplineAnimation />
+        {/* Animation side */}
+        <div className="w-full md:w-1/2 lg:w-5/12 h-[400px] md:h-[600px] relative">
+          <div className="absolute inset-0 bg-gradient-to-tr from-volcana-lime/20 to-transparent rounded-full blur-3xl opacity-30 animate-pulse" />
+          <div className="w-full h-full relative z-10">
+            <SplineAnimation sceneUrl={HOME_SPLINE_URL} />
+          </div>
+        </div>
       </div>
     </section>
   );

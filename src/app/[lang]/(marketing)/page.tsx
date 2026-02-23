@@ -7,6 +7,7 @@ import { OrchestratedEcosystemSection } from "@/components/orchestrated-ecosyste
 import { FinalCTA } from "@/components/final-cta";
 import { SocialImpactBar } from "@/components/social-impact-bar";
 import { PlanetBadge } from "@/components/planet-badge";
+import { ScarcityBanner } from "@/components/scarcity-banner";
 import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/lib/i18n-config";
 
@@ -18,6 +19,7 @@ export default async function HomePage({
   const dictionary = await getDictionary(lang);
   return (
     <div className="bg-white text-gray-900">
+      <ScarcityBanner phrases={dictionary.waitlist.scarcity} />
       <Hero01 dictionary={dictionary.hero} lang={lang} />
       <Hero02 dictionary={dictionary} />
       <FeatureSection dictionary={dictionary.feature_section} lang={lang} />
