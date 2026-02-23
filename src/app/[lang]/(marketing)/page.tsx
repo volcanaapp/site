@@ -9,6 +9,8 @@ import { PlanetBadge } from "@/components/planet-badge";
 import { ScarcityBanner } from "@/components/scarcity-banner";
 import { getDictionary } from "@/lib/get-dictionary";
 import { Locale } from "@/lib/i18n-config";
+import { ProductExperience } from "@/components/product-experience";
+import { HowItWorksSection } from "@/components/how-it-works-section";
 
 export default async function HomePage({
   params: { lang },
@@ -21,7 +23,9 @@ export default async function HomePage({
       <ScarcityBanner phrases={dictionary.waitlist.scarcity} />
       <Hero01 dictionary={dictionary.hero} lang={lang} />
       <Hero02 dictionary={dictionary} />
+      <ProductExperience />
       <FeatureSection dictionary={dictionary.feature_section} lang={lang} />
+      <HowItWorksSection lang={lang} />
       <PowerOfAutonomySection dictionary={dictionary.power_of_autonomy} />
       <UseCaseCarousel dictionary={dictionary.use_case_carousel} lang={lang} />
       <OrchestratedEcosystemSection
