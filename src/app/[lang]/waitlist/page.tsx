@@ -13,9 +13,9 @@ import { ProductExperience } from "@/components/product-experience";
 export async function generateMetadata({
   params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }): Promise<Metadata> {
-  const { lang } = params;
+  const { lang } = await params;
   const dictionary = await getDictionary(lang);
   const waitlistDict = dictionary.waitlist;
 
@@ -32,9 +32,9 @@ export async function generateMetadata({
 export default async function WaitlistPage({
   params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
-  const { lang } = params;
+  const { lang } = await params;
   const dictionary = await getDictionary(lang);
   const waitlistDict = dictionary.waitlist;
 
