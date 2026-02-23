@@ -9,9 +9,10 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { Button } from "./ui/button";
+import { CtaButton } from "./ui/cta-button";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
+import { ArrowRight } from "lucide-react";
 
 export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: string }) {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -80,12 +81,12 @@ export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: s
                       {slide.description}
                     </p>
                     <div className="flex">
-                      <Button asChild size="lg" variant="volcana" className="h-14 px-8 rounded-xl font-bold group">
+                      <CtaButton asChild className="h-14 px-8 font-bold" wrapperClassName="w-auto justify-start">
                         <Link href={`/${lang}/waitlist`}>
                           {slide.button_text}
-                          <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
+                          <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Link>
-                      </Button>
+                      </CtaButton>
                     </div>
                   </div>
                   <div className="flex items-center justify-center relative">

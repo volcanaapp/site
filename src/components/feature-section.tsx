@@ -1,11 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useInView } from "@/hooks/use-in-view";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { CtaButton } from "@/components/ui/cta-button";
+import { ArrowRight } from "lucide-react";
 
 export function FeatureSection({ dictionary, lang }: { dictionary: any, lang: string }) {
   const { ref, isInView } = useInView<HTMLElement>({
@@ -46,12 +47,12 @@ export function FeatureSection({ dictionary, lang }: { dictionary: any, lang: st
             </div>
             
             <div className="flex flex-wrap items-center gap-6 pt-4">
-              <Button asChild size="lg" variant="volcana" className="font-bold text-lg h-14 px-10 rounded-xl group">
+              <CtaButton asChild className="h-14 px-10 text-lg" wrapperClassName="w-auto">
                 <Link href={`/${lang}/about`}>
                   {dictionary.learn_more}
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </Button>
+              </CtaButton>
             </div>
           </div>
           
