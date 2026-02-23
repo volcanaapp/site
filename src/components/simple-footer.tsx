@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 // Substituindo o ícone do X pelo Linkedin que é mais corporativo/B2B
 const XIcon = ({ className }: { className?: string }) => (
@@ -28,7 +31,7 @@ export function SimpleFooter() {
   ];
 
   return (
-    <footer className="bg-[#F3F4F6] py-12 md:py-16 text-gray-800 border-t border-gray-200 relative z-[60]">
+    <footer className="bg-[#F3F4F6] pt-12 md:pt-16 text-gray-800 border-t border-gray-200 relative z-[60]">
       <div className="container mx-auto px-4 max-w-6xl">
         
         {/* Top Section: Socials & Newsletter */}
@@ -84,12 +87,24 @@ export function SimpleFooter() {
         </div>
 
         {/* Bottom Section: Copyright & Address */}
-        <div className="text-center text-sm text-gray-500 space-y-2">
+        <div className="text-center text-sm text-gray-500 pb-12 space-y-2">
           <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP, Brasil</p>
           <p>© {currentYear} Volcana™. Todos os direitos reservados.</p>
         </div>
-
       </div>
+
+      {/* 1% For the Planet Banner */}
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="w-full bg-[#D3FE3E] py-4 flex justify-center items-center"
+      >
+        <span className="text-black font-bold tracking-tight text-sm md:text-base uppercase">
+          1% for the planet
+        </span>
+      </motion.div>
     </footer>
   );
 }
