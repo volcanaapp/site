@@ -133,7 +133,7 @@ export function Header({
                     <NavigationMenuTrigger className={linkClassName}>
                       {dictionary.header.product}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="md:w-[900px]">
+                    <NavigationMenuContent>
                       <ProductMegamenu dictionary={dictionary} />
                     </NavigationMenuContent>
                   </NavigationMenuItem>
@@ -141,7 +141,7 @@ export function Header({
                     <NavigationMenuTrigger className={linkClassName}>
                       {dictionary.header.solutions}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="md:w-[1000px]">
+                    <NavigationMenuContent>
                       <SolutionsMegamenu dictionary={dictionary} />
                     </NavigationMenuContent>
                   </NavigationMenuItem>

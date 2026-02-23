@@ -9,7 +9,7 @@ export function ProductMegamenu({ dictionary }: { dictionary: any }) {
   const productDict = dictionary.megamenu.product;
 
   return (
-    <div className="relative bg-white/95 backdrop-blur-xl border border-gray-100 rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1),0_0_40px_-10px_rgba(211,254,62,0.15)] ring-1 ring-black/[0.03]">
+    <div className="relative bg-white/95 backdrop-blur-xl border border-gray-100 rounded-[2.5rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] w-full">
       {/* Header of Megamenu */}
       <div className="flex items-center justify-between px-8 py-4 border-b border-gray-50 bg-gray-50/50">
         <div className="flex items-center gap-2">
