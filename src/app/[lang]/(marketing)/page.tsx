@@ -5,7 +5,6 @@ import { PowerOfAutonomySection } from "@/components/power-of-autonomy-section";
 import { UseCaseCarousel } from "@/components/use-case-carousel";
 import { OrchestratedEcosystemSection } from "@/components/orchestrated-ecosystem-section";
 import { FinalCTA } from "@/components/final-cta";
-import { SocialImpactBar } from "@/components/social-impact-bar";
 import { PlanetBadge } from "@/components/planet-badge";
 import { ScarcityBanner } from "@/components/scarcity-banner";
 import { getDictionary } from "@/lib/get-dictionary";
@@ -29,7 +28,6 @@ export default async function HomePage({
         dictionary={dictionary.orchestrated_ecosystem}
       />
       <FinalCTA dictionary={dictionary.final_cta} lang={lang} />
-      <SocialImpactBar dictionary={dictionary.social_impact} />
       <PlanetBadge dictionary={dictionary.planet_badge} />
     </div>
   );

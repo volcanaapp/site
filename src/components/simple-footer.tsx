@@ -31,8 +31,36 @@ export function SimpleFooter() {
   ];
 
   return (
-    <footer className="bg-[#F3F4F6] pt-12 md:pt-16 text-gray-800 border-t border-gray-200 relative z-[60]">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <footer className="bg-[#F3F4F6] text-gray-800 border-t border-gray-200 relative z-[60]">
+      {/* 1% For the Planet Banner - Moved to top of footer */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-50px" }}
+        className="w-full bg-[#D3FE3E] py-3 border-b border-[#c2ea39]"
+      >
+        <div className="container mx-auto flex justify-center items-center">
+          <Link
+            href="https://www.onepercentfortheplanet.org/"
+            target="_blank"
+            className="flex items-center gap-3 group px-4"
+          >
+            <Image
+              src="/one-percent-logo.svg"
+              alt="1% for the Planet Logo"
+              width={80}
+              height={20}
+              className="opacity-70 group-hover:opacity-100 transition-opacity"
+            />
+            <p className="text-xs text-gray-700 group-hover:text-gray-900 transition-colors font-medium">
+              Compromisso com a sustentabilidade. Saiba mais &rarr;
+            </p>
+          </Link>
+        </div>
+      </motion.div>
+
+      <div className="container mx-auto px-4 max-w-6xl pt-12 md:pt-16">
         
         {/* Top Section: Socials & Newsletter */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-16">
@@ -92,34 +120,6 @@ export function SimpleFooter() {
           <p>© {currentYear} Volcana™. Todos os direitos reservados.</p>
         </div>
       </div>
-
-      {/* 1% For the Planet Banner - Replicado do action-section */}
-      <motion.div 
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, margin: "-50px" }}
-        className="w-full bg-[#D3FE3E] py-3 border-t border-[#c2ea39]"
-      >
-        <div className="container mx-auto flex justify-center items-center">
-          <Link 
-            href="https://www.onepercentfortheplanet.org/" 
-            target="_blank" 
-            className="flex items-center gap-3 group px-4"
-          >
-            <Image
-              src="/one-percent-logo.svg"
-              alt="1% for the Planet Logo"
-              width={80}
-              height={20}
-              className="opacity-70 group-hover:opacity-100 transition-opacity"
-            />
-            <p className="text-xs text-gray-700 group-hover:text-gray-900 transition-colors font-medium">
-              Compromisso com a sustentabilidade. Saiba mais &rarr;
-            </p>
-          </Link>
-        </div>
-      </motion.div>
     </footer>
   );
 }
