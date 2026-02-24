@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Sparkles } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Link from "next/link";
+import { CtaButton } from "@/components/ui/cta-button";
 import {
   Tooltip,
   TooltipContent,
@@ -63,12 +64,12 @@ export function Hero01({ dictionary, lang }: { dictionary: any, lang: string }) 
                 placeholder="Ex: Uma loja de roupas com estilo minimalista..."
                 className="h-12 md:h-14 text-base md:text-lg bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-gray-400"
               />
-              <Button asChild size="lg" variant="volcana" className="w-full sm:w-auto h-12 md:h-14 px-8 rounded-xl font-bold text-base whitespace-nowrap group">
+              <CtaButton asChild className="w-full sm:w-auto h-12 md:h-14 px-8 text-base font-bold whitespace-nowrap group">
                 <Link href={`/${lang}/waitlist`}>
                   {dictionary.cta_primary}
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </Button>
+              </CtaButton>
             </div>
             
             {/* Experimente */}
