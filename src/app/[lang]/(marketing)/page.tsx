@@ -23,7 +23,7 @@ export default async function HomePage({
       <ScarcityBanner phrases={dictionary.waitlist.scarcity} />
       <Hero01 dictionary={dictionary.hero} lang={lang} />
       <Hero02 dictionary={dictionary} />
-      <ProductExperience />
+      <ProductExperience dictionary={dictionary} />
       <FeatureSection dictionary={dictionary.feature_section} lang={lang} />
       <HowItWorksSection lang={lang} />
       <PowerOfAutonomySection dictionary={dictionary.power_of_autonomy} />

@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
-export function ProductExperience() {
+export function ProductExperience({ dictionary }: { dictionary?: any }) {
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -31,9 +31,9 @@ export function ProductExperience() {
             style={{ opacity, y }}
             className="text-3xl md:text-5xl font-bold tracking-tighter text-white"
           >
-            O comando da sua operação.
+            {dictionary?.product_experience?.title_part1 || "O comando da sua operação."}
             <br />
-            <span className="text-gray-500">Como você nunca viu.</span>
+            <span className="text-gray-500">{dictionary?.product_experience?.title_part2 || "Como você nunca viu."}</span>
           </motion.h2>
         </div>
 

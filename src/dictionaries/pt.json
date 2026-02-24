@@ -228,6 +228,10 @@
       "badge": "1% PARA O PLANETA"
     }
   },
+  "product_experience": {
+    "title_part1": "O comando da sua operação.",
+    "title_part2": "Como você nunca viu."
+  },
   "final_cta": {
     "demo": {
       "title": "AGENDE UMA DEMO",
