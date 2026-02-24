@@ -200,20 +200,22 @@ export function PricingContent({
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {dictionary.pricing_page.token_packages.packages.map((pkg: any) => (
-                  <div key={pkg.name} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className="font-bold text-gray-900 text-lg">{pkg.name}</h3>
-                        <p className="text-sm text-gray-500 font-medium">{pkg.tokens}</p>
+                  <div key={pkg.name} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h3 className="font-bold text-gray-900 text-lg">{pkg.name}</h3>
+                          <p className="text-sm text-gray-500 font-medium">{pkg.tokens}</p>
+                        </div>
+                        <div className="bg-gray-50 text-gray-900 font-bold px-3 py-1 rounded-lg text-sm border border-gray-100">
+                          {pkg.price}
+                        </div>
                       </div>
-                      <div className="bg-gray-50 text-gray-900 font-bold px-3 py-1 rounded-lg text-sm border border-gray-100">
-                        {pkg.price}
-                      </div>
+                      <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                        {pkg.description}
+                      </p>
                     </div>
-                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                      {pkg.description}
-                    </p>
-                    <Button variant="outline" size="sm" className="w-full font-bold text-xs rounded-lg h-9">
+                    <Button variant="volcana" size="sm" className="w-full font-bold text-xs rounded-lg h-9">
                       {dictionary.pricing_page.token_packages.add_to_plan}
                     </Button>
                   </div>
