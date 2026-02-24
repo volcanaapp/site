@@ -315,9 +315,16 @@ export function PricingContent({
           {/* Environmental Section */}
           {dictionary?.pricing_page?.environment && (
             <div className="mt-24 w-full bg-[#1C1C1B] rounded-3xl overflow-hidden relative min-h-[400px] flex items-center group">
-              {/* Efeitos de luz estáticos restaurados */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#D3FE3E] opacity-10 blur-[100px] rounded-full pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D3FE3E] opacity-5 blur-[80px] rounded-full pointer-events-none" />
+              {/* Background Image */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/florest.bg"
+                  alt="Floresta Background"
+                  fill
+                  className="object-cover opacity-60"
+                />
+                <div className="absolute inset-0 bg-black/60" />
+              </div>
               
               <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center w-full">
                 <div className="flex-1 space-y-6">
