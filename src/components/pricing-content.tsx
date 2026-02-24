@@ -314,18 +314,19 @@ export function PricingContent({
 
           {/* Environmental Section */}
           {dictionary?.pricing_page?.environment && (
-            <div className="mt-24 w-full bg-[#1C1C1B] rounded-3xl overflow-hidden relative min-h-[400px] flex items-center">
+            <div className="mt-24 w-full bg-[#1C1C1B] rounded-3xl overflow-hidden relative min-h-[400px] flex items-center group">
+              <div className="absolute inset-0 bg-black z-0" />
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover opacity-30"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay"
               >
-                <source src="https://cdn.pixabay.com/video/2019/04/20/22908-331666497_large.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_25fps.mp4" type="video/mp4" />
               </video>
               
-              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-0 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-[1] pointer-events-none" />
               
               <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center w-full">
                 <div className="flex-1 space-y-6">
