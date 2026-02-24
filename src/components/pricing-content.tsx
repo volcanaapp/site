@@ -173,10 +173,10 @@ export function PricingContent({
                     <div className="pt-4 mt-auto">
                       <Button
                         asChild
-                        variant={isFeatured ? "volcana" : "outline"}
+                        variant="volcana"
                         className={cn(
                           "w-full h-12 rounded-xl font-bold text-base transition-transform active:scale-95",
-                          isFeatured ? "shadow-lg shadow-[#D3FE3E]/20" : "bg-white hover:bg-gray-50"
+                          isFeatured ? "shadow-lg shadow-[#D3FE3E]/20" : ""
                         )}
                       >
                         <Link href={plan.name.toLowerCase() === "enterprise" ? `/${lang}/waitlist` : `/${lang}/login`}>
