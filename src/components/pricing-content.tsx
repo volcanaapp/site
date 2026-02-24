@@ -315,7 +315,7 @@ export function PricingContent({
           {/* Environmental Section */}
           {dictionary?.pricing_page?.environment && (
             <div className="mt-24 w-full bg-[#1C1C1B] rounded-3xl overflow-hidden relative min-h-[400px] flex items-center group">
-              {/* Removi o vídeo e adicionei os efeitos de luz/gradiente estáticos */}
+              {/* Efeitos de luz estáticos restaurados */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#D3FE3E] opacity-10 blur-[100px] rounded-full pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D3FE3E] opacity-5 blur-[80px] rounded-full pointer-events-none" />
               
@@ -340,7 +340,7 @@ export function PricingContent({
                 <div className="shrink-0 z-20">
                    <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center p-6 shadow-2xl shadow-black/50 hover:scale-105 transition-transform duration-500">
                      <Image 
-                       src="/one-percent-logo.svg" 
+                       src="/selo-oficial.png" 
                        alt="1% for the Planet" 
                        width={120} 
                        height={120} 
