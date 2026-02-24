@@ -53,6 +53,7 @@ export function Header({
   const navLinks = [
     { href: "#", label: dictionary.header.product },
     { href: "#", label: dictionary.header.solutions },
+    { href: `/${lang}/pricing`, label: dictionary.header.pricing },
     { href: "#", label: dictionary.header.comparison },
     { href: "#", label: dictionary.header.use_cases },
     { href: "#", label: dictionary.header.content },
@@ -144,6 +145,16 @@ export function Header({
                     <NavigationMenuContent>
                       <SolutionsMegamenu dictionary={dictionary} />
                     </NavigationMenuContent>
+                  </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href={`/${lang}/pricing`}
+                        className={cn(navigationMenuTriggerStyle(), linkClassName, "bg-transparent")}
+                      >
+                        {dictionary.header.pricing}
+                      </Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <NavigationMenuLink asChild>
