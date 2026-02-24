@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export function AboutHero({ dictionary }: { dictionary: any }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -21,10 +22,20 @@ export function AboutHero({ dictionary }: { dictionary: any }) {
         
         <div className="container mx-auto max-w-7xl z-10 relative">
           <div className="w-full md:w-4/5 lg:w-3/4 flex flex-col items-start text-left">
-            <Badge variant="outline" className="mb-8 border-volcana-lime/50 bg-volcana-lime/5 text-black flex items-center gap-2 px-4 py-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-black" />
-              <span className="font-bold tracking-tight uppercase text-[10px]">OUR MISSION</span>
-            </Badge>
+            <div className="flex items-center gap-3 mb-8">
+              <Badge variant="outline" className="border-volcana-lime/50 bg-volcana-lime/5 text-black flex items-center gap-2 px-4 py-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-black" />
+                <span className="font-bold tracking-tight uppercase text-[10px]">OUR MISSION</span>
+              </Badge>
+              <div className="relative w-8 h-6 shadow-sm rounded-sm overflow-hidden border border-gray-100">
+                <Image 
+                  src="https://flagcdn.com/br.svg" 
+                  alt="Brazil Flag" 
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
 
             <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black tracking-tighter mb-8 uppercase leading-[0.9] text-black">
               {titleWords.map((word: string, index: number) => (
