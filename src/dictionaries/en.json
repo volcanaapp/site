@@ -199,6 +199,27 @@
           "description": "Maximum efficiency for large-scale operations."
         }
       ]
+    },
+    "faq": {
+      "title": "Common Questions",
+      "items": [
+        {
+          "question": "What is an AI Agent?",
+          "answer": "An AI agent is an autonomous worker that can perform tasks like customer support, inventory management, or price optimization without constant human supervision."
+        },
+        {
+          "question": "Are there really no transaction fees?",
+          "answer": "Yes. Volcana charges a fixed monthly fee. We do not take a percentage of your sales (unlike other platforms that charge 0.5% to 2% per transaction)."
+        },
+        {
+          "question": "Can I cancel at any time?",
+          "answer": "Absolutely. There are no long-term contracts for our Starter and Pro plans. You can cancel your subscription at any time."
+        },
+        {
+          "question": "How do token packages work?",
+          "answer": "Your plan comes with a base allowance. If your agents are very active, you can buy extra token packs that never expire. You only pay for what you use."
+        }
+      ]
     }
   },
   "final_cta": {

@@ -199,6 +199,27 @@
           "description": "Máxima eficiência para operações de grande escala."
         }
       ]
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "items": [
+        {
+          "question": "O que é um Agente de IA?",
+          "answer": "Um agente de IA é um trabalhador autônomo que pode executar tarefas como atendimento ao cliente, gestão de estoque ou otimização de preços sem supervisão humana constante."
+        },
+        {
+          "question": "Realmente não há taxas de transação?",
+          "answer": "Sim. A Volcana cobra uma assinatura mensal fixa. Não cobramos porcentagem sobre suas vendas (diferente de outras plataformas que cobram de 0,5% a 2% por transação)."
+        },
+        {
+          "question": "Posso cancelar a qualquer momento?",
+          "answer": "Com certeza. Não há contratos de longo prazo para os planos Starter e Pro. Você pode cancelar sua assinatura a qualquer momento."
+        },
+        {
+          "question": "Como funcionam os pacotes de tokens?",
+          "answer": "Seu plano vem com uma franquia base. Se seus agentes forem muito ativos, você pode comprar pacotes de tokens extras que nunca expiram. Você paga apenas pelo que usar."
+        }
+      ]
     }
   },
   "final_cta": {

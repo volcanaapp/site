@@ -8,6 +8,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import { Locale } from "@/lib/i18n-config";
 
@@ -282,6 +288,27 @@ export function PricingContent({
               </TabsContent>
             </Tabs>
           </div>
+
+          {/* FAQ Section */}
+          {dictionary?.pricing_page?.faq && (
+            <div className="mt-24 max-w-3xl mx-auto">
+              <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
+                {dictionary.pricing_page.faq.title}
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {dictionary.pricing_page.faq.items.map((item: any, index: number) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-left font-semibold text-gray-900">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-600 leading-relaxed">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          )}
 
           {/* Brand strip */}
           <div className="mt-24 pt-12 border-t border-gray-100">
