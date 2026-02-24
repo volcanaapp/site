@@ -175,7 +175,52 @@
         "cta": "Contáctanos",
         "featured": false
       }
-    ]
+    ],
+    "token_packages": {
+      "title": "¿Necesita más potencia?",
+      "subtitle": "Añada paquetes de tokens extra para sus agentes a medida que escala. Pague solo por lo que necesita.",
+      "packages": [
+        {
+          "name": "Starter Boost",
+          "tokens": "1 Millón de Tokens",
+          "price": "$10",
+          "description": "Aprox. 750k palabras generadas."
+        },
+        {
+          "name": "Growth Pack",
+          "tokens": "5 Millones de Tokens",
+          "price": "$45",
+          "description": "Mejor para tiendas en crecimiento con alta actividad de agentes."
+        },
+        {
+          "name": "Scale Unit",
+          "tokens": "10 Millones de Tokens",
+          "price": "$80",
+          "description": "Máxima eficiencia para operaciones a gran escala."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "question": "¿Qué es un Agente de IA?",
+          "answer": "Un agente de IA es un trabajador autónomo que puede realizar tareas como atención al cliente, gestión de inventario u optimización de precios sin supervisión humana constante."
+        },
+        {
+          "question": "¿Realmente no hay comisiones por transacción?",
+          "answer": "Sí. Volcana cobra una tarifa mensual fija. No tomamos un porcentaje de sus ventas (a diferencia de otras plataformas que cobran del 0.5% al 2% por transacción)."
+        },
+        {
+          "question": "¿Puedo cancelar en cualquier momento?",
+          "answer": "Absolutamente. No hay contratos a largo plazo para nuestros planes Starter y Pro. Puede cancelar su suscripción en cualquier momento."
+        },
+        {
+          "question": "¿Cómo funcionan los paquetes de tokens?",
+          "answer": "Su plan viene con una asignación base. Si sus agentes son muy activos, puede comprar paquetes de tokens adicionales que nunca caducan. Solo paga por lo que usa."
+        }
+      ]
+    }
   },
   "final_cta": {
     "demo": {
@@ -188,7 +233,7 @@
     }
   },
   "social_impact": {
-    "text": "1% para el Planeta. Porque el futuro del e-commerce também es sostenible.",
+    "text": "1% para el Planeta. Porque el futuro del e-commerce también es sostenible.",
     "link": "Conoce nuestro compromiso"
   },
   "new_footer": {
