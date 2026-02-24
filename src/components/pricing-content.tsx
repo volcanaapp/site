@@ -315,18 +315,9 @@ export function PricingContent({
           {/* Environmental Section */}
           {dictionary?.pricing_page?.environment && (
             <div className="mt-24 w-full bg-[#1C1C1B] rounded-3xl overflow-hidden relative min-h-[400px] flex items-center group">
-              <div className="absolute inset-0 bg-black z-0" />
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay"
-              >
-                <source src="https://videos.pexels.com/video-files/3129671/3129671-hd_1920_1080_25fps.mp4" type="video/mp4" />
-              </video>
-              
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-[1] pointer-events-none" />
+              {/* Removi o vídeo e adicionei os efeitos de luz/gradiente estáticos */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#D3FE3E] opacity-10 blur-[100px] rounded-full pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D3FE3E] opacity-5 blur-[80px] rounded-full pointer-events-none" />
               
               <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center w-full">
                 <div className="flex-1 space-y-6">
@@ -346,14 +337,14 @@ export function PricingContent({
                   </p>
                 </div>
                 
-                <div className="shrink-0">
-                   <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center p-6 shadow-2xl shadow-black/50">
+                <div className="shrink-0 z-20">
+                   <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center p-6 shadow-2xl shadow-black/50 hover:scale-105 transition-transform duration-500">
                      <Image 
                        src="/one-percent-logo.svg" 
                        alt="1% for the Planet" 
                        width={120} 
                        height={120} 
-                       className="w-full h-auto"
+                       className="w-full h-auto object-contain"
                      />
                    </div>
                 </div>
