@@ -214,7 +214,7 @@ export function PricingContent({
                       {pkg.description}
                     </p>
                     <Button variant="outline" size="sm" className="w-full font-bold text-xs rounded-lg h-9">
-                      Add to Plan
+                      {dictionary.pricing_page.token_packages.add_to_plan}
                     </Button>
                   </div>
                 ))}

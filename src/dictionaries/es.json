@@ -179,6 +179,7 @@
     "token_packages": {
       "title": "¿Necesita más potencia?",
       "subtitle": "Añada paquetes de tokens extra para sus agentes a medida que escala. Pague solo por lo que necesita.",
+      "add_to_plan": "Añadir al Plan",
       "packages": [
         {
           "name": "Starter Boost",
