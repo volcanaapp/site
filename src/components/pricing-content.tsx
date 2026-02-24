@@ -314,13 +314,22 @@ export function PricingContent({
 
           {/* Environmental Section */}
           {dictionary?.pricing_page?.environment && (
-            <div className="mt-24 w-full bg-[#1C1C1B] rounded-3xl overflow-hidden relative">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#D3FE3E] opacity-10 blur-[100px] rounded-full pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D3FE3E] opacity-5 blur-[80px] rounded-full pointer-events-none" />
+            <div className="mt-24 w-full bg-[#1C1C1B] rounded-3xl overflow-hidden relative min-h-[400px] flex items-center">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-30"
+              >
+                <source src="https://cdn.pixabay.com/video/2019/04/20/22908-331666497_large.mp4" type="video/mp4" />
+              </video>
               
-              <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-0 pointer-events-none" />
+              
+              <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center w-full">
                 <div className="flex-1 space-y-6">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-[#D3FE3E]/10 border border-[#D3FE3E]/20 px-3 py-1">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-[#D3FE3E]/10 border border-[#D3FE3E]/20 px-3 py-1 backdrop-blur-sm">
                     <span className="w-2 h-2 rounded-full bg-[#D3FE3E] animate-pulse" />
                     <span className="text-xs font-bold text-[#D3FE3E] tracking-wide uppercase">
                       {dictionary.pricing_page.environment.badge}
