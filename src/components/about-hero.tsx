@@ -2,30 +2,39 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import { Sparkles } from "lucide-react";
 
 export function AboutHero({ dictionary }: { dictionary: any }) {
   const [isMounted, setIsMounted] = useState(false);
   const titleWords = dictionary.title.split(" ");
 
   useEffect(() => {
-    // Garante que a animação só execute no cliente após a montagem
     setIsMounted(true);
   }, []);
 
   return (
     <div className="dark">
-      <section className="w-full min-h-[calc(80vh-theme(spacing.14))] flex items-center relative overflow-hidden bg-background">
-        <div className="container z-10">
-          <div className="w-full md:w-3/4 lg:w-2/3 flex flex-col items-start text-left">
-            <h1 className="text-5xl md:text-[5.5rem] font-bold tracking-tighter mb-6 uppercase leading-none text-foreground">
-              {titleWords.map((word, index) => (
+      <section className="w-full min-h-[70vh] flex items-center relative overflow-hidden bg-white">
+        {/* Decorative background */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-volcana-lime/5 rounded-full blur-[150px] pointer-events-none" />
+        
+        <div className="container mx-auto max-w-7xl z-10 relative">
+          <div className="w-full md:w-4/5 lg:w-3/4 flex flex-col items-start text-left">
+            <Badge variant="outline" className="mb-8 border-volcana-lime/50 bg-volcana-lime/5 text-black flex items-center gap-2 px-4 py-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-black" />
+              <span className="font-bold tracking-tight uppercase text-[10px]">OUR MISSION</span>
+            </Badge>
+
+            <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black tracking-tighter mb-8 uppercase leading-[0.9] text-black">
+              {titleWords.map((word: string, index: number) => (
                 <span
                   key={index}
                   className={cn(
-                    "inline-block transition-all duration-500 ease-out",
+                    "inline-block transition-all duration-700 ease-out",
                     isMounted
                       ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-5"
+                      : "opacity-0 translate-y-12"
                   )}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
@@ -33,6 +42,15 @@ export function AboutHero({ dictionary }: { dictionary: any }) {
                 </span>
               ))}
             </h1>
+            
+            <p 
+              className={cn(
+                "text-xl md:text-3xl text-gray-500 font-medium leading-tight max-w-3xl transition-all duration-1000 delay-500",
+                isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              )}
+            >
+              {dictionary.subtitle}
+            </p>
           </div>
         </div>
       </section>
