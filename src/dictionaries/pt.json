@@ -175,7 +175,31 @@
         "cta": "Fale Conosco",
         "featured": false
       }
-    ]
+    ],
+    "token_packages": {
+      "title": "Precisa de mais poder?",
+      "subtitle": "Adicione pacotes de tokens extras para seus agentes conforme você escala. Pague apenas pelo que precisar.",
+      "packages": [
+        {
+          "name": "Starter Boost",
+          "tokens": "1 Milhão de Tokens",
+          "price": "R$50",
+          "description": "Aprox. 750k palavras geradas."
+        },
+        {
+          "name": "Growth Pack",
+          "tokens": "5 Milhões de Tokens",
+          "price": "R$225",
+          "description": "Melhor para lojas em crescimento com alta atividade de agentes."
+        },
+        {
+          "name": "Scale Unit",
+          "tokens": "10 Milhões de Tokens",
+          "price": "R$400",
+          "description": "Máxima eficiência para operações de grande escala."
+        }
+      ]
+    }
   },
   "final_cta": {
     "demo": {

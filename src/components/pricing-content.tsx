@@ -184,6 +184,38 @@ export function PricingContent({
             })}
           </div>
 
+          {/* Token Packages Section */}
+          {dictionary?.pricing_page?.token_packages && (
+            <div className="mt-20 max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <h2 className="text-2xl font-bold text-gray-900">{dictionary.pricing_page.token_packages.title}</h2>
+                <p className="text-gray-500 max-w-2xl mx-auto">{dictionary.pricing_page.token_packages.subtitle}</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {dictionary.pricing_page.token_packages.packages.map((pkg: any) => (
+                  <div key={pkg.name} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="font-bold text-gray-900 text-lg">{pkg.name}</h3>
+                        <p className="text-sm text-gray-500 font-medium">{pkg.tokens}</p>
+                      </div>
+                      <div className="bg-gray-50 text-gray-900 font-bold px-3 py-1 rounded-lg text-sm border border-gray-100">
+                        {pkg.price}
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                      {pkg.description}
+                    </p>
+                    <Button variant="outline" size="sm" className="w-full font-bold text-xs rounded-lg h-9">
+                      Add to Plan
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Comparison Tabs */}
           <div className="mt-24 max-w-4xl mx-auto">
              <div className="text-center mb-10">
