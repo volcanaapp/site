@@ -17,25 +17,26 @@ export function AboutHero({ dictionary }: { dictionary: any }) {
   return (
     <div className="dark">
       <section className="w-full min-h-[70vh] flex items-center relative overflow-hidden bg-white">
+        {/* Background Image - Brazil Flag */}
+        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none select-none">
+          <Image
+            src="/bandeira-brasil.jpg"
+            alt="Brazil Flag Background"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+
         {/* Decorative background */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-volcana-lime/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-volcana-lime/5 rounded-full blur-[150px] pointer-events-none z-0" />
         
         <div className="container mx-auto max-w-7xl z-10 relative">
           <div className="w-full md:w-4/5 lg:w-3/4 flex flex-col items-start text-left">
-            <div className="flex items-center gap-3 mb-8">
-              <Badge variant="outline" className="border-volcana-lime/50 bg-volcana-lime/5 text-black flex items-center gap-2 px-4 py-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-black" />
-                <span className="font-bold tracking-tight uppercase text-[10px]">OUR MISSION</span>
-              </Badge>
-              <div className="relative w-8 h-6 shadow-sm rounded-sm overflow-hidden border border-gray-100">
-                <Image 
-                  src="https://flagcdn.com/br.svg" 
-                  alt="Brazil Flag" 
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+            <Badge variant="outline" className="mb-8 border-volcana-lime/50 bg-volcana-lime/5 text-black flex items-center gap-2 px-4 py-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-black" />
+              <span className="font-bold tracking-tight uppercase text-[10px]">OUR MISSION</span>
+            </Badge>
 
             <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black tracking-tighter mb-8 uppercase leading-[0.9] text-black">
               {titleWords.map((word: string, index: number) => (
