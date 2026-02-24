@@ -221,6 +221,11 @@
           "answer": "Su plan viene con una asignación base. Si sus agentes son muy activos, puede comprar paquetes de tokens adicionales que nunca caducan. Solo paga por lo que usa."
         }
       ]
+    },
+    "environment": {
+      "title": "La tecnología cuesta energía. La responsabilidad genera vida.",
+      "text": "Sabemos que cada token generado tiene un costo invisible: el consumo de energía de los centros de datos. Mientras las grandes tecnológicas corren solo por el beneficio, nosotros corremos por el futuro. Destinamos el 1% de nuestra facturación a regenerar el planeta. Al elegir Volcana, no solo escalas tu operación, ayudas a neutralizar la huella de carbono de la revolución de la IA.",
+      "badge": "1% POR EL PLANETA"
     }
   },
   "final_cta": {

@@ -221,6 +221,11 @@
           "answer": "Seu plano vem com uma franquia base. Se seus agentes forem muito ativos, você pode comprar pacotes de tokens extras que nunca expiram. Você paga apenas pelo que usar."
         }
       ]
+    },
+    "environment": {
+      "title": "Tecnologia custa energia. Responsabilidade gera vida.",
+      "text": "Sabemos que cada token gerado tem um custo invisível: o consumo de energia dos data centers. Enquanto as big techs correm apenas pelo lucro, nós corremos pelo futuro. Revertemos 1% de todo o nosso faturamento para regenerar o planeta. Ao escolher a Volcana, você não apenas escala sua operação, você ajuda a neutralizar a pegada de carbono da revolução da IA.",
+      "badge": "1% PARA O PLANETA"
     }
   },
   "final_cta": {

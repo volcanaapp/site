@@ -221,6 +221,11 @@
           "answer": "Your plan comes with a base allowance. If your agents are very active, you can buy extra token packs that never expire. You only pay for what you use."
         }
       ]
+    },
+    "environment": {
+      "title": "Technology costs energy. Responsibility creates life.",
+      "text": "We know every generated token has an invisible cost: data center energy consumption. While big tech races for profit alone, we race for the future. We revert 1% of our revenue to regenerate the planet. By choosing Volcana, you don't just scale your operation, you help neutralize the carbon footprint of the AI revolution.",
+      "badge": "1% FOR THE PLANET"
     }
   },
   "final_cta": {

@@ -312,6 +312,45 @@ export function PricingContent({
             </div>
           )}
 
+          {/* Environmental Section */}
+          {dictionary?.pricing_page?.environment && (
+            <div className="mt-24 w-full bg-[#1C1C1B] rounded-3xl overflow-hidden relative">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#D3FE3E] opacity-10 blur-[100px] rounded-full pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D3FE3E] opacity-5 blur-[80px] rounded-full pointer-events-none" />
+              
+              <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row gap-12 items-center">
+                <div className="flex-1 space-y-6">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-[#D3FE3E]/10 border border-[#D3FE3E]/20 px-3 py-1">
+                    <span className="w-2 h-2 rounded-full bg-[#D3FE3E] animate-pulse" />
+                    <span className="text-xs font-bold text-[#D3FE3E] tracking-wide uppercase">
+                      {dictionary.pricing_page.environment.badge}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-2xl md:text-3xl font-black text-white leading-tight">
+                    {dictionary.pricing_page.environment.title}
+                  </h2>
+                  
+                  <p className="text-gray-400 text-lg leading-relaxed">
+                    {dictionary.pricing_page.environment.text}
+                  </p>
+                </div>
+                
+                <div className="shrink-0">
+                   <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center p-6 shadow-2xl shadow-black/50">
+                     <Image 
+                       src="/one-percent-logo.svg" 
+                       alt="1% for the Planet" 
+                       width={120} 
+                       height={120} 
+                       className="w-full h-auto"
+                     />
+                   </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Brand strip */}
           <div className="mt-24 pt-12 border-t border-gray-100">
             <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Trusted Ecosystem</p>
