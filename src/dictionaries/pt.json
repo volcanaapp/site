@@ -13,7 +13,8 @@
     "pricing": "Preços",
     "content": "Conteúdo",
     "login": "Login",
-    "start_now": "Comece Agora"
+    "start_now": "Comece Agora",
+    "marketplace": "Marketplace"
   },
   "topbar": {
     "language": "PT-BR",
@@ -378,5 +379,43 @@
   },
   "dashboard": {
     "welcome_message": "Bem-vindo de volta, {name}!"
+  },
+  "marketplace": {
+    "badge": "POWERED BY SHERPA AI",
+    "title_part1": "Pare de instalar apps.",
+    "title_part2": "Comece a delegar habilidades.",
+    "subtitle": "O fim das mensalidades de plugins. Adquira Prompts de Alta Engenharia, equipe o seu agente Sherpa e deixe a Inteligência Artificial executar a sua operação consumindo apenas Créditos Agênticos.",
+    "filters": {
+      "all": "Todas as Habilidades",
+      "seo": "SEO & Catálogo",
+      "conversion": "Conversão & Vendas",
+      "supply": "Supply Chain"
+    },
+    "cards": {
+      "card1": {
+        "category": "SEO & Catálogo",
+        "title": "Especialista em Copywriting D2C",
+        "description": "Reescreve títulos e descrições de produtos utilizando gatilhos mentais avançados e formatação otimizada para o algoritmo do Google.",
+        "price_label": "Grátis",
+        "cost_label": "Execução: ~2 Créditos/Produto",
+        "button": "Adicionar ao Sherpa"
+      },
+      "card2": {
+        "category": "Estratégia",
+        "title": "Analista de Dynamic Pricing",
+        "description": "Monitora o custo no ERP (TOTVS/SAP) e ajusta a precificação na loja em tempo real para garantir a margem mínima de 25%.",
+        "price_label": "Adquirir: $ 29",
+        "cost_label": "Execução: ~10 Créditos/Dia",
+        "button": "Adicionar ao Sherpa"
+      },
+      "card3": {
+        "category": "Supply Chain",
+        "title": "Predição de Ruptura de Estoque",
+        "description": "Cruza dados de tráfego do Meta Ads com o volume de vendas do MedusaJS para alertar sobre quebra de estoque 7 dias antes de ocorrer.",
+        "price_label": "Adquirir: $ 15",
+        "cost_label": "Execução: ~5 Créditos/Análise",
+        "button": "Adicionar ao Sherpa"
+      }
+    }
   }
 }

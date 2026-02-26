@@ -13,7 +13,8 @@
     "pricing": "Pricing",
     "content": "Content",
     "login": "Login",
-    "start_now": "Start Now"
+    "start_now": "Start Now",
+    "marketplace": "Marketplace"
   },
   "topbar": {
     "language": "EN-US",
@@ -373,5 +374,43 @@
   },
   "dashboard": {
     "welcome_message": "Welcome back, {name}!"
+  },
+  "marketplace": {
+    "badge": "POWERED BY SHERPA AI",
+    "title_part1": "Stop installing apps.",
+    "title_part2": "Start delegating skills.",
+    "subtitle": "The end of plugin monthly fees. Acquire High-Engineering Prompts, equip your Sherpa agent, and let Artificial Intelligence run your operation consuming only Agentic Credits.",
+    "filters": {
+      "all": "All Skills",
+      "seo": "SEO & Catalog",
+      "conversion": "Conversion & Sales",
+      "supply": "Supply Chain"
+    },
+    "cards": {
+      "card1": {
+        "category": "SEO & Catalog",
+        "title": "D2C Copywriting Specialist",
+        "description": "Rewrites product titles and descriptions using advanced mental triggers and formatting optimized for Google's algorithm.",
+        "price_label": "Free",
+        "cost_label": "Execution: ~2 Credits/Product",
+        "button": "Add to Sherpa"
+      },
+      "card2": {
+        "category": "Strategy",
+        "title": "Dynamic Pricing Analyst",
+        "description": "Monitors cost in ERP (TOTVS/SAP) and adjusts pricing in the store in real-time to ensure a minimum margin of 25%.",
+        "price_label": "Acquire: $ 29",
+        "cost_label": "Execution: ~10 Credits/Day",
+        "button": "Add to Sherpa"
+      },
+      "card3": {
+        "category": "Supply Chain",
+        "title": "Stockout Prediction",
+        "description": "Cross-references Meta Ads traffic data with MedusaJS sales volume to alert about stockouts 7 days before they occur.",
+        "price_label": "Acquire: $ 15",
+        "cost_label": "Execution: ~5 Credits/Analysis",
+        "button": "Add to Sherpa"
+      }
+    }
   }
 }
