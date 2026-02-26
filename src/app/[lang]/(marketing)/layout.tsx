@@ -21,7 +21,7 @@ export default async function MarketingLayout({
 }) {
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
-  const supabase = await createClient();
+  const supabase = createClient();
   const {
     data: { session },
   } = await supabase.auth.getSession();
