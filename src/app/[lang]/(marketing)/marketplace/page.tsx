@@ -3,10 +3,11 @@ import { Locale } from "@/lib/i18n-config";
 import { SkillMarketplace } from "@/components/skill-marketplace";
 
 export default async function MarketplacePage({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
   return (

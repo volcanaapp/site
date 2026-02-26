@@ -26,7 +26,7 @@ interface AccountFormProps {
   profile: Profile | null;
 }
 
-const initialState = {
+const initialState: any = {
   error: null,
   success: false,
 };

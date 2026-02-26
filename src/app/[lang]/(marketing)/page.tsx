@@ -13,14 +13,15 @@ import { ProductExperience } from "@/components/product-experience";
 import { HowItWorksSection } from "@/components/how-it-works-section";
 
 export default async function HomePage({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const dictionary = await getDictionary(lang);
   return (
     <div className="bg-white text-gray-900">
-      <ScarcityBanner phrases={dictionary.waitlist.scarcity} />
+      <ScarcityBanner phrases={(dictionary as any).waitlist.scarcity} />
       <Hero01 dictionary={dictionary.hero} lang={lang} />
       <Hero02 dictionary={dictionary} />
       <ProductExperience dictionary={dictionary} />

@@ -13,7 +13,7 @@ export function WaitlistLogoCloud() {
     "google",
   ];
 
-  const logos = {
+  const logos: Record<string, any> = {
     ...integrationLogos,
     google: () => <Image src="/google-logo.png" alt="Google" width={90} height={32} className="h-8 w-auto" />,
   };

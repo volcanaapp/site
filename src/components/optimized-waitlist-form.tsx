@@ -8,7 +8,7 @@ import { CtaButton } from "@/components/ui/cta-button";
 import { addToWaitlist } from "@/app/actions/waitlist";
 import { Loader2, ArrowRight } from "lucide-react";
 
-const initialState = {
+const initialState: any = {
   error: null,
   success: false,
 };

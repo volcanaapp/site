@@ -40,13 +40,13 @@ export default async function WaitlistPage({
 
   return (
     <div className="bg-white text-gray-900">
-      <ScarcityBanner phrases={waitlistDict.scarcity} />
+      <ScarcityBanner phrases={(waitlistDict as any).scarcity} />
       <WaitlistHeader />
       <main>
         <WaitlistHero dictionary={waitlistDict} />
         <InterestSection />
         <ProductExperience />
-        <HowItWorksSection />
+        <HowItWorksSection lang={lang} />
         <DesireSection />
       </main>
       <SimpleFooter />

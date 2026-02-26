@@ -14,11 +14,12 @@ export const metadata: Metadata = {
 
 export default async function MarketingLayout({
   children,
-  params: { lang },
+  params,
 }: {
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const dictionary = await getDictionary(lang);
   const supabase = createClient();
   const {
