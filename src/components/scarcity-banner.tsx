@@ -33,7 +33,7 @@ export function ScarcityBanner({ phrases = defaultPhrases }: ScarcityBannerProps
   const currentPhrase = phrases[currentIndex] || phrases[0] || "";
 
   return (
-    <div className="bg-[#D3FE3E] text-black text-center py-2 text-xs md:text-sm font-medium relative z-50 overflow-hidden h-9 flex items-center justify-center px-4">
+    <div className="bg-[#D3FE3E] text-black text-center py-2 text-xs md:text-sm font-medium relative z-40 overflow-hidden h-9 flex items-center justify-center px-4">
       <p
         className={`transition-opacity duration-500 ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'} line-clamp-1`}
       >
