@@ -373,43 +373,43 @@
     }
   },
   "dashboard": {
-    "welcome_message": "Bienvenido de nuevo, {name}!"
+    "welcome_message": "¡Bienvenido de nuevo, {name}!"
   },
   "marketplace": {
-    "badge": "POWERED BY SHERPA AI",
-    "title_part1": "Stop installing apps.",
-    "title_part2": "Start delegating skills.",
-    "subtitle": "The end of plugin monthly fees. Acquire High-Engineering Prompts, equip your Sherpa agent, and let Artificial Intelligence run your operation consuming only Agentic Credits.",
+    "badge": "IMPULSADO POR SHERPA AI",
+    "title_part1": "Deja de instalar apps.",
+    "title_part2": "Empieza a delegar habilidades.",
+    "subtitle": "El fin de las mensualidades de plugins. Adquiere Prompts de Alta Ingeniería, equipa a tu agente Sherpa y deja que la Inteligencia Artificial ejecute tu operación consumiendo solo Créditos Agénticos.",
     "filters": {
-      "all": "All Skills",
-      "seo": "SEO & Catalog",
-      "conversion": "Conversion & Sales",
-      "supply": "Supply Chain"
+      "all": "Todas las Habilidades",
+      "seo": "SEO y Catálogo",
+      "conversion": "Conversión y Ventas",
+      "supply": "Cadena de Suministro"
     },
     "cards": {
       "card1": {
-        "category": "SEO & Catalog",
-        "title": "D2C Copywriting Specialist",
-        "description": "Rewrites product titles and descriptions using advanced mental triggers and formatting optimized for Google's algorithm.",
-        "price_label": "Free",
-        "cost_label": "Execution: ~2 Credits/Product",
-        "button": "Add to Sherpa"
+        "category": "SEO y Catálogo",
+        "title": "Especialista en Copywriting D2C",
+        "description": "Reescribe títulos y descripciones de productos utilizando disparadores mentales avanzados y un formato optimizado para el algoritmo de Google.",
+        "price_label": "Gratis",
+        "cost_label": "Ejecución: ~2 Créditos/Producto",
+        "button": "Añadir a Sherpa"
       },
       "card2": {
-        "category": "Strategy",
-        "title": "Dynamic Pricing Analyst",
-        "description": "Monitors cost in ERP (TOTVS/SAP) and adjusts pricing in the store in real-time to ensure a minimum margin of 25%.",
-        "price_label": "Acquire: $ 29",
-        "cost_label": "Execution: ~10 Credits/Day",
-        "button": "Add to Sherpa"
+        "category": "Estrategia",
+        "title": "Analista de Precios Dinámicos",
+        "description": "Monitorea el costo en el ERP (TOTVS/SAP) y ajusta los precios en la tienda en tiempo real para garantizar un margen mínimo del 25%.",
+        "price_label": "Adquirir: $ 29",
+        "cost_label": "Ejecución: ~10 Créditos/Día",
+        "button": "Añadir a Sherpa"
       },
       "card3": {
-        "category": "Supply Chain",
-        "title": "Stockout Prediction",
-        "description": "Cross-references Meta Ads traffic data with MedusaJS sales volume to alert about stockouts 7 days before they occur.",
-        "price_label": "Acquire: $ 15",
-        "cost_label": "Execution: ~5 Credits/Analysis",
-        "button": "Add to Sherpa"
+        "category": "Cadena de Suministro",
+        "title": "Predicción de Agotamiento de Stock",
+        "description": "Cruza datos de tráfico de Meta Ads con el volumen de ventas de MedusaJS para alertar sobre el agotamiento de stock 7 días antes de que ocurra.",
+        "price_label": "Adquirir: $ 15",
+        "cost_label": "Ejecución: ~5 Créditos/Análisis",
+        "button": "Añadir a Sherpa"
       }
     }
   }

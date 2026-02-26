@@ -112,13 +112,14 @@ export function SkillMarketplace({ dictionary }: { dictionary: any }) {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skill) => (
+          {filteredSkills.map((skill, index) => (
             <div 
               key={skill.id}
               className={cn(
-                "group bg-[#20201F] border border-[#353634] rounded-2xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1",
+                "group bg-[#20201F] border border-[#353634] rounded-2xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1 animate-in fade-in zoom-in-95 fill-mode-both",
                 skill.categoryColor === "purple" ? "hover:border-[#693EFE] hover:shadow-[0_10px_30px_rgba(105,62,254,0.1)]" : "hover:border-[#D3FE3E] hover:shadow-[0_10px_30px_rgba(211,254,62,0.1)]"
               )}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex justify-between items-start mb-6">
                 <span className={cn(
