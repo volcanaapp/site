@@ -59,7 +59,10 @@ export function Header({
     { href: "#", label: dictionary.header.content },
   ];
 
-  const linkClassName = "bg-transparent hover:bg-transparent transition-all hover:text-volcana-lime text-foreground/60 font-bold data-[state=open]:text-volcana-lime";
+  const linkClassName = cn(
+    "bg-transparent hover:bg-transparent transition-all font-bold data-[state=open]:text-volcana-lime",
+    scrolled ? "text-black/60 hover:text-volcana-lime" : "text-white/80 hover:text-white"
+  );
 
   return (
     <>
@@ -78,7 +81,7 @@ export function Header({
             <div className="md:hidden">
               <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="hover:bg-volcana-lime/10">
+                  <Button variant="ghost" size="icon" className={cn("hover:bg-volcana-lime/10", scrolled ? "text-black" : "text-white")}>
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Abrir menu</span>
                   </Button>
@@ -120,7 +123,7 @@ export function Header({
             </div>
             <div className="hidden md:flex">
               <Link href={`/${lang}`} className="mr-10 flex items-center transition-transform hover:scale-105">
-                <Logo className="h-8" />
+                <Logo className={cn("h-8 transition-colors duration-300", scrolled ? "text-black" : "text-white")} />
               </Link>
             </div>
           </div>
@@ -180,7 +183,7 @@ export function Header({
                     <NavigationMenuLink asChild>
                       <Link
                         href="#"
-                        className={cn(navigationMenuTriggerStyle(), linkClassName, "bg-transparent")}
+                        className={cn(navigationMenuTriggerStyle(), linkClassName)}
                       >
                         {dictionary.header.content}
                       </Link>
@@ -194,7 +197,7 @@ export function Header({
           {/* Center Logo (Mobile) */}
           <div className="md:hidden">
             <Link href={`/${lang}`} className="flex items-center">
-              <Logo className="h-7" />
+              <Logo className={cn("h-7 transition-colors duration-300", scrolled ? "text-black" : "text-white")} />
             </Link>
           </div>
 
@@ -207,7 +210,7 @@ export function Header({
                 </Button>
               ) : (
                 <>
-                  <Button asChild variant="ghost" className="rounded-xl px-6 h-11 font-bold hover:text-volcana-lime hover:bg-volcana-lime/5">
+                  <Button asChild variant="ghost" className={cn("rounded-xl px-6 h-11 font-bold hover:text-volcana-lime hover:bg-volcana-lime/5", scrolled ? "text-black" : "text-white")}>
                     <Link href={`/${lang}/login`}>{dictionary.header.login}</Link>
                   </Button>
                   <Button
