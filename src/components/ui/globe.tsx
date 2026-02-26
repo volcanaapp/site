@@ -18,17 +18,17 @@ export function Globe({
 
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
-      width: 1000 * 2, // Increased resolution
-      height: 1000 * 2, // Increased resolution
-      phi: 0,
-      theta: 0.2, // Tilted slightly
+      width: 600 * 2, // Reduced resolution slightly for better performance
+      height: 600 * 2,
+      phi: 4.5, // Start facing Americas approx
+      theta: 0.25, // Slightly more tilted
       dark: 1,
       diffuse: 1.2,
-      mapSamples: 25000, // More dots/samples for tech look
+      mapSamples: 20000,
       mapBrightness: 6,
-      baseColor: [0.05, 0.05, 0.05], // Darker base
-      markerColor: [0.1, 0.8, 0.0], // Laser Green
-      glowColor: [0.05, 0.5, 0.2], // Greenish glow
+      baseColor: [0.05, 0.05, 0.05],
+      markerColor: [0.1, 0.8, 0.0],
+      glowColor: [0.05, 0.5, 0.2],
       markers: [
         // USA
         { location: [40.7128, -74.0060], size: 0.1 }, // NY
@@ -53,7 +53,7 @@ export function Globe({
         // Called on every animation frame.
         // `state` will be an empty object, return updated params.
         state.phi = phi;
-        phi += 0.005; // Faster rotation
+        phi += 0.003; // Slightly slower rotation for better readability
       },
     });
 

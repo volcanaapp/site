@@ -82,13 +82,13 @@ export function GlobalPresenceSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative flex items-center justify-center lg:justify-end -mr-20 lg:-mr-40"
+            className="relative flex items-center justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-[800px] aspect-square">
+            <div className="relative w-full max-w-[600px] aspect-square">
               {/* Enhanced Glow Effect */}
-              <div className="absolute inset-0 bg-volcana-lime/10 blur-[120px] rounded-full opacity-40 animate-pulse" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-volcana-lime/5 blur-[80px] rounded-full mix-blend-screen pointer-events-none" />
-              <Globe className="w-full h-full scale-125 md:scale-150 transform-gpu" />
+              <div className="absolute inset-0 bg-volcana-lime/10 blur-[80px] rounded-full opacity-40 animate-pulse" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-volcana-lime/5 blur-[60px] rounded-full mix-blend-screen pointer-events-none" />
+              <Globe className="w-full h-full" />
             </div>
           </motion.div>
 
