@@ -4,6 +4,7 @@ import Script from "next/script";
 import "../globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Locale } from "@/lib/i18n-config";
+import { GlobalLoader } from "@/components/global-loader";
 
 const outfit = Outfit({ 
   subsets: ["latin"],
@@ -77,6 +78,7 @@ export default async function LangRootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <GlobalLoader />
         {children}
         <Toaster position="bottom-center" />
       </body>
