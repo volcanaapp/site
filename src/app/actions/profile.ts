@@ -9,7 +9,7 @@ const ProfileSchema = z.object({
 });
 
 export async function updateProfile(prevState: any, formData: FormData) {
-  const supabase = createClient();
+  const supabase = await createClient();
 
   const {
     data: { user },
