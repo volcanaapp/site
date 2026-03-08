@@ -14,6 +14,11 @@ import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { ArrowRight } from "lucide-react";
 
+const carouselImages = [
+  "/volcana-nature.png",
+  "/volcana.capsula.png",
+];
+
 export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: string }) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
@@ -92,7 +97,7 @@ export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: s
                   <div className="flex items-center justify-center relative">
                     <div className="absolute inset-0 bg-volcana-lime/5 rounded-full blur-3xl" />
                     <Image
-                      src={slide.image_url || "https://www.dayos.com/assets/images-next/subpillars/accounting-accountsReceivable.webp"}
+                      src={slide.image_url || carouselImages[index % carouselImages.length]}
                       alt={slide.title}
                       width={600}
                       height={600}
