@@ -100,7 +100,7 @@ export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: s
                       src={carouselImages[index % carouselImages.length]}
                       alt={slide.title}
                       width={600}
-                      height={600}
+                      height={500}
                       className="w-full max-w-md relative z-10 filter drop-shadow-2xl"
                     />
                   </div>
