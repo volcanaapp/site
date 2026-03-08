@@ -87,7 +87,7 @@ export function Globe({ className, ...props }: { className?: string }) {
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
-  }, [r]);
+  }, []); // A correção está aqui: removi a dependência desnecessária.
 
   return (
     <canvas
