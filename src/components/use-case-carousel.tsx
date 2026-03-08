@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   Carousel,
@@ -13,6 +12,7 @@ import { CtaButton } from "./ui/cta-button";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { ArrowRight } from "lucide-react";
+import { FeaturedItem } from "./featured-item";
 
 const carouselImages = [
   "/volcana-nature.png",
@@ -94,14 +94,10 @@ export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: s
                       </CtaButton>
                     </div>
                   </div>
-                  <div className="flex items-center justify-center relative">
-                    <div className="absolute inset-0 bg-volcana-lime/5 rounded-full blur-3xl" />
-                    <Image
-                      src={carouselImages[index % carouselImages.length]}
+                  <div className="flex items-center justify-center">
+                    <FeaturedItem
+                      imageSrc={carouselImages[index % carouselImages.length]}
                       alt={slide.title}
-                      width={600}
-                      height={400}
-                      className="w-full max-w-md relative z-10 filter drop-shadow-2xl"
                     />
                   </div>
                 </div>
