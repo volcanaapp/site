@@ -10,17 +10,17 @@ export function AboutMission({ dictionary }: { dictionary: any }) {
     offset: ["start start", "end start"],
   });
 
-  // Animação de escala para o título - Apenas zoom in, sem zoom out
-  const scale = useTransform(scrollYProgress, [0.1, 0.5], [1, 4]);
+  // Animação de escala para o título - Máximo de 2.5x para não estourar na tela
+  const scale = useTransform(scrollYProgress, [0.1, 0.5], [1, 2.5]);
   
-  // Animação de opacidade para o título - Aparece, fica visível, depois desaparece
+  // Animação de opacidade para o título
   const opacityH1 = useTransform(
     scrollYProgress,
     [0, 0.1, 0.8, 0.9],
     [0, 1, 1, 0]
   );
 
-  // Animação de opacidade para o subtítulo - Aparece no zoom máximo e depois desaparece
+  // Animação de opacidade para o subtítulo
   const opacityP = useTransform(
     scrollYProgress,
     [0.45, 0.5, 0.8, 0.9],
