@@ -97,7 +97,7 @@ export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: s
                   <div className="flex items-center justify-center relative">
                     <div className="absolute inset-0 bg-volcana-lime/5 rounded-full blur-3xl" />
                     <Image
-                      src={slide.image_url || carouselImages[index % carouselImages.length]}
+                      src={carouselImages[index % carouselImages.length]}
                       alt={slide.title}
                       width={600}
                       height={600}
