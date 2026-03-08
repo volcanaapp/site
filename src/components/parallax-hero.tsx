@@ -35,7 +35,7 @@ export function ParallaxHero({ dictionary }: { dictionary: any }) {
             className="w-full h-full object-cover"
             src="/volcana-ai-engenharia-brasileira-ecommerce-autonomo.mp4"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/20" />
         </motion.div>
 
         {/* Camada 2: Conteúdo de Texto */}
