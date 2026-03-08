@@ -23,15 +23,11 @@ export function Globe({ className, ...props }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
-  const [{ r }, api] = useSpring(() => ({
-    r: 0,
-    config: {
-      mass: 1,
-      tension: 280,
-      friction: 40,
-      precision: 0.001,
-    },
-  }));
+  const r = useSpring(0, {
+    stiffness: 280,
+    damping: 40,
+    mass: 1,
+  });
 
   useEffect(() => {
     if (!canvasRef.current) return;
@@ -107,29 +103,27 @@ export function Globe({ className, ...props }: { className?: string }) {
         if (canvasRef.current) {
           canvasRef.current.style.cursor = "grab";
         }
+        r.set(0);
       }}
       onPointerOut={() => {
         pointerInteracting.current = null;
         if (canvasRef.current) {
           canvasRef.current.style.cursor = "grab";
         }
+        r.set(0);
       }}
       onMouseMove={(e) => {
         if (pointerInteracting.current !== null) {
           const delta = e.clientX - pointerInteracting.current;
           pointerInteractionMovement.current = delta;
-          api.start({
-            r: delta / 200,
-          });
+          r.set(delta / 200);
         }
       }}
       onTouchMove={(e) => {
         if (pointerInteracting.current !== null && e.touches[0]) {
           const delta = e.touches[0].clientX - pointerInteracting.current;
           pointerInteractionMovement.current = delta;
-          api.start({
-            r: delta / 100,
-          });
+          r.set(delta / 100);
         }
       }}
       style={{
