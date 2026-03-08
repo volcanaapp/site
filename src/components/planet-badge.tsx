@@ -14,8 +14,8 @@ export function PlanetBadge({ dictionary }: { dictionary: any }) {
         <HoverCardTrigger asChild>
           <div className="relative h-28 w-40 cursor-pointer overflow-hidden rounded-xl transition-transform duration-200 hover:scale-105 bg-black/5 flex items-center justify-center p-2">
             <Image
-              src="/volcana-nature.png"
-              alt="Volcana Nature"
+              src="/volcana.capsula.png"
+              alt="Volcana Capsula"
               width={160}
               height={112}
               className="object-contain w-full h-full"
