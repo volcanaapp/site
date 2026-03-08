@@ -98,6 +98,9 @@ export function UseCaseCarousel({ dictionary, lang }: { dictionary: any, lang: s
                     <FeaturedItem
                       imageSrc={carouselImages[index % carouselImages.length]}
                       alt={slide.title}
+                      badgeText="CASE STUDY"
+                      description={slide.title}
+                      linkText="LER HISTÓRIA COMPLETA"
                     />
                   </div>
                 </div>
