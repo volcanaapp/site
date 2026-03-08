@@ -13,20 +13,20 @@ export function FinalCTA({ dictionary, lang }: { dictionary: any, lang: string }
           {/* Demo Card */}
           <Link
             href={`/${lang}/waitlist`}
-            className="group flex flex-col justify-between rounded-[2.5rem] border border-gray-100 bg-gray-50/50 p-10 lg:p-14 transition-all duration-500 ease-out hover:bg-black hover:border-black shadow-sm hover:shadow-2xl hover:-translate-y-2"
+            className="group flex flex-col justify-between rounded-[2.5rem] border border-black bg-black p-10 lg:p-14 transition-all duration-500 ease-out hover:bg-gray-50/50 hover:border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2"
           >
             <div>
               <div className="mb-16 flex items-start justify-between">
-                <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tight text-black group-hover:text-volcana-lime leading-[0.9]">
+                <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tight text-volcana-lime group-hover:text-black leading-[0.9]">
                   {dictionary.demo.title.split(' ').map((word: string, i: number) => (
                     <span key={i} className="block">{word}</span>
                   ))}
                 </h2>
-                <div className="rounded-full border border-black p-4 transition-all duration-500 group-hover:border-volcana-lime group-hover:bg-volcana-lime group-hover:text-black">
+                <div className="rounded-full border border-volcana-lime bg-volcana-lime text-black p-4 transition-all duration-500 group-hover:border-black group-hover:bg-transparent group-hover:text-black">
                   <ArrowUpRight className="h-8 w-8" />
                 </div>
               </div>
-              <p className="max-w-[280px] text-xl font-medium text-gray-600 transition-colors duration-500 group-hover:text-gray-400">
+              <p className="max-w-[280px] text-xl font-medium text-gray-400 transition-colors duration-500 group-hover:text-gray-600">
                 {dictionary.demo.text}
               </p>
             </div>
@@ -35,7 +35,7 @@ export function FinalCTA({ dictionary, lang }: { dictionary: any, lang: string }
           {/* About Card */}
           <Link
             href={`/${lang}/about`}
-            className="group flex flex-col justify-between rounded-[2.5rem] border border-gray-100 bg-white p-10 lg:p-14 transition-all duration-500 ease-out hover:bg-volcana-lime hover:border-volcana-lime shadow-sm hover:shadow-2xl hover:-translate-y-2"
+            className="group flex flex-col justify-between rounded-[2.5rem] border border-volcana-lime bg-volcana-lime p-10 lg:p-14 transition-all duration-500 ease-out hover:bg-white hover:border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2"
           >
             <div>
               <div className="mb-16 flex items-start justify-between">
@@ -44,11 +44,11 @@ export function FinalCTA({ dictionary, lang }: { dictionary: any, lang: string }
                     <span key={i} className="block">{word}</span>
                   ))}
                 </h2>
-                <div className="rounded-full border border-black p-4 transition-all duration-500 group-hover:bg-black group-hover:text-volcana-lime">
+                <div className="rounded-full border border-black bg-black text-volcana-lime p-4 transition-all duration-500 group-hover:bg-transparent group-hover:text-black">
                   <ArrowUpRight className="h-8 w-8" />
                 </div>
               </div>
-              <p className="max-w-[280px] text-xl font-medium text-gray-600 transition-colors duration-500 group-hover:text-black/70">
+              <p className="max-w-[280px] text-xl font-medium text-black/70 transition-colors duration-500 group-hover:text-gray-600">
                 {dictionary.about.text}
               </p>
             </div>
