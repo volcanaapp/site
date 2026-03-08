@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles } from "lucide-react";
-import Image from "next/image";
 
 export function AboutHero({ dictionary }: { dictionary: any }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -16,16 +15,18 @@ export function AboutHero({ dictionary }: { dictionary: any }) {
 
   return (
     <div className="dark">
-      <section className="w-full min-h-[70vh] flex flex-col justify-center items-center relative overflow-hidden bg-white gap-16 py-16">
-        {/* Background Image - Brazil Flag */}
-        <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none select-none">
-          <Image
-            src="/bandeira-brasil.jpg"
-            alt="Brazil Flag Background"
-            fill
-            className="object-cover object-center"
-            priority
+      <section className="w-full min-h-[70vh] flex flex-col justify-center items-center relative overflow-hidden bg-black gap-16 py-16">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            src="/volcana-ai-engenharia-brasileira-ecommerce-autonomo.mp4"
           />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
         {/* Decorative background */}
@@ -33,12 +34,12 @@ export function AboutHero({ dictionary }: { dictionary: any }) {
         
         <div className="container mx-auto max-w-7xl z-10 relative">
           <div className="w-full md:w-4/5 lg:w-3/4 flex flex-col items-start text-left">
-            <Badge variant="outline" className="mb-8 border-volcana-lime/50 bg-volcana-lime/5 text-black flex items-center gap-2 px-4 py-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-black" />
+            <Badge variant="outline" className="mb-8 border-volcana-lime/50 bg-volcana-lime/10 text-white flex items-center gap-2 px-4 py-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-white" />
               <span className="font-bold tracking-tight uppercase text-[10px]">OUR MISSION</span>
             </Badge>
 
-            <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black tracking-tighter mb-8 uppercase leading-[0.9] text-black">
+            <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black tracking-tighter mb-8 uppercase leading-[0.9] text-white">
               {titleWords.map((word: string, index: number) => (
                 <span
                   key={index}
@@ -57,7 +58,7 @@ export function AboutHero({ dictionary }: { dictionary: any }) {
             
             <p 
               className={cn(
-                "text-xl md:text-3xl text-gray-500 font-medium leading-tight max-w-3xl transition-all duration-1000 delay-500",
+                "text-xl md:text-3xl text-gray-300 font-medium leading-tight max-w-3xl transition-all duration-1000 delay-500",
                 isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               )}
             >
