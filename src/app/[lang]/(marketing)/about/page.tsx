@@ -1,4 +1,5 @@
-import { ParallaxHero } from "@/components/parallax-hero";
+import { AboutVideoHero } from "@/components/about-video-hero";
+import { AboutMission } from "@/components/about-mission";
 import { ManifestoSection } from "@/components/manifesto-section";
 import { GlobalPresenceSection } from "@/components/global-presence-section";
 import { getDictionary } from "@/lib/get-dictionary";
@@ -13,7 +14,8 @@ export default async function AboutPage({
   const dictionary = await getDictionary(lang);
   return (
     <main className="bg-black min-h-screen">
-      <ParallaxHero dictionary={dictionary.about_page} />
+      <AboutVideoHero />
+      <AboutMission dictionary={dictionary.about_page} />
       <ManifestoSection dictionary={dictionary.manifesto} />
       <GlobalPresenceSection />
     </main>
