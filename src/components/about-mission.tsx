@@ -10,8 +10,8 @@ export function AboutMission({ dictionary }: { dictionary: any }) {
     offset: ["start start", "end start"],
   });
 
-  // Animação de escala para o título
-  const scale = useTransform(scrollYProgress, [0.1, 0.5, 0.8], [1, 15, 1]);
+  // Animação de escala para o título - Zoom máximo reduzido para 4x
+  const scale = useTransform(scrollYProgress, [0.1, 0.5, 0.8], [1, 4, 1]);
   
   // Animação de opacidade para o título
   const opacityH1 = useTransform(
@@ -20,15 +20,15 @@ export function AboutMission({ dictionary }: { dictionary: any }) {
     [0, 1, 1, 0]
   );
 
-  // Animação de opacidade para o subtítulo, aparecendo um pouco depois
+  // Animação de opacidade para o subtítulo - Ajustado para aparecer mais cedo
   const opacityP = useTransform(
     scrollYProgress,
-    [0.55, 0.6, 0.7, 0.8],
+    [0.45, 0.5, 0.7, 0.8], // Aparece quando o zoom está próximo do máximo
     [0, 1, 1, 0]
   );
   
-  // Animação de posição para o subtítulo
-  const yP = useTransform(scrollYProgress, [0.55, 0.6], ["2rem", "0rem"]);
+  // Animação de posição para o subtítulo - Sincronizado com a opacidade
+  const yP = useTransform(scrollYProgress, [0.45, 0.5], ["2rem", "0rem"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-black">
