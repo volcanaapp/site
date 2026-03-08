@@ -1,83 +1,147 @@
 "use client";
 
-import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
+import createGlobe from "cobe";
+import { useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-export function Globe({
-  className,
-}: {
-  className?: string;
-}) {
+// Converte hex para RGB normalizado [0-1]
+const hexToRgb = (hex: string): [number, number, number] => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? [
+        parseInt(result[1], 16) / 255,
+        parseInt(result[2], 16) / 255,
+        parseInt(result[3], 16) / 255,
+      ]
+    : [0, 0, 0];
+};
+
+const volcanaLimeRgb = hexToRgb("#D3FE3E");
+
+export function Globe({ className, ...props }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pointerInteracting = useRef<number | null>(null);
+  const pointerInteractionMovement = useRef(0);
+  const [{ r }, api] = useSpring(() => ({
+    r: 0,
+    config: {
+      mass: 1,
+      tension: 280,
+      friction: 40,
+      precision: 0.001,
+    },
+  }));
 
   useEffect(() => {
-    let phi = 0;
-
     if (!canvasRef.current) return;
+
+    let phi = 0;
+    let width = 0;
+
+    const onResize = () => {
+      if (canvasRef.current) {
+        width = canvasRef.current.offsetWidth;
+      }
+    };
+    window.addEventListener("resize", onResize);
+    onResize();
 
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
-      width: 600 * 2, // Reduced resolution slightly for better performance
-      height: 600 * 2,
-      phi: 4.5, // Start facing Americas approx
-      theta: 0.25, // Slightly more tilted
+      width: width * 2,
+      height: width * 2,
+      phi: 0,
+      theta: 0.3,
       dark: 1,
       diffuse: 1.2,
-      mapSamples: 20000,
+      mapSamples: 16000,
       mapBrightness: 6,
-      baseColor: [0.05, 0.05, 0.05],
-      markerColor: [0.1, 0.8, 0.0],
-      glowColor: [0.05, 0.5, 0.2],
+      baseColor: [0.3, 0.3, 0.3],
+      markerColor: volcanaLimeRgb,
+      glowColor: volcanaLimeRgb,
       markers: [
         // USA
-        { location: [40.7128, -74.0060], size: 0.1 }, // NY
-        { location: [37.7749, -122.4194], size: 0.1 }, // SF
-        { location: [34.0522, -118.2437], size: 0.08 }, // LA
-        { location: [41.8781, -87.6298], size: 0.08 }, // Chicago
-        
+        { location: [37.77, -122.41], size: 0.03 },
+        { location: [40.71, -74.00], size: 0.03 },
         // Brazil
-        { location: [-23.5505, -46.6333], size: 0.12 }, // SP (Hub)
-        { location: [-22.9068, -43.1729], size: 0.1 }, // Rio
-        { location: [-15.7975, -47.8919], size: 0.08 }, // Brasilia
-        { location: [-30.0346, -51.2177], size: 0.08 }, // Porto Alegre
-        
-        // LATAM
-        { location: [19.4326, -99.1332], size: 0.1 }, // Mexico City
-        { location: [4.7110, -74.0721], size: 0.08 }, // Bogota
-        { location: [-34.6037, -58.3816], size: 0.08 }, // Buenos Aires
-        { location: [-33.4489, -70.6693], size: 0.08 }, // Santiago
-        { location: [-12.0464, -77.0428], size: 0.08 }, // Lima
+        { location: [-23.55, -46.63], size: 0.1 },
+        // Latam
+        { location: [19.43, -99.13], size: 0.05 },
+        { location: [4.71, -74.07], size: 0.05 },
+        { location: [-33.44, -70.66], size: 0.05 },
       ],
       onRender: (state) => {
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
-        state.phi = phi;
-        phi += 0.003; // Slightly slower rotation for better readability
+        if (!pointerInteracting.current) {
+          phi += 0.005;
+        }
+        state.phi = phi + r.get();
+        state.width = width * 2;
+        state.height = width * 2;
       },
+    });
+
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1";
+      }
     });
 
     return () => {
       globe.destroy();
+      window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [r]);
 
   return (
-    <div
-      className={cn(
-        "relative mx-auto aspect-[1/1] w-full max-w-[600px]",
-        className
-      )}
-    >
-      <canvas
-        ref={canvasRef}
-        style={{
-          width: "100%",
-          height: "100%",
-          contain: "layout paint size",
-          opacity: 1,
-        }}
-      />
-    </div>
+    <canvas
+      ref={canvasRef}
+      onPointerDown={(e) => {
+        pointerInteracting.current = e.clientX - pointerInteractionMovement.current;
+        if (canvasRef.current) {
+          canvasRef.current.style.cursor = "grabbing";
+        }
+      }}
+      onPointerUp={() => {
+        pointerInteracting.current = null;
+        if (canvasRef.current) {
+          canvasRef.current.style.cursor = "grab";
+        }
+      }}
+      onPointerOut={() => {
+        pointerInteracting.current = null;
+        if (canvasRef.current) {
+          canvasRef.current.style.cursor = "grab";
+        }
+      }}
+      onMouseMove={(e) => {
+        if (pointerInteracting.current !== null) {
+          const delta = e.clientX - pointerInteracting.current;
+          pointerInteractionMovement.current = delta;
+          api.start({
+            r: delta / 200,
+          });
+        }
+      }}
+      onTouchMove={(e) => {
+        if (pointerInteracting.current !== null && e.touches[0]) {
+          const delta = e.touches[0].clientX - pointerInteracting.current;
+          pointerInteractionMovement.current = delta;
+          api.start({
+            r: delta / 100,
+          });
+        }
+      }}
+      style={{
+        width: "100%",
+        height: "100%",
+        contain: "layout paint size",
+        opacity: 0,
+        transition: "opacity 1s ease",
+        cursor: "grab",
+      }}
+      className={className}
+      {...props}
+    />
   );
 }
