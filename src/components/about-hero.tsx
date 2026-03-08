@@ -65,41 +65,6 @@ export function AboutHero({ dictionary }: { dictionary: any }) {
             </p>
           </div>
         </div>
-
-        <div className="container mx-auto max-w-7xl z-10 relative">
-          <div className="w-full md:w-4/5 lg:w-3/4 flex flex-col items-start text-left">
-            <Badge variant="outline" className="mb-8 border-volcana-lime/50 bg-volcana-lime/5 text-black flex items-center gap-2 px-4 py-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-black" />
-              <span className="font-bold tracking-tight uppercase text-[10px]">OUR MISSION</span>
-            </Badge>
-
-            <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-black tracking-tighter mb-8 uppercase leading-[0.9] text-black">
-              {titleWords.map((word: string, index: number) => (
-                <span
-                  key={index}
-                  className={cn(
-                    "inline-block transition-all duration-700 ease-out",
-                    isMounted
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-12"
-                  )}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  {word}{' '}
-                </span>
-              ))}
-            </h1>
-            
-            <p 
-              className={cn(
-                "text-xl md:text-3xl text-gray-500 font-medium leading-tight max-w-3xl transition-all duration-1000 delay-500",
-                isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              )}
-            >
-              {dictionary.subtitle}
-            </p>
-          </div>
-        </div>
       </section>
     </div>
   );
