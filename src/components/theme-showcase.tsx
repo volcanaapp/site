@@ -57,7 +57,7 @@ export default function ThemeShowcase() {
   const segments: Segment[] = ["Todos", "Varejo", "Industria", "DTC"];
 
   return (
-    <section className="py-20 md:py-32 bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+    <section className="py-20 md:py-32 bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(190,242,100,0.2),rgba(255,255,255,0))]">
       <div className="container max-w-screen-xl text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
           Comece com um tema feito para o seu negócio
@@ -74,8 +74,8 @@ export default function ThemeShowcase() {
               onClick={() => setActiveSegment(segment)}
               className={`rounded-full transition-all duration-300 ${
                 activeSegment === segment
-                  ? "bg-indigo-600 hover:bg-indigo-500 text-white border-transparent"
-                  : "bg-transparent border border-gray-700 text-gray-400 hover:bg-gray-800 hover:text-white"
+                  ? "bg-lime-400 hover:bg-lime-500 text-black font-semibold border-transparent"
+                  : "bg-transparent border border-gray-700 text-gray-400 hover:bg-gray-800 hover:text-white hover:border-gray-600"
               }`}
             >
               {segment}
@@ -87,7 +87,7 @@ export default function ThemeShowcase() {
           {filteredThemes.map((theme) => (
             <Card 
               key={theme.id} 
-              className="bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden group relative hover:border-indigo-500/50 transition-all duration-300"
+              className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden group relative backdrop-blur-sm hover:border-lime-400/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(190,242,100,0.3)]"
             >
               <CardContent className="p-0">
                 <div className="overflow-hidden">
@@ -101,7 +101,7 @@ export default function ThemeShowcase() {
                 </div>
                 <div className="p-6 text-left">
                   <h3 className="text-xl font-semibold text-white">{theme.title}</h3>
-                  <p className="text-sm text-indigo-400 mt-1">{theme.segment}</p>
+                  <p className="text-sm text-lime-400 mt-1 font-medium">{theme.segment}</p>
                 </div>
               </CardContent>
             </Card>
