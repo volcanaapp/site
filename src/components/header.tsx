@@ -114,7 +114,7 @@ export function Header({
                           <Link href={`/${lang}/login`} onClick={() => setIsMenuOpen(false)}>{dictionary.header.login}</Link>
                         </Button>
                         <Button asChild variant="volcana" className="w-full h-14 text-lg rounded-2xl font-black shadow-xl shadow-volcana-lime/20">
-                          <Link href={`/${lang}/waitlist`} onClick={() => setIsMenuOpen(false)}>{dictionary.header.start_now}</Link>
+                          <Link href={`/${lang}/v2`} onClick={() => setIsMenuOpen(false)}>{dictionary.header.start_now}</Link>
                         </Button>
                       </div>
                     </div>
@@ -229,7 +229,7 @@ export function Header({
                     variant="volcana"
                     className="font-bold rounded-xl px-8 h-11 shadow-lg shadow-volcana-lime/20"
                   >
-                    <Link href={`/${lang}/waitlist`}>{dictionary.header.start_now}</Link>
+                    <Link href={`/${lang}/v2`}>{dictionary.header.start_now}</Link>
                   </Button>
                 </>
               )
