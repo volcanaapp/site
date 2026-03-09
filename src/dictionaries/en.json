@@ -1,9 +1,14 @@
 {
   "hero": {
-    "title_part1": "Welcome to Volcana.",
-    "title_part2": "The first AI-Native e-commerce platform in Latin America.",
+    "title": "The first AI-Native e-commerce platform in Latin America.",
     "subtitle": "Brazilian engineering. Fixed cost. Agentic operation.",
-    "cta_primary": "Start Now"
+    "promptPlaceholder": "Enter your prompt here...",
+    "ctaButton": "Start Now",
+    "suggestedPrompts": [
+      "Optimize my campaigns",
+      "Analyze my sales",
+      "Suggest new products"
+    ]
   },
   "header": {
     "product": "Product",
