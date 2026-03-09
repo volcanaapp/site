@@ -1,4 +1,4 @@
-import { Hero01 } from "@/components/hero-01";
+import HeroV2 from "@/components/hero-v2";
 import { Hero02 } from "@/components/hero-02";
 import { FeatureSection } from "@/components/feature-section";
 import { PowerOfAutonomySection } from "@/components/power-of-autonomy-section";
@@ -20,9 +20,9 @@ export default async function V2HomePage({
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-black text-white">
       <ScarcityBanner phrases={(dictionary as any).waitlist.scarcity} />
-      <Hero01 dictionary={dictionary.hero} lang={lang} />
+      <HeroV2 dictionary={dictionary.hero} lang={lang} />
       <Hero02 dictionary={dictionary} />
       <ProductExperience dictionary={dictionary} />
       <FeatureSection dictionary={dictionary.feature_section} lang={lang} />
