@@ -57,12 +57,12 @@ export default function ThemeShowcase() {
   const segments: Segment[] = ["Todos", "Varejo", "Industria", "DTC"];
 
   return (
-    <section className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 md:py-32 bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
       <div className="container max-w-screen-xl text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
           Comece com um tema feito para o seu negócio
         </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
+        <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
           Escolha um ponto de partida e personalize-o para se adequar à sua marca.
         </p>
 
@@ -72,7 +72,11 @@ export default function ThemeShowcase() {
               key={segment}
               variant={activeSegment === segment ? "default" : "outline"}
               onClick={() => setActiveSegment(segment)}
-              className="rounded-full"
+              className={`rounded-full transition-all duration-300 ${
+                activeSegment === segment
+                  ? "bg-indigo-600 hover:bg-indigo-500 text-white border-transparent"
+                  : "bg-transparent border border-gray-700 text-gray-400 hover:bg-gray-800 hover:text-white"
+              }`}
             >
               {segment}
             </Button>
@@ -81,20 +85,23 @@ export default function ThemeShowcase() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredThemes.map((theme) => (
-            <Card key={theme.id} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card 
+              key={theme.id} 
+              className="bg-gray-900/50 border border-gray-800 rounded-2xl overflow-hidden group relative hover:border-indigo-500/50 transition-all duration-300"
+            >
               <CardContent className="p-0">
-                <div className="aspect-w-4 aspect-h-3">
+                <div className="overflow-hidden">
                   <Image
                     src={`https://picsum.photos/seed/${theme.id}/600/450`}
                     alt={theme.title}
                     width={600}
                     height={450}
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{theme.title}</h3>
-                  <p className="text-sm text-indigo-500 mt-1">{theme.segment}</p>
+                <div className="p-6 text-left">
+                  <h3 className="text-xl font-semibold text-white">{theme.title}</h3>
+                  <p className="text-sm text-indigo-400 mt-1">{theme.segment}</p>
                 </div>
               </CardContent>
             </Card>
