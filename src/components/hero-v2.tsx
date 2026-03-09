@@ -63,19 +63,19 @@ export default function HeroV2({ dictionary, lang }: HeroV2Props) {
       </div>
 
       <motion.div
-        className="relative z-10 flex flex-col items-center text-center"
+        className="relative z-10 flex w-full flex-col items-center px-4 text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.h1
-          className="mb-4 text-4xl font-bold uppercase tracking-tight text-white md:text-6xl lg:text-7xl"
+          className="mb-4 text-4xl font-bold uppercase tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
           variants={itemVariants}
         >
           {dictionary.title}
         </motion.h1>
         <motion.p
-          className="mb-8 max-w-2xl text-lg text-gray-300 md:text-xl"
+          className="mb-8 max-w-2xl text-base text-gray-300 md:text-xl"
           variants={itemVariants}
         >
           {dictionary.subtitle}
@@ -93,8 +93,8 @@ export default function HeroV2({ dictionary, lang }: HeroV2Props) {
                 : "0 0 0px 0px rgba(208, 255, 5, 0)",
             }}
           >
-            <div className="relative flex items-center">
-              <Sparkles className="absolute left-4 h-6 w-6 text-volcana-lime" />
+            <div className="relative flex w-full items-center">
+              <Sparkles className="absolute left-4 h-5 w-5 text-volcana-lime" />
               <Input
                 type="text"
                 placeholder={dictionary.promptPlaceholder}
@@ -102,10 +102,10 @@ export default function HeroV2({ dictionary, lang }: HeroV2Props) {
                 onChange={(e) => setPrompt(e.target.value)}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
-                className="h-16 w-full rounded-md border-2 border-gray-700 bg-gray-900/80 pl-14 pr-40 text-white placeholder:text-gray-500 focus:border-volcana-lime focus:ring-0"
+                className="h-14 w-full rounded-md border-2 border-gray-700 bg-gray-900/80 pl-12 pr-32 text-sm text-white placeholder:text-gray-500 focus:border-volcana-lime focus:ring-0 sm:pr-40 sm:text-base"
               />
-              <div className="absolute right-2">
-                <CtaButton href="/waitlist" lang={lang}>
+              <div className="absolute right-1.5 sm:right-2">
+                <CtaButton href="/waitlist" lang={lang} className="text-sm">
                   {dictionary.ctaButton}
                 </CtaButton>
               </div>
