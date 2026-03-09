@@ -1,5 +1,5 @@
 import HeroV2 from "@/components/hero-v2";
-import { Hero02 } from "@/components/hero-02";
+import ThemeShowcase from "@/components/theme-showcase";
 import { FeatureSection } from "@/components/feature-section";
 import { PowerOfAutonomySection } from "@/components/power-of-autonomy-section";
 import { UseCaseCarousel } from "@/components/use-case-carousel";
@@ -23,7 +23,7 @@ export default async function V2HomePage({
     <div className="bg-black text-white">
       <ScarcityBanner phrases={(dictionary as any).waitlist.scarcity} />
       <HeroV2 dictionary={dictionary.hero} lang={lang} />
-      <Hero02 dictionary={dictionary} />
+      <ThemeShowcase />
       <ProductExperience dictionary={dictionary} />
       <FeatureSection dictionary={dictionary.feature_section} lang={lang} />
       <HowItWorksSection lang={lang} />
